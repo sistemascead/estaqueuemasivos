@@ -1,0 +1,34 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+
+# Backups y archivos temporales
+*.bak
+*.bak2
+*.tmp
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Uploads y archivos generados
+uploads/
+dist/
+build/
+
+# Archivos CSV de ejemplo y salida
+ejemplos/
+InformeSMSyWS_*.csv
