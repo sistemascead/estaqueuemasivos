@@ -1,0 +1,665 @@
+﻿Fecha,Celular,Mensaje,Dir,Tipo,URL,Nombre,ack,Medio,Agente,CelDesde,statusSMS,idSMS
+"2026-03-10 00:07:02","	573113248113","La formula no la arreglaron y no ví las ordenes",ENTRADA,TEXTO,,Eliza,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTEzMjQ4MTEzFQIAEhggQUM5Q0EyRkZFOERBOTcwMDEwQTQxMjJENjA0MTREODUA"
+"2026-03-10 00:07:03","	573113248113","Hola 👋, gracias por contactar a CEAD Especialistas en Alivio del Dolor. En este momento no estamos disponibles. Nuestros horarios laborales son: 📅 Lunes a Viernes: 7:00 am - 5:30 pm ❌ Sábados, Domingos y festivos no disponibles. ¡Te responderemos pronto! 🌟",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTEzMjQ4MTEzFQIAERgSRDIyNTkwRkUxNUI2RDkwNjE5AA=="
+"2026-03-10 06:22:02","	573011706242","Buen dia",ENTRADA,TEXTO,,Yudy,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDExNzA2MjQyFQIAEhggQUM0Q0MwNzcwQjUzRkZCQ0I0NTcwRTc4QTFGRTA5NTQA"
+"2026-03-10 06:22:03","	573011706242","Hola 👋, gracias por contactar a CEAD Especialistas en Alivio del Dolor. En este momento no estamos disponibles. Nuestros horarios laborales son: 📅 Lunes a Viernes: 7:00 am - 5:30 pm ❌ Sábados, Domingos y festivos no disponibles. ¡Te responderemos pronto! 🌟",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDExNzA2MjQyFQIAERgSRkJDOEIxNTUzNTAzMkQzQTFCAA=="
+"2026-03-10 06:22:19","	573011706242","Deceo orientacion para tratamiento de culebrilla",ENTRADA,TEXTO,,Yudy,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDExNzA2MjQyFQIAEhggQUM1REEwNTM3MEJBRDRCMThGMjI3M0U3QUIxRTc0QUEA"
+"2026-03-10 06:22:20","	573011706242","En adulto mayor",ENTRADA,TEXTO,,Yudy,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDExNzA2MjQyFQIAEhggQUM0MkI1NjMzOTE3MkNBNDZDRDYzQjhFQjkxMzcyREEA"
+"2026-03-10 06:22:20","	573011706242","Por fabor , gracias",ENTRADA,TEXTO,,Yudy,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDExNzA2MjQyFQIAEhggQUMwNzRCNkM5MjE1NzUzMUIxMEEzMjQ3QzUzOTQ2RjAA"
+"2026-03-10 06:54:10","	573165741753","Buen dia",ENTRADA,TEXTO,,Beatriz,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTY1NzQxNzUzFQIAEhggQUM5QjBFMEZDRUYyQ0YxNTQ1ODE0Nzc0NjNEODhGOUQA"
+"2026-03-10 06:54:11","	573165741753","Hola 👋, gracias por contactar a CEAD Especialistas en Alivio del Dolor. En este momento no estamos disponibles. Nuestros horarios laborales son: 📅 Lunes a Viernes: 7:00 am - 5:30 pm ❌ Sábados, Domingos y festivos no disponibles. ¡Te responderemos pronto! 🌟",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTY1NzQxNzUzFQIAERgSNDEwMzcwRjRCNUU3RjkxM0Y0AA=="
+"2026-03-10 07:02:45","	573104348334","Buenos días",ENTRADA,TEXTO,,saryguerra9,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAEhggQUNERUUzQjg2MzdCMzZEMEVERDNBREY3NzZFOUEyNTcA"
+"2026-03-10 07:02:46","	573104348334","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSREQ4MTk1QUVCODc5RkE5NUM4AA=="
+"2026-03-10 07:02:47","	573104348334","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSQThFRkFERjkzQkY3RDNFMjYwAA=="
+"2026-03-10 07:03:03","	573104348334","Asignar o Modificar",ENTRADA,TEXTO,,saryguerra9,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAEhggQUM0NDYxOTlBM0VEMkQ3NzU4QzgxQzY1MEU3NTczQjEA"
+"2026-03-10 07:03:05","	573104348334","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSM0U3MUE5M0REOUU2QzlCQzI1AA=="
+"2026-03-10 07:03:11","	573104348334",Eps,ENTRADA,TEXTO,,saryguerra9,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAEhggQUMwQTkzRjAxMTg2NTM3RTg0NDQ4N0JDM0EwRENBNDIA"
+"2026-03-10 07:03:13","	573007799518","Buenos dias",ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0E1MEVGMTc5RkVDRDk3OEIyM0IA"
+"2026-03-10 07:03:13","	573104348334","Por favor selecciona la EPS del paciente:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSNDUzRkM4RTVDMzQ3RTE0QUQxAA=="
+"2026-03-10 07:03:14","	573007799518","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSMTBBRTkyNjREQTQzRDQ5NEVFAA=="
+"2026-03-10 07:03:14","	573007799518","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSNzkyODcyRjI0NjA2OUU1NjAxAA=="
+"2026-03-10 07:03:19","	573104348334","Savia Salud",ENTRADA,TEXTO,,saryguerra9,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAEhggQUM4MDhEQTJGOURDRTNDQkFGQUQ3MTc3MURFRjc1MUUA"
+"2026-03-10 07:03:21","	573104348334","Por favor Seleccione el área de su interés:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSNzMzNTY3M0E2NzQ5QjBFNTNBAA=="
+"2026-03-10 07:03:28","	573104348334","Cita Procedimientos",ENTRADA,TEXTO,,saryguerra9,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAEhggQUM4M0YxOTk1RDdDMjYzOEUzMDVGNzU3QkYxQzUyNzQA"
+"2026-03-10 07:03:30","	573104348334","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSODAxMzA4QTVFQjJFQjA3NkE3AA=="
+"2026-03-10 07:03:31","	573104348334","ASIGNADO A Valentina por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	3a40f5939097131309f98ed5cee6c443"
+"2026-03-10 07:03:31","	573007799518","Otros Tramites ",ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0FCRTcyNEQ5NjQzN0IxN0MxM0EA"
+"2026-03-10 07:03:31","	573104348334","Este chat ha sido asignado a: Valentina",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSRDUyQzcyODJBMTk5MDI3N0Q5AA=="
+"2026-03-10 07:03:33","	573007799518","Por favor seleccione la opción de su interés",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSRDZDNzdBQzc5RTIyRDJBQzJBAA=="
+"2026-03-10 07:03:42","	573104348334",21470825,ENTRADA,TEXTO,,saryguerra9,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAEhggQUM0OUM2NUM2ODI5NTQ2MDA0REFDQjJCMDkyNTI0NzMA"
+"2026-03-10 07:04:18","	573007799518","Asignar o Modificar",ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0E3OEFBOURDRkMzNTE0OTdDRUQA"
+"2026-03-10 07:04:20","	573007799518","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSMkI0MTIwOUJDMzBDMTM5QUIzAA=="
+"2026-03-10 07:04:27","	573007799518",Eps,ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0EzOTQ5OTI0MUYxMUE5MEVENjgA"
+"2026-03-10 07:04:29","	573007799518","Por favor selecciona la EPS del paciente:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSMTU1NzM0ODI0MjJEN0UzNzZBAA=="
+"2026-03-10 07:04:38","	573007799518","Salud Total",ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0E1M0FDRjVGQUMyMTU0QzZBMUYA"
+"2026-03-10 07:04:41","	573007799518","Por favor Seleccione el área de su interés:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSM0Q4MUJGNTkzNEI0OTQ3MDU1AA=="
+"2026-03-10 07:04:54","	573007799518","Cita Procedimientos",ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0E3QUJCMzQzQjAzQTVGNzQ0Q0MA"
+"2026-03-10 07:04:56","	573007799518","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSOUIxQjVFQUUzOEFCMzhERDE2AA=="
+"2026-03-10 07:04:57","	573007799518","ASIGNADO A Valentina por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	22fa91c2b55907a0560b8d14629b6f52"
+"2026-03-10 07:04:57","	573007799518","Este chat ha sido asignado a: Valentina",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSMDRGNjMyNTI1REUwMDcxQkIzAA=="
+"2026-03-10 07:06:04","	573007799518","3384791. Cédula de ciudadanía",ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0EzNEIwMzYxRDRGQUI2NUE1MUQA"
+"2026-03-10 07:13:28","	573046040718",,ENTRADA,IMAGEN,tmp/573102825033/2026-03-10/IN-26022095237399933.jpg,.,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ2MDQwNzE4FQIAEhggQUM3OTc1NDdEQ0FGM0M5NDI3M0E1ODQwNzlCQTQyQzgA"
+"2026-03-10 07:13:31","	573046040718","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDQ2MDQwNzE4FQIAERgSODJGRjdBNDIyRjE1QzM0MjA1AA=="
+"2026-03-10 07:13:31","	573046040718","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDQ2MDQwNzE4FQIAERgSMzAxQkFFRkVFODY1QjQ0N0E4AA=="
+"2026-03-10 07:13:40","	573046040718","ASIGNADO A Leidy por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	5eac3bad687e1a5ffd62c6b8b2eb806b"
+"2026-03-10 07:15:46","	573006534289","Hola🤗 bienvenid@ a CEAD (Centro de Especialistas en el Alivio del Dolor). Soy Santiago Perez🙋🏻‍♂️ para mi es un gusto atenderte ",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAERgSMjQ5MUMyNUQyOERBNzI5M0QxAA=="
+"2026-03-10 07:16:27","	573006534289","La doctora Nora Mendoza,  ya no trabaja con nosotros",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAERgSQzNDNjg2RDgzM0UzMEQ4ODVGAA=="
+"2026-03-10 07:16:35","	573006534289",Aaa,ENTRADA,TEXTO,,"Aleja Acosta",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAEhgUM0FFRDMxNTc0QUM4MTk5OTkyN0YA"
+"2026-03-10 07:16:40","	573006534289","Y el doctor",ENTRADA,TEXTO,,"Aleja Acosta",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAEhgUM0E1MjM0NDBCNzE1RTM4NTA3MkMA"
+"2026-03-10 07:16:47","	573006534289",.,ENTRADA,TEXTO,,"Aleja Acosta",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAEhgUM0EwODcwRjlDODVENDRBOEU2N0IA"
+"2026-03-10 07:17:29","	573006534289","Con el doctor Jorge Gomez cuento con disponibilidad para el lunes 16 de marzo a las 10:30, le queda fácil asistir?",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAERgSNUM4REQ5NTAwMUM4N0VGOEIxAA=="
+"2026-03-10 07:17:38","	573237917296","Buenos días como está con María Alejandra Noreña Restrepo 
+De savia salud yo tengo mi cita de mi primera vez con medicina de el deporte hoi a las 2;30",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUNDNzAwMzc4MzdEODZDRDZBQjE1QzZENDkxMDM5NkIA"
+"2026-03-10 07:17:39","	573237917296","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSRTkzQTVEMUM3QTI5RTYxOUU2AA=="
+"2026-03-10 07:17:40","	573237917296","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSOEY0NEQ4OTJCQUM3NkE0RkM5AA=="
+"2026-03-10 07:17:42","	573006534289","Está bien",ENTRADA,TEXTO,,"Aleja Acosta",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAEhgUM0FCOURBQUFCRkFFNjY5QzkwRTcA"
+"2026-03-10 07:17:46","	573237917296","Quería preguntar cómo es que se llama",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUM1QTBCMTNBMkU0RTdENzQ4NzRBQjFFOUMzN0EzMDUA"
+"2026-03-10 07:17:47","	573237917296","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSREU0NjBEODc1QThFREY4QTlDAA=="
+"2026-03-10 07:17:50","	573237917296","El especialista",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUNGQkQ5N0E1NjlDRTM4RkY4NkMyMkRFMjA3QzkwRTAA"
+"2026-03-10 07:17:51","	573237917296","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSNkUxRDI4NEM2NDc1RTI3RUFEAA=="
+"2026-03-10 07:17:58","	573237917296","Que me va a ver de primera vez hoi ??",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUM4QjE0QUQ0NzM1MzJBMDdCQTZCOEJBQzc0NTI5NkYA"
+"2026-03-10 07:17:59","	573237917296","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSMjMyODVERTA3RUU0NzYxNTY0AA=="
+"2026-03-10 07:18:00","	573006534289","Estos son los datos",ENTRADA,TEXTO,,"Aleja Acosta",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAEhgUM0FCMjYyRTgwN0MyN0MxOUZGMDgA"
+"2026-03-10 07:18:05","	573237917296","Es que ayer cuando me respndistess",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUNFMzdDOTEwQTNFNkNGMjc0MUMwRkE0ODg1RjFCOTYA"
+"2026-03-10 07:18:06","	573237917296","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSNDNGMjI0MjRGNUQ2MjA3Q0Y2AA=="
+"2026-03-10 07:18:16","	573006534289","Está Esta es la cc",ENTRADA,TEXTO,,"Aleja Acosta",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAEhgUM0EzRUUxNEU1OEY5M0Q2MzYwODIA"
+"2026-03-10 07:18:32","	573237917296","Ya la conversación no me aparecería 
+Por qué mi wasap aveces borra las cosas quedó atenta porfavor",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUMwQkFGNEM2MDM1ODk5RjM4NzI2QTYyRkY4Q0U3MzUA"
+"2026-03-10 07:18:33","	573237917296","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSMEI1N0Y0MkE2RUMzQjdGQ0Q1AA=="
+"2026-03-10 07:19:46","	573006514287","Bienvenido/a a CEAD. Nos complace estar a su disposición para atender sus necesidades. ¿En qué podemos ayudarle hoy?",SALIDA,TEXTO,,saludo_bienvenida_2026,2,WHATSAPP,Juliana,"	573102825033",,"	wamid.HBgMNTczMDA2NTE0Mjg3FQIAERgSQjc4RDNBQkQyQzE0NDNCRkIxAA=="
+"2026-03-10 07:20:33","	573104348334","¡Bienvenido a CEAD, Especialistas en Alivio del Dolor! ¿Hablas con Valentina Mesa del área de programación, en que te puedo ayudar el día de hoy? 😄",SALIDA,TEXTO,,,3,WHATSAPP,Valentina,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSRTc2MEVGQzAyNkU3RTU4NDZDAA=="
+"2026-03-10 07:20:40","	573007799518","¡Bienvenido a CEAD, Especialistas en Alivio del Dolor! ¿Hablas con Valentina Mesa del área de programación, en que te puedo ayudar el día de hoy? 😄",SALIDA,TEXTO,,,3,WHATSAPP,Valentina,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSMURDMjg2RjdFMUUxMEI2MUM1AA=="
+"2026-03-10 07:20:57","	573206292144","Bienvenido/a a CEAD. Nos complace estar a su disposición para atender sus necesidades. ¿En qué podemos ayudarle hoy?",SALIDA,TEXTO,,saludo_bienvenida_2026,2,WHATSAPP,Juliana,"	573102825033",,"	wamid.HBgMNTczMjA2MjkyMTQ0FQIAERgSOUEzQzkyNTg0NTBEOTBGODI1AA=="
+"2026-03-10 07:21:03","	573007799518","Para confirmar una cita",ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0E2MkNGN0JERTQwMTI0RkM0MEEA"
+"2026-03-10 07:21:14","	573206292144",Si,ENTRADA,TEXTO,,Elisabeth,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjA2MjkyMTQ0FQIAEhggQUM1N0MxREJEQTg0NEYzQUZCMTY3NUI1NkUwREY3QkMA"
+"2026-03-10 07:21:16","	573104348334","Tengo un bloqueo pendiente y nada q me llaman",ENTRADA,TEXTO,,saryguerra9,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAEhggQUM3NDA1OTg1MDBEMUM5REFDRjA0Mzg2NkQ3NkEzRjgA"
+"2026-03-10 07:21:25","	573007799518","Para un procedimiento",ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0E2QzIyM0IwQzUyNDRFN0YyMzkA"
+"2026-03-10 07:21:39","	573206292144",2026-03-10-21657687-MARIA_NINFA_SOTO_DE_QUINTERO-HC.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/835f4c5afa08f8f7eadfafb293233415.pdf,,2,WHATSAPP,Juliana,"	573102825033",,"	wamid.HBgMNTczMjA2MjkyMTQ0FQIAERgSMUIxQjRBODZGNDFBRjI5OUI1AA=="
+"2026-03-10 07:21:43","	573206292144",2026-03-10-21657687-MARIA_NINFA_SOTO_DE_QUINTERO-MEDICAMENTOS.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/7ab24fafe005cce7c790268383b6d35a.pdf,,2,WHATSAPP,Juliana,"	573102825033",,"	wamid.HBgMNTczMjA2MjkyMTQ0FQIAERgSRTlGNDE5NTIxQzgwMzVDRDBBAA=="
+"2026-03-10 07:21:47","	573206292144",2026-03-10-21657687-MARIA_NINFA_SOTO_DE_QUINTERO-ORDEN_MEDICA.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/55f85508dcd9223b6f1e6ce225b499db.pdf,,2,WHATSAPP,Juliana,"	573102825033",,"	wamid.HBgMNTczMjA2MjkyMTQ0FQIAERgSNjBCRTY3MDczMTU4ODE3QTI3AA=="
+"2026-03-10 07:23:10","	573226050994","Buenos días está orden mecirbe para mañana q tengo cita aya",ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUM4RTkxQTRGQTJFODAzNTRCOEI3QzM5NDFDNkVFRUYA"
+"2026-03-10 07:23:11","	573226050994","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSOTMyNTE4NzFFQTkxNDI3OUIyAA=="
+"2026-03-10 07:23:12","	573226050994","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSOEU2M0M1NDg3NUEyNEQ0ODU5AA=="
+"2026-03-10 07:23:45","	573226050994","Otros Tramites ",ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUMwNjdDNDc1ODU3ODc2NERBNzhCRTczNEI1OEZGM0QA"
+"2026-03-10 07:23:47","	573226050994","Por favor seleccione la opción de su interés",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSNEI1MUY0NzkyOTE2ODAxQkM4AA=="
+"2026-03-10 07:24:11","	573226050994","Asignar o Modificar",ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUMyMDY4NUU1NEQ5Q0I1Q0FDRUE4MzhBMzBBOEEwMDYA"
+"2026-03-10 07:24:13","	573226050994","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSRkNENUY1MDU3QUUxQjYxMzZGAA=="
+"2026-03-10 07:24:29","	573226050994",Eps,ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUNFOTBBRThERDJCM0VEOTE1Q0EyRDEyQkI4MTdDNEUA"
+"2026-03-10 07:24:31","	573226050994","Por favor selecciona la EPS del paciente:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSNDAxMEI5OEFFNTQxQkE0NTBFAA=="
+"2026-03-10 07:24:41","	573226050994","Savia Salud",ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUNBMEM0MEZFQ0YxOTQ1QzU0RTE5NzQ3ODU5MUMyNDUA"
+"2026-03-10 07:24:43","	573226050994","Por favor Seleccione el área de su interés:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSMjY2QUFFNTcyNTFBQTM1NENBAA=="
+"2026-03-10 07:24:53","	573226050994","Cita Especialista",ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUNFNkFDNDgzMUNDMjY5Nzg2MUI4MUU2NjFDMjE4QTEA"
+"2026-03-10 07:24:55","	573226050994","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSQjQ5OEY2RDIxQjY1MTBGNEVGAA=="
+"2026-03-10 07:24:57","	573226050994","ASIGNADO A santiago.perez por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	3023be3ae3f1ea541d823c0e96105625"
+"2026-03-10 07:24:57","	573226050994","Este chat ha sido asignado a: santiago.perez",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSQjY4QUMwQzJFQkEzNTc5NkQxAA=="
+"2026-03-10 07:25:34","	573226050994",43845658,ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUMyMzZGQTc3QjA1OUE1RDE2RTM0NTc1NUZDNTBERjMA"
+"2026-03-10 07:28:48","	573237917296","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	083de690f99344e6074735a05a7e4b2c"
+"2026-03-10 07:28:58","	573165741753","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	8102143702f6bdd3df9032fb700f8f7f"
+"2026-03-10 07:29:17","	573011706242","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	72b38b459dee14379936a4207a48b4a2"
+"2026-03-10 07:29:28","	16317661411","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	950267f22e4ddeaf1fbe6aea61eed288"
+"2026-03-10 07:29:36","	573003688815","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	c07f32ec18187e1ab953c6606d1bccaa"
+"2026-03-10 07:29:50","	573003688815","REASIGNADO A Gladys por santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	8664162831126a616ebf37ed4b5f59e4"
+"2026-03-10 07:29:55","	50671618064","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	1596de1852fb1cdc5151bf7fa7b0d572"
+"2026-03-10 07:29:59","	573002720986","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	d8fe6e866e652305252aaa134765dce5"
+"2026-03-10 07:30:06","	573002720986","REASIGNADO A Gladys por santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	3a77d1c8105392282d77aa7f183a80bb"
+"2026-03-10 07:30:08","	573145142384","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	7ac5e2b734c69f4fcfc687cf2d7cbdbc"
+"2026-03-10 07:30:11","	573145142384","CERRADO POR santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	5000c6df42e2107ae8fea6419ac62023"
+"2026-03-10 07:30:12","	573005740840","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	ccc95d5300d48137014b6c7b7e4e84d9"
+"2026-03-10 07:30:17","	573007799518","Claro que si, la cita la tienes el dia de hoy a las 10:40 am ",SALIDA,TEXTO,,,3,WHATSAPP,Valentina,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSRTIyM0M3RDU2NTU0MzhDRTNCAA=="
+"2026-03-10 07:30:24","	573011298102","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	09ba400a9086e2d46a92663b5e1fcbf5"
+"2026-03-10 07:30:26","	573007799518","Recuerda:
+▫️ Presentarse con un acompañante mayor de edad.
+▫️ Asistir con Tapabocas
+o	Venir en completo ayuno de 6 horas
+o	Presentarse 30 minutos antes.
+▫️ No se permite el ingreso de mascotas a la institución
+▫️ Presentar el documento de identidad
+▫️Dirección Carrera 38 no. 26-41 Torre 3 Local 132 Edificio BIO 26 (Por toda la avenida las palmas, entre el mall del indio y la loma San Julián) SEDE 1
+",SALIDA,TEXTO,,,3,WHATSAPP,Valentina,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSN0RBNDQwNDJERDFFRDU5Q0UzAA=="
+"2026-03-10 07:30:30","	573011298102","REASIGNADO A Gladys por santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	8a38cf541f1720e79f45d0ef008fe54b"
+"2026-03-10 07:30:32","	573005052784","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	99adaf360f2edf9a2c30d6b0528e4dea"
+"2026-03-10 07:30:39","	573007799518","Gracias por confirmar su asistencia, lo esperamos aquí el día de Hoy Feliz día !! 🤍💙",SALIDA,TEXTO,,,3,WHATSAPP,Valentina,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAERgSM0NCQzY5NkUzQTczQUYyOERFAA=="
+"2026-03-10 07:30:40","	573005052784","REASIGNADO A Gladys por santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	a7585a32198b965bb2299eef4be252ea"
+"2026-03-10 07:30:42","	573002558223","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	d7708901914b5e32fe4f51bb94d54654"
+"2026-03-10 07:30:45","	573002558223","REASIGNADO A Gladys por santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	ed853684b79edd878d478056b680b54c"
+"2026-03-10 07:30:47","	573002437714","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	798e16dd26306ca49e93dfb7f86ed643"
+"2026-03-10 07:30:53","	573002437714","CERRADO POR santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	efe31117704c7762d33c8a2e04cb640b"
+"2026-03-10 07:30:55","	573118002887","Hola cómo estás?",ENTRADA,TEXTO,,"Catalina Ocampo López",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAEhggQUM5MTNGRTI3MUYzOUM4MEM3NkRBNzFEMjc0NzBFMzIA"
+"2026-03-10 07:30:56","	573118002887","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSMTUyNzhCNThGQTFGQTU0NjE1AA=="
+"2026-03-10 07:30:57","	573175587007","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	f63c914a6d416bd3ba1db1207a999313"
+"2026-03-10 07:30:57","	573118002887","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSMDgzNTYyMkJGQzAwQkM0Mzk3AA=="
+"2026-03-10 07:31:07","	573118002887","Asignar o Modificar",ENTRADA,TEXTO,,"Catalina Ocampo López",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAEhggQUM3MDFGQUIxN0U5ODI3Mzk3NjM4NzcwQjdBNzBGNDcA"
+"2026-03-10 07:31:09","	573118002887","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSQjI5NUM2RjVGMDlBNUJBQkREAA=="
+"2026-03-10 07:31:14","	573175587007","REASIGNADO A Valentina por santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	ca29be4b32949aeb0f7b0d9e6a5575a2"
+"2026-03-10 07:31:15","	573114881990","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	ff88dc572dec0b1468eaf205bcb8bd2f"
+"2026-03-10 07:31:22","	573118002887","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	4974bcf60ffc244f6bc04b916cbc1686"
+"2026-03-10 07:31:23","	573104348334","Buen día, se encuentra en lista de espera el proceso es un poco demorado, a medida que se van habilitando las agendas se van comunicando con los pacientes que están a la espera, tenemos alta demanda de pacientes pendientes por programar",SALIDA,TEXTO,,,3,WHATSAPP,Valentina,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSNTcwREUzRUI4MEVCRDUzNEVBAA=="
+"2026-03-10 07:31:38","	573043955455","ASIGNADO A alivium.administrador por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	10794fc507fc34a0bbcedcf7009194e5"
+"2026-03-10 07:31:56","	573043955455","Buenos días, espero se encuentre muy bien",SALIDA,TEXTO,,,1,WHATSAPP,alivium.administrador,"	573102825033",,"	wamid.HBgMNTczMDQzOTU1NDU1FQIAERgSOUE4Qjg1NjRFRTM5RjRBMzk1AA=="
+"2026-03-10 07:32:01","	573043955455","me envía por favor número del documento",SALIDA,TEXTO,,,1,WHATSAPP,alivium.administrador,"	573102825033",,"	wamid.HBgMNTczMDQzOTU1NDU1FQIAERgSRjNCQzMxNzk3REZFMTQ5REU1AA=="
+"2026-03-10 07:32:03","	573128528382","ASIGNADO A alivium.administrador por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	46031aec36af31bd6939c810de5feb5b"
+"2026-03-10 07:32:19","	573002558223","Te esperamos... CEAD- Especialistas en Alivio del Dolor le desea ¡feliz día!",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDAyNTU4MjIzFQIAERgSQzIyNjk5MDcwRTMwNjFERDZBAA=="
+"2026-03-10 07:32:22","	573007799518",Gracias,ENTRADA,TEXTO,,Patricia,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA3Nzk5NTE4FQIAEhgUM0FDRDg5RUNBREYxMkEzMkEzOTEA"
+"2026-03-10 07:32:40","	573005052784","Buenos días, mi nombre es Gladys Marín de CEAD (Centro de Especialistas en el Alivio del Dolor) número de documento por favor?",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDA1MDUyNzg0FQIAERgSOTc1RkY4OTQ2NDE0REFEMjM4AA=="
+"2026-03-10 07:32:51","	573003688815","Te esperamos... CEAD- Especialistas en Alivio del Dolor le desea ¡feliz día!",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDAzNjg4ODE1FQIAERgSRkQzNUMzQjk2QkMwRTFGOTk0AA=="
+"2026-03-10 07:33:16","	573128528382","Buen día, un momento por favor, direccionaré el chat al área encargada para que le brinde toda la información.",SALIDA,TEXTO,,direccionarchat,3,WHATSAPP,alivium.administrador,"	573102825033",,"	wamid.HBgMNTczMTI4NTI4MzgyFQIAERgSMTA1RThENDM2MEE5QkYxNUM4AA=="
+"2026-03-10 07:33:17","	573175587007","REASIGNADO A Sara por Valentina",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	ad119962c0488a8205ad0ea84092a78d"
+"2026-03-10 07:33:26","	573007799518","REASIGNADO A Sara por Valentina",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	4a4a50f2c5c27f25ecf474a18d8f1265"
+"2026-03-10 07:33:30","	573104348334","CERRADO POR Valentina",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	232045c55cee3045aa6b2fcd50ac0703"
+"2026-03-10 07:33:39","	573011298102","Buenos días, mi nombre es Gladys Marín de CEAD (Centro de Especialistas en el Alivio del Dolor) ",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDExMjk4MTAyFQIAERgSRDlEMUJCQjJBMTA3NTNFN0ZEAA=="
+"2026-03-10 07:33:42","	573011298102","RUTAS DE TRANSPORTE:  *Bus del poblado San Lucas 136* (Av. Oriental) al frente de la iglesia san José o al lado del Exito de San Antonio y en la estación Ex-posiciones *bus verde metro integrado 136ii*.",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDExMjk4MTAyFQIAERgSMTc1MjgzRjE5MUFDNTc2M0Y3AA=="
+"2026-03-10 07:33:51","	573128528382","REASIGNADO A Sara por alivium.administrador",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	0bbd47698178ec46294af5bc80754dec"
+"2026-03-10 07:34:11","	573002720986","Buenos días, mi nombre es Gladys Marín de CEAD (Centro de Especialistas en el Alivio del Dolor)",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDAyNzIwOTg2FQIAERgSNzA4MjU0RkMyODZBREFGMTE5AA=="
+"2026-03-10 07:34:19","	573118002887",Poliza/Prepagada,ENTRADA,TEXTO,,"Catalina Ocampo López",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAEhggQUM2NEQwNzVFQjg4Q0Q0RDRERDVGMERDOTQzRjgyRDcA"
+"2026-03-10 07:34:21","	573118002887","💙Su solicitud por Póliza/prepagada ha sido asignada al Área encargada 🏥🚀. Por favor, Indícanos la ENTIDAD de su cobertura ( Allianz | MedPlus | SURA | Coomeva | Axa Colpatria | Colmedica | Equidad Seguros ARL). Además, indíquenos su TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar.  ¡Gracias por tu colaboración! 🙌",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSNDIxMThGRjBEQjhBNjU4NjgyAA=="
+"2026-03-10 07:34:23","	573118002887","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	b83db0dabfee38d5fea80420946c082a"
+"2026-03-10 07:34:23","	573118002887","ASIGNADO A santiago.perez por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	6e8a4b9fcb94438fbe5aa015806817ae"
+"2026-03-10 07:34:23","	573118002887","Este chat ha sido asignado a: santiago.perez",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSRUU5RDNFRjg3RTA1MkJDNEY1AA=="
+"2026-03-10 07:34:31","	573002720986","No hay problema aquí te ayudamos antes de la cita",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDAyNzIwOTg2FQIAERgSN0VEQTMwNDVDNDlFOEY0MTdBAA=="
+"2026-03-10 07:34:33","	573118002887",SURA,ENTRADA,TEXTO,,"Catalina Ocampo López",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAEhggQUNGRTY5NjIwQTU0NzczOTlBNzMyRDRFNTEwOTZCOTkA"
+"2026-03-10 07:34:43","	573118002887","Hola🤗 bienvenid@ a CEAD (Centro de Especialistas en el Alivio del Dolor). Soy Santiago Perez🙋🏻‍♂️ para mi es un gusto atenderte ¿En qué puedo ayudarle hoy?",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSQzJFQzhCRjdBNkJGMTA3NkE2AA=="
+"2026-03-10 07:34:43","	573002720986","
+Te esperamos... CEAD- Especialistas en Alivio del Dolor le desea ¡feliz día!
+",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDAyNzIwOTg2FQIAERgSQzIyODMxRDFBNjdCODJBQjg2AA=="
+"2026-03-10 07:36:03","	573118002887","Me debo realizar un bloqueo, es posible separar la cita para el martes 28 de abril a las 7am? Gracias.",ENTRADA,TEXTO,,"Catalina Ocampo López",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAEhggQUM2NDJGRDJGMjQyNTA0N0MwNDk0MDM5MTA3RTFERUUA"
+"2026-03-10 07:36:14","	573113248113","ASIGNADO A alivium.administrador por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	0ac0e8dec5096122864b886ffe3bca5f"
+"2026-03-10 07:36:25","	573136481694","Buenos días le escribo para programarle su cita",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAERgSRUY1QjcyQTBCRUIwRDU3Rjc0AA=="
+"2026-03-10 07:36:35","	573113248113","Buen día, un momento por favor, direccionaré el chat al área encargada para que le brinde toda la información.",SALIDA,TEXTO,,direccionarchat,3,WHATSAPP,alivium.administrador,"	573102825033",,"	wamid.HBgMNTczMTEzMjQ4MTEzFQIAERgSNjIwNUJBMDAxQ0VEOTQyNENEAA=="
+"2026-03-10 07:36:42","	573113248113","REASIGNADO A Juliana por alivium.administrador",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	beffa1b28d71b51457d243ec49fbc04a"
+"2026-03-10 07:36:51","	573006534289",Imagen,SALIDA,IMAGEN,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/14427.png,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAERgSMUVFRTdFMjZEREU0MEJERDA4AA=="
+"2026-03-10 07:37:10","	573006534289","RECUERDE 🧏🏻‍♂️
+
+Por favor llegar 20 minutos antes y traer:
+-Documento de Identidad
+-Exámenes recientes o relacionados a la consulta (si los tiene)
+
+Dirección:
+Carrera 38 # 26 - 41, Edificio BIO- 26 Torre 3 CEAD (primer piso). Barrio Poblado vía las palmas, después de la bomba del indio dos cuadras sobre la derecha al lado de la Notaría 21, o subiendo la loma de San Julián al lado izquierdo https://maps.app.goo.gl/57JjoqjDFN5dBxABA.
+
+Te esperamos... CEAD- Especialistas en Alivio del Dolor le desea ¡feliz dia!
+
+",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAERgSQTQ0RUIxQkQxMkQ2Qzg0OEE3AA=="
+"2026-03-10 07:37:30","	573006534289","Muchas gracias",ENTRADA,TEXTO,,"Aleja Acosta",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAEhgUM0E2QzczODA5MjAyRDIwQkFFREQA"
+"2026-03-10 07:38:00","	573006649214","Buenos días señora Maricela",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAERgSODFENTUyOTdCQ0FFRkU2MDlDAA=="
+"2026-03-10 07:38:28","	573006649214","Dios le bendiga",ENTRADA,TEXTO,,maricelaoquendom@gmail.co,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAEhggQUNGNzAxNDU5MzAwRDQwNkY1OURDNTQwRkFGMEI4NDcA"
+"2026-03-10 07:38:34","	573006649214","Le informo que no es posible programarle cita con nuestro especialista por que usted registra en Salud Total como desafiliada",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAERgSREM0RTUzNDJGNjkwRTE3RDk5AA=="
+"2026-03-10 07:39:00","	573006649214","Ay como a si",ENTRADA,TEXTO,,maricelaoquendom@gmail.co,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAEhggQUNERjU2RTZCOTFEQTM5NjRBRUVFRUI0MDMyRDk0RUUA"
+"2026-03-10 07:39:01","	573118002887","""Pos - Desafiliado por cierre de contrato laboral""",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSMzg0NzJFNDAxRTZGOEJDODM0AA=="
+"2026-03-10 07:39:04","	573118002887","Para esta fecha programar el bloqueo?",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSREJEQjA1N0ZFMEM2RDA3NzJCAA=="
+"2026-03-10 07:39:25","	573006649214","Bueno me toca ir allá haber q paso",ENTRADA,TEXTO,,maricelaoquendom@gmail.co,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAEhggQUNFRUI4MDFCRUNGOTA0ODNBMDlCOTRENUYwMUY3Q0UA"
+"2026-03-10 07:39:34","	573118002887","disculpa este mensaje no es para usted",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSNzdBODY0NTEwQjIzMjlFMTg5AA=="
+"2026-03-10 07:40:02","	573006534289","Con mucho gusto",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDA2NTM0Mjg5FQIAERgSQTJEQjMwMDlFNEJCRUVFQkIwAA=="
+"2026-03-10 07:40:06","	573006649214","Sí señora en cuanto tenga generada la nueva autorización nos escribe de nuevo",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAERgSMzA3N0IyRkI5N0JFRDdDRUY2AA=="
+"2026-03-10 07:40:38","	573006649214","Estamos atentos a cualquier inquietud. CEAD- Especialistas en Alivio del Dolor le desea ¡feliz día!",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAERgSMDlCMTNBMjE3N0RCRDJFRDA2AA=="
+"2026-03-10 07:40:39","	573006649214","Claro q si muchas gracias",ENTRADA,TEXTO,,maricelaoquendom@gmail.co,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAEhggQUNDMDNENzc4OUNFQTQ4MUZCQkE2NkM1OUQ2RTYxNjEA"
+"2026-03-10 07:40:42","	573006649214","Dios les bendiga",ENTRADA,TEXTO,,maricelaoquendom@gmail.co,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAEhggQUNBNzNBMkQzNkU1OEE1NDc0RTBCRDdDODdFREM1RkMA"
+"2026-03-10 07:40:48","	573136481694","buenos dias",ENTRADA,TEXTO,,??,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAEhggQUNEMTBGRDZFQ0YzRDYwMTQ2Mzk3QjkxMDc0Mzk1QTgA"
+"2026-03-10 07:41:20","	573107293334","Estimado usuario. Adjunto encontrará los documentos correspondientes a la consulta realizada hoy. Por favor, responda con la palabra SI para el envío de los documentos. Que tenga un buen día.",SALIDA,TEXTO,,08admprocesalidanormal,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTA3MjkzMzM0FQIAERgSQkIyMzRDMzdEODZGMDRGMjI0AA=="
+"2026-03-10 07:41:22","	573148803930","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	f7c153f24d2a1b44e1e90268dda54290"
+"2026-03-10 07:41:28","	573117732866","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	928aede7a35faaa9acc2e06abdf6505f"
+"2026-03-10 07:41:30","	573006649214","Igualmente para usted",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAERgSRTYwNjQ4QkMzMjI0RjVEQzk2AA=="
+"2026-03-10 07:41:31","	573176813237","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	7e96d6c50e4e022d0ce318f159368bde"
+"2026-03-10 07:41:35","	573005107981","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	e2473ab4d3d5c6267aa7d06085ec9e7b"
+"2026-03-10 07:41:40","	573006649214",🙏🏻,ENTRADA,TEXTO,,maricelaoquendom@gmail.co,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA2NjQ5MjE0FQIAEhggQUM5RDhCQUQzQTMxODdDNTAxQzVBOTE1QTEyNkU1REEA"
+"2026-03-10 07:41:44","	573226050994","Hola🤗 bienvenid@ a CEAD (Centro de Especialistas en el Alivio del Dolor). Soy Santiago Perez🙋🏻‍♂️ para mi es un gusto atenderte",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSRUI3N0JBMEZCRDdFQ0JCN0Q4AA=="
+"2026-03-10 07:41:48","	573017128380","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	807dd4ae8e934e386424e1ecd9749039"
+"2026-03-10 07:42:11","	573107293334",Si.,ENTRADA,TEXTO,,"Gloria Buriticá",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA3MjkzMzM0FQIAEhggQUM3N0E3ODY0RkVBNDE5N0UzNEM1ODQyQTBENjlGNzAA"
+"2026-03-10 07:42:23","	573107293334",2026-03-10-21877398-LUZ_AMPARO_BURITICA_RIOS-HC.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/2b14aa65f69a242f25585e03cd1adeb0.pdf,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTA3MjkzMzM0FQIAERgSQ0EwMzY1MTI3QTdGRTc4QzQzAA=="
+"2026-03-10 07:42:26","	573107293334",2026-03-10-21877398-LUZ_AMPARO_BURITICA_RIOS-MEDICAMENTOS.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/6fb74c18b7946b3ca7c1a1f079435808.pdf,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTA3MjkzMzM0FQIAERgSRUQyMkI0RDNCMjJGMkYxRTAwAA=="
+"2026-03-10 07:42:31","	573107293334",2026-03-10-21877398-LUZ_AMPARO_BURITICA_RIOS-ORDEN_MEDICA.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/9e3a7927c42c8a0d9fd2f485201d0446.pdf,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTA3MjkzMzM0FQIAERgSMjlGMDREOUZCNDY4MTk3RjRFAA=="
+"2026-03-10 07:42:37","	573104348334","Ok muchas gracias",ENTRADA,TEXTO,,saryguerra9,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAEhggQUNFNjcyRTcxMzIzMEM3QjMxNzU2MDdBMzM4RUY3RUYA"
+"2026-03-10 07:43:01","	573226050994","Validando en el sistema la autorizacion esta *vencida*, por tal motivo no le sirve para la consulta y la debes de renovar en la EPS",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSQjQ4MEM0RTk2NkRBMTkyMkEyAA=="
+"2026-03-10 07:43:07","	573128528382","REASIGNADO A Daniela por Sara",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	930d94e7ef9f08d9fbaca909af44ea17"
+"2026-03-10 07:43:13","	573011706242","Hola🤗 bienvenid@ a CEAD (Centro de Especialistas en el Alivio del Dolor). Soy Santiago Perez🙋🏻‍♂️ para mi es un gusto atenderte ",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDExNzA2MjQyFQIAERgSRTJDNTUxQUMyQkI1MEZEMTEwAA=="
+"2026-03-10 07:43:19","	573011706242","n CEAD tratamos todo tipo de dolor por medio de tratamientos efectivos, seguros y mínimamente invasivos sin necesidad de cirugía. Tenemos diversas alternativas de tratamiento para los principales problemas que producen dolor, estos tratamientos dependen exclusivamente de un diagnóstico preciso que sólo puede lograrse con la evaluación especializada
+",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDExNzA2MjQyFQIAERgSMzY1MjNBRDM5N0IyRTRDQ0ZEAA=="
+"2026-03-10 07:43:29","	573118002887","Si, necesito saber en qué fecha lo debo programar?",ENTRADA,TEXTO,,"Catalina Ocampo López",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAEhggQUM4MzIwQ0Y2MTI0MkZCNUMzODNEOTAzNThBMkY5NzEA"
+"2026-03-10 07:43:42","	573118002887","Para q sea el 28 de abril.",ENTRADA,TEXTO,,"Catalina Ocampo López",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAEhggQUMyOTYwNEUzMjg1Qzk4OEU0MjJBQkQxRDQxNkE1QkEA"
+"2026-03-10 07:44:34","	573011706242","Que tratamientos a realizado para este diagnostico?",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDExNzA2MjQyFQIAERgSRkEzNTQxREFGNzdEQjMzMTU5AA=="
+"2026-03-10 07:44:48","	573041092282","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	2b66e501400a2331f0078049359e11fa"
+"2026-03-10 07:45:00","	573118002887","Un momento por favor, direccionaré el chat al área encargada para que le brinde toda la información.",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSMTNFRkUwNDE5NEE0NEJEMTUyAA=="
+"2026-03-10 07:45:04","	573118002887","REASIGNADO A Sara por santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	5ba526a5d874b990174b4979371c71b8"
+"2026-03-10 07:45:26","	573118002887",Gracias,ENTRADA,TEXTO,,"Catalina Ocampo López",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAEhggQUM1M0I0OTc1NTY2MTI2QjRCODJBNDk5NDlGMzM3QUQA"
+"2026-03-10 07:45:34","	573226050994","En tonces mepueden  dar la cita para fin de mes",ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUNCNkM2RDc4NUJEMjc5RTZFMjQ0NzBFRjI5QzA2MDUA"
+"2026-03-10 07:46:10","	573007799518","CERRADO POR Sara",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	19447db42d15892cbb51d2f8fdab7798"
+"2026-03-10 07:46:19","	573127452091","buenos dias",ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMEY5NURDRUQ3MDNGNzU0Nzc5MAA="
+"2026-03-10 07:46:20","	573127452091","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSNUQyNDUyRjM3NkMzMzY1RUE3AA=="
+"2026-03-10 07:46:21","	573127452091","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSNTdDMEM3QzFCOTRCMUI1MDlEAA=="
+"2026-03-10 07:46:27","	573127452091","Asignar o Modificar",ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMDVGNTRDQzBGMjMxN0EwMkFGRQA="
+"2026-03-10 07:46:29","	573127452091","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSRTU4MEREMDhFQzdGMzNDMTAwAA=="
+"2026-03-10 07:46:35","	573127452091",Eps,ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMDE3REI2MUNBOUMxQjc1NzMzMgA="
+"2026-03-10 07:46:37","	573127452091","Por favor selecciona la EPS del paciente:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSQkNDNDRGNTJEQjNBQTc4NUE4AA=="
+"2026-03-10 07:46:43","	573127452091","Salud Total",ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMDQyRUExOTZEMzc0QUJCRjQ0MAA="
+"2026-03-10 07:46:45","	573127452091","Por favor Seleccione el área de su interés:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSNjlBMDg2Qjg3MkZCODVDMDQ3AA=="
+"2026-03-10 07:46:46","	573136481694","En el momento contamos con una cita disponible para mañana 11 de marzo a las 8:40 am",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAERgSMUM5RDg0OEY0RTk1Qjc3Q0FEAA=="
+"2026-03-10 07:46:52","	573136481694","Desea programarla?",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAERgSOEVERDExNTZBOTg5QTZCREVGAA=="
+"2026-03-10 07:46:59","	573006649214","CERRADO POR Gladys",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	6d0b084806b67e541f1a52b6feedbf7a"
+"2026-03-10 07:47:00","	573127452091","Cita Especialista",ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMDZENzA5RkIwOTQ0QzIxNzZGNQA="
+"2026-03-10 07:47:01","	573104348334","Un gusto atender su solicitud, recuerda que fue atendido (a) por Valentina Mesa, CEAD, Especialistas en Alivio del Dolor, le desea ¡Feliz día! 🤍💙",SALIDA,TEXTO,,,3,WHATSAPP,Valentina,"	573102825033",,"	wamid.HBgMNTczMTA0MzQ4MzM0FQIAERgSQ0VFQ0I4MUI0ODc1NzY1REQ3AA=="
+"2026-03-10 07:47:02","	573127452091","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSMTMyMDE4NTAyNjM4RTdEQUREAA=="
+"2026-03-10 07:47:03","	573127452091","ASIGNADO A Gladys por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	3675cfedd10ba0a204edf05b06ac45a2"
+"2026-03-10 07:47:03","	573127452091","Este chat ha sido asignado a: Gladys",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSRDQwOTg5RkU3OTU2MjQ0OEE2AA=="
+"2026-03-10 07:47:04","	573104348334","CERRADO POR Valentina",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	801fd0d1353ab3d0ec5955b1b206cb68"
+"2026-03-10 07:47:06","	573127452091","cc 43450250",ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMEJFNTUzOEQyQTgzQ0ZGRUY2MgA="
+"2026-03-10 07:47:33","	573118002887","Buenos dias
+Habla Sara Isaza del área de programación de procedimientos 
+",SALIDA,TEXTO,,,3,WHATSAPP,Sara,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSNDQ5OTU3RjRFNjdGRTY5MzZCAA=="
+"2026-03-10 07:47:50","	573127452091","Buenos días, mi nombre es Gladys Marín de CEAD (Centro de Especialistas en el Alivio del Dolor) en qué te puedo ayudar?  ",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSQTY0MzVBQUFBQTgxRERBNjJFAA=="
+"2026-03-10 07:48:01","	16317661411","Received, we""re waiting for you... CEAD - Pain Relief Specialists",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgLMTYzMTc2NjE0MTEVAgARGBI4MEMxMUYzQ0I0NUVERDhGREEA"
+"2026-03-10 07:48:02","	573118002887","Las agendas se habilitan a final de mes, pero para tan lejos debes comunicarte mas o menos en mitad de abril ",SALIDA,TEXTO,,,3,WHATSAPP,Sara,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSRjRCQTVEM0QyRTgyOUZCMEYxAA=="
+"2026-03-10 07:48:16","	573127452091","hola mira   el dia de mañana tengo una cita",ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMDE3NDZGQTJFQzFBMzI4RjQ2QQA="
+"2026-03-10 07:48:18","	573118002887",Gracias.,ENTRADA,TEXTO,,"Catalina Ocampo López",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAEhggQUMxMDZGNTE5RjczQzJGODMyMDdENEMzN0FDNUIyMkYA"
+"2026-03-10 07:48:21","	573136481694","si claro",ENTRADA,TEXTO,,??,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAEhggQUM3OEQyOEZCRDc4MjUxNjREMzc5RUZFQkY5MjEzN0IA"
+"2026-03-10 07:48:24","	573175587007","CAMBIO PRIORIDAD - Media por Sara",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	e13eaf7f417942cfcbc39fab11a78a89"
+"2026-03-10 07:49:30","	573136481694","por favor me manda la direción",ENTRADA,TEXTO,,??,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAEhggQUNCNTAxQjhDNDc0QUIxQUExNTEzNTVGQzAyRDM0QTQA"
+"2026-03-10 07:49:30","	573127452091","quiero saber si para la otra semana haber si tiene citas si la puedo reprogramar",ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMDE5MkExOUZEREUwOUE1MEFEMwA="
+"2026-03-10 07:49:47","	573014441191","Hola buen día ! ☀️ 
+Hoy tengo revisión con el doctor frantz. 
+Me confirmas la hora xfa",ENTRADA,TEXTO,,"-Joha A-",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAEhgUM0ExQjk5OUY3NkE4REQ5MTMxRDIA"
+"2026-03-10 07:49:49","	573014441191","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAERgSMUY4NDVGM0RBNTdGRUY2Q0JFAA=="
+"2026-03-10 07:49:49","	573014441191","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAERgSRDMxNzk1MEIwMjkxNjRFMkU5AA=="
+"2026-03-10 07:50:08","	573014441191","Asignar o Modificar",ENTRADA,TEXTO,,"-Joha A-",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAEhgUM0E1N0U4MzhERjIyRjE3NjEzQUMA"
+"2026-03-10 07:50:11","	573014441191","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAERgSRkM5MzdBQTMxRjY1QkRBMkU0AA=="
+"2026-03-10 07:50:15","	573175587007","Buenos días 
+No hay ningún inconveniente, se puede realizar los exámenes y el tratamiento normal ",SALIDA,TEXTO,,,3,WHATSAPP,Sara,"	573102825033",,"	wamid.HBgMNTczMTc1NTg3MDA3FQIAERgSQzJDOUE0NDcwOEZFQUU3MEU3AA=="
+"2026-03-10 07:50:17","	573014441191",Poliza/Prepagada,ENTRADA,TEXTO,,"-Joha A-",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAEhgUM0E5QUMxQjkzNzREMTBFQUFGMjAA"
+"2026-03-10 07:50:19","	573014441191","💙Su solicitud por Póliza/prepagada ha sido asignada al Área encargada 🏥🚀. Por favor, Indícanos la ENTIDAD de su cobertura ( Allianz | MedPlus | SURA | Coomeva | Axa Colpatria | Colmedica | Equidad Seguros ARL). Además, indíquenos su TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar.  ¡Gracias por tu colaboración! 🙌",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAERgSRUUxQjc2RDE3RkY5NzJDMERCAA=="
+"2026-03-10 07:50:20","	573014441191","ASIGNADO A santiago.perez por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	755db5aea54fb939ef16acf40bb9b59f"
+"2026-03-10 07:50:21","	573014441191","Este chat ha sido asignado a: santiago.perez",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAERgSNTVCOUFCMUFBMjFFNThFQzhEAA=="
+"2026-03-10 07:50:23","	573128652485","Buenos días",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUNBNTdENDM0ODk5RTg5N0UxRTgxRTI1QzQ2M0EwNEYA"
+"2026-03-10 07:50:24","	573128652485","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAERgSMUQ4MkY4QjNEREI1RThCQjJDAA=="
+"2026-03-10 07:50:24","	573128652485","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAERgSOUVGNjM3RjlBRDU3QjU0RTYxAA=="
+"2026-03-10 07:50:26","	573014441191",1037588483,ENTRADA,TEXTO,,"-Joha A-",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAEhgUM0E0RkMxMzU3MTg4RTJCQUI3OUUA"
+"2026-03-10 07:50:28","	573118002887","Con mucho gusto, CEAD, Especialistas en Alivio del Dolor, le desea ¡Feliz día!
+",SALIDA,TEXTO,,,3,WHATSAPP,Sara,"	573102825033",,"	wamid.HBgMNTczMTE4MDAyODg3FQIAERgSNUZDN0E5RkUwNkE4MzdEQjMxAA=="
+"2026-03-10 07:50:53","	573014441191","Santiago 
+Hola buen día ! ☀️ 
+Hoy tengo revisión con el doctor frantz. 
+Me confirmas la hora xfa",ENTRADA,TEXTO,,"-Joha A-",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAEhgUM0FEQzFFODlDM0M3NDhFMTA5NUIA"
+"2026-03-10 07:51:04","	573128652485","Asignar o Modificar",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUNFM0EwRDZBRjdCMTkyRkVFMDg4RjIwRjFBMTA0QkQA"
+"2026-03-10 07:51:06","	573128652485","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAERgSNjk3MUIwNDIzRkIzNDg0MzAxAA=="
+"2026-03-10 07:51:20","	573128652485",Eps,ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUM2NTJGRjE5MUFGMTg2NURBQTQzODQ0RjU5NUZEQkEA"
+"2026-03-10 07:51:21","	573044047636","Estimado usuario. Adjunto encontrará los documentos correspondientes a la consulta realizada hoy. Por favor, responda con la palabra SI para el envío de los documentos. Que tenga un buen día.",SALIDA,TEXTO,,08admprocesalidanormal,15,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMDQ0MDQ3NjM2FQIAERgSMkMzMEEzRDEwMzE1RjE4MjRFAA=="
+"2026-03-10 07:51:22","	573128652485","Por favor selecciona la EPS del paciente:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAERgSMjFBMUI5Njc0RUJBQUY2MkY2AA=="
+"2026-03-10 07:51:43","	573128652485","Salud Total",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUM4REM3MDU2QjBDMzcwRkIwRDkyNDYxMzUyQTIyNDIA"
+"2026-03-10 07:51:45","	573128652485","Por favor Seleccione el área de su interés:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAERgSNzY5NTNFOUNENDU1MjM3NjkyAA=="
+"2026-03-10 07:51:58","	573128652485","Cita Especialista",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUM4RUFFOTJERkQ1ODZBMDFDQzE0RDZDQzdCMEU0MDkA"
+"2026-03-10 07:52:00","	573128652485","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAERgSRTA1Njc0NkZDRjg2N0U3MjIyAA=="
+"2026-03-10 07:52:01","	573128652485","ASIGNADO A santiago.perez por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	d106ecd455706553ae36e9555d84a067"
+"2026-03-10 07:52:01","	573128652485","Este chat ha sido asignado a: santiago.perez",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAERgSN0JEQTg4NzM5RUEyRTcxOUUwAA=="
+"2026-03-10 07:52:41","	573136481694","Queda programada  para mañana 11 de marzo a las 8:40 am.  Por favor llegar 20 minutos antes y traer:
+-Autorización
+-Documento de Identidad
+-Reunir lo que tenga de historia clínica (orden del especialista que remite)
+-Exámenes recientes
+Dirección:
+Carrera 38 # 26 - 17, Edificio BIO Torre 2 CEAD (primer piso). Barrio Poblado vía las palmas, después de la bomba del indio dos cuadras sobre la derecha al lado de la Notaría 21, o subiendo la loma de San Julián al lado izquierdo https://maps.app.goo.gl/57JjoqjDFN5dBxABA…
+",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAERgSQjUxODM1MTlCRjM4REYzNTgyAA=="
+"2026-03-10 07:52:49","	573128652485","Cc # 32454445",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUMyNURBMTE2NEQ3MjY1MjM1OTZEQUU5NEU2RDlFMEMA"
+"2026-03-10 07:52:55","	573117223390","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	cafde5f362f45a71a558a74e471e8797"
+"2026-03-10 07:53:05","	573044047636",Si,ENTRADA,TEXTO,,DIANA??,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ0MDQ3NjM2FQIAEhggQUM0ODkyMDZCMzZFN0FBREIyQTlGM0Q5QjhFQzlGOEIA"
+"2026-03-10 07:53:23","	573044047636",2026-03-10-42701294-DIANA_ALEXANDRA_CORREA_CORREA-HC.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/1a82d8500248c83f049e2f54d1bb6378.pdf,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMDQ0MDQ3NjM2FQIAERgSRTBENUNBRDRCMUJBOUNEQjFBAA=="
+"2026-03-10 07:53:36","	573118002887","CERRADO POR Sara",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	2bb7f6aa3a303c2162470b94a4e0dc85"
+"2026-03-10 07:53:39","	573175587007","CERRADO POR Sara",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	c5fb8a1f097d851d9ce9484728fcaa99"
+"2026-03-10 07:54:06","	573136481694","listo muchas gracias y feliz dia",ENTRADA,TEXTO,,??,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAEhggQUM1OUY5RDJBNjg0QzU1RUJGMTJGQTAzODQwNkNEREMA"
+"2026-03-10 07:54:10","	573014441191","Hola🤗 bienvenid@ a CEAD (Centro de Especialistas en el Alivio del Dolor). Soy Santiago Perez🙋🏻‍♂️ para mi es un gusto atenderte",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAERgSNTJDNkVGREY5MUMxMjhBRUIwAA=="
+"2026-03-10 07:55:03","	573014441191","Validando en el sistema, es correcto le confirmo cita de revisión *martes 10 de marzo a la 1:30 pm*",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAERgSRDNGODE0OUI4RTNENDk0OUEwAA=="
+"2026-03-10 07:55:33","	573128652485","Hola🤗 bienvenid@ a CEAD (Centro de Especialistas en el Alivio del Dolor). Soy Santiago Perez🙋🏻‍♂️ para mi es un gusto atenderte ¿En qué puedo ayudarle hoy?",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAERgSODZDMjQ2MzFERTZEODNGNDVBAA=="
+"2026-03-10 07:55:59","	573226812364","Estimado usuario. Adjunto encontrará los documentos correspondientes a la consulta realizada hoy. Por favor, responda con la palabra SI para el envío de los documentos. Que tenga un buen día.",SALIDA,TEXTO,,08admprocesalidanormal,2,WHATSAPP,Leidy,"	573102825033",,"	wamid.HBgMNTczMjI2ODEyMzY0FQIAERgSNUJCMTVCQTRBNTdBMjFDQzdFAA=="
+"2026-03-10 07:56:12","	573226812364",Si,ENTRADA,TEXTO,,wiliantangarife20022,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2ODEyMzY0FQIAEhggQUNDMkJCOTdEQjg5NUYwMEE1QjIxMDNGM0YxNUI4RjAA"
+"2026-03-10 07:56:18","	573128652485",,ENTRADA,IMAGEN,tmp/573102825033/2026-03-10/IN-1409839130335994.jpg,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUMxRDE5Q0Q0Q0RDNTBFRDEwMjdGNzRDQzk4RUQzMDQA"
+"2026-03-10 07:56:36","	573226812364","hc 8461438.pdf",SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/c0aef4005e5b51f612893bec4b9a696a.pdf,,2,WHATSAPP,Leidy,"	573102825033",,"	wamid.HBgMNTczMjI2ODEyMzY0FQIAERgSNjI0OTI0NDJGRDQyRDY5REUzAA=="
+"2026-03-10 07:56:40","	573226812364","formula 8461438.pdf",SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/45005c6bd4cb7f94a4b2af451b99c07e.pdf,,2,WHATSAPP,Leidy,"	573102825033",,"	wamid.HBgMNTczMjI2ODEyMzY0FQIAERgSQ0NBMTBEMDIwNUZCRDhDMDQ1AA=="
+"2026-03-10 07:56:45","	573226812364","ordenes 8461438.pdf",SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/76814db6b5156f1b737773285a33857d.pdf,,2,WHATSAPP,Leidy,"	573102825033",,"	wamid.HBgMNTczMjI2ODEyMzY0FQIAERgSQTQzRDUxMjg4REJGNEYzMTQzAA=="
+"2026-03-10 07:56:53","	573128652485","Buenos días",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUMzRjNDODdCQ0MwQjZCODNBQjUzNzQ1OUVEMTJEM0YA"
+"2026-03-10 07:57:00","	573226050994","lo que podemos hacer si gusta es cancelar la cita y un vez cuente con la autorización, programamos cita con el especialista",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSQjQ3NUY1NUNDM0RDMjVCRTM1AA=="
+"2026-03-10 07:57:03","	573128652485","Para pedir está cita por favor",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUNBMzhFMkYxNkEzMkZBMzkxNjA2MUVGOUI1Qzk2NUMA"
+"2026-03-10 07:57:28","	573128652485","*Por favor envía la siguiente información:*📖
+ 
+*tipo y número documento 
+*Nombre completo
+*fecha y lugar de nacimiento 
+*Estado civil:
+*Municipio:
+*Dirección:
+*Barrio:
+*Teléfono donde se pueda ubicar al paciente(2):
+*Correo electrónico:
+*Nombre y apellido, parentesco y teléfono de un familiar:
+",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAERgSM0E2NEUxMkU4NEVFMEQyQjAwAA=="
+"2026-03-10 07:57:45","	573126388608","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	bf32fe1282430e17eb56be3aeb0bb418"
+"2026-03-10 07:57:54","	573226050994","Si entonces",ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUMzNzhBNDY5OUJDMjBFMUM0NjE4NDBFREZGNTY1MzMA"
+"2026-03-10 07:57:56","	573006534289","CERRADO POR santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	4c187177a56b159730cf61c7e305ddf3"
+"2026-03-10 07:57:59","	573135265484","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	d5f98f841a723708c311b9696074b0b2"
+"2026-03-10 07:58:06","	573226050994","Para cancelar",ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUNDOTMxODcxMTU5MzJDNjg3MjdDMTczNTZBMDcxRDkA"
+"2026-03-10 07:58:22","	573217741231","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	d223de35d11ff1e2fc8f57cb32591e3c"
+"2026-03-10 07:58:36","	573017559274","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	dbe7dda3b8f80f1f9f75584f92e916a9"
+"2026-03-10 07:58:42","	573237917296","Hola🤗 bienvenid@ a CEAD (Centro de Especialistas en el Alivio del Dolor). Soy Santiago Perez🙋🏻‍♂️ para mi es un gusto atenderte",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSRkYzNUZGN0YzMTFFODQ3OEM5AA=="
+"2026-03-10 07:58:45","	573006162297","Buenos días",SALIDA,TEXTO,,,2,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMDA2MTYyMjk3FQIAERgSNUREOTM0NTFGMzZDODFBQ0JEAA=="
+"2026-03-10 07:58:46","	573046040718","Sra. Carolina, reciba un cordial saludo. 😊
+Estoy muy atenta porque debo realizar la facturación, ya sea de la terapia hiperbárica de forma individual o, si lo prefieres, del valor total del paquete.
+
+Ten presente que si la facturación se hace por sesiones individuales, las siguientes terapias también tendrían que manejarse de esa misma manera y en ese caso ya no aplicaría el descuento del paquete.
+
+Quedo muy pendiente de tu confirmación. Muchas gracias. 🙏",SALIDA,TEXTO,,,2,WHATSAPP,Leidy,"	573102825033",,"	wamid.HBgMNTczMDQ2MDQwNzE4FQIAERgSNzM2OUUxODc4QkI2Njg1M0YwAA=="
+"2026-03-10 07:59:01","	573006162297","Y a las 12:20pm puedes asistir?",SALIDA,TEXTO,,,2,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMDA2MTYyMjk3FQIAERgSNTQ1MzkxNTc1QjVDNkEzOTIwAA=="
+"2026-03-10 07:59:01","	573128652485","Cc# 32454445",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUMyMjYxOUFGNzdEMzY5NzcyQjNEQkEzRDI3RTRCNzIA"
+"2026-03-10 07:59:05","	573006162297","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	62f85ec217d650d41597f8322e136551"
+"2026-03-10 07:59:13","	573044324620","Sra. Carolina, reciba un cordial saludo. 😊
+Estoy muy atenta porque debo realizar la facturación, ya sea de la terapia hiperbárica de forma individual o, si lo prefieres, del valor total del paquete.
+
+Ten presente que si la facturación se hace por sesiones individuales, las siguientes terapias también tendrían que manejarse de esa misma manera y en ese caso ya no aplicaría el descuento del paquete.
+
+Quedo muy pendiente de tu confirmación. Muchas gracias. 🙏",SALIDA,TEXTO,,,2,WHATSAPP,Leidy,"	573102825033",,"	wamid.HBgMNTczMDQ0MzI0NjIwFQIAERgSMzc5QTFENDI3NDVCNzdBQTQ1AA=="
+"2026-03-10 07:59:31","	573113689941","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	89e3c098b7dae08119aa1849c2dfa4d2"
+"2026-03-10 07:59:44","	573128652485","Amparo del socorro García de Yarce",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUM0MEE0NEIyMTU2QUJDNzVDMUVFODVGRDlGNUMwQzQA"
+"2026-03-10 08:00:20","	573128652485","19 de febrero de 1949",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUNEOUU5RDEzRUU5NDg5RDdEQjkyNjdEMDY1ODNDNTYA"
+"2026-03-10 08:00:23","	573005052784",39437695,ENTRADA,TEXTO,,Vigo,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA1MDUyNzg0FQIAEhggQUNFQTBGQTM3NzM5REZEQjNERjRCODVCNjY2ODU0NjYA"
+"2026-03-10 08:00:37","	573114296698","Te esperamos... CEAD- Especialistas en Alivio del Dolor le desea ¡Un excelente día!🩵🤍",SALIDA,TEXTO,,,2,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMTE0Mjk2Njk4FQIAERgSRjk3RjUyQzcyN0M4QkZGNDgwAA=="
+"2026-03-10 08:00:43","	573114296698","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	e92628df3553c227da64a943727881d0"
+"2026-03-10 08:00:52","	573142597735","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	c5edb937d461b22f6d8c8470cd277b83"
+"2026-03-10 08:00:52","	573127452091","En el momento no contamos con citas disponibles para trasladarle la cita",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSRUI0MEU3RjJFQTgzNzEzODBBAA=="
+"2026-03-10 08:01:16","	573127452091","a bueno dale muchas gracias",ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMDE3RDk5RTdBNDg3RThGMUMxOAA="
+"2026-03-10 08:01:32","	573206100175","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	1c8fd060bec65b3683e41013d3ed9a55"
+"2026-03-10 08:01:44","	573128652485",Cisneros,ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUNBNTIyMjRGRDA0OTEwNThEMkFCOEJEQjRGRjQ4MzMA"
+"2026-03-10 08:01:55","	573128528382","Buenos días",SALIDA,TEXTO,,,3,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMTI4NTI4MzgyFQIAERgSMDAwMjIyQzA1OTQ3N0VEMDAzAA=="
+"2026-03-10 08:01:57","	573128652485",Casada,ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUM1NzE2OEIyOTg2NEM4RDMxMzM4NzEwMDIzMDY3RjYA"
+"2026-03-10 08:01:58","	573127452091","Confirmamos la de mañana?",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSM0U0RkVDNDM2RUZGRjJBMjJBAA=="
+"2026-03-10 08:02:10","	573127452091","si señora",ENTRADA,TEXTO,,"Tia Y Sobrina La Amo ????",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAEhgWM0VCMEQ1QzE3NkQyOTQwMjI2NzA1NwA="
+"2026-03-10 08:02:18","	573128652485",Copacabana,ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUM2REY4OUFDRTU0RThGRjM3NzE0QjE1MEU0QjQxNkMA"
+"2026-03-10 08:02:43","	573002289522","Buen día Sr(a) CLARA ELENA GOMEZ GIRALDO , Lo sentimos. La cita del día *de mañana 11 de Marzo* ha sido cancelada porque aun no cuenta con autorización por parte de la EPS , Para resolver cualquier inquietud no dude en comunicarse con nosotros.",SALIDA,TEXTO,,adm02citascanceladas,3,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAERgSMzNFRDI3NTI4NzRDOUYyRDVGAA=="
+"2026-03-10 08:03:05","	573005052784","La cita le queda cancelada.  CEAD- Especialistas en Alivio del Dolor le desea ¡feliz día!",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDA1MDUyNzg0FQIAERgSOTMyRDM4NEY5NjdFRTcyQTAxAA=="
+"2026-03-10 08:03:23","	573128652485","Cl 49#64-25barrio la misericordia",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUNFMkQzQTQxOUU0RTBGRDhCMDdDNkVGNDNCMDUzNTEA"
+"2026-03-10 08:03:27","	573014264239",,ENTRADA,AUDIO,tmp/573102825033/2026-03-10/IN-1830739934278404.ogg,Luza,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDE0MjY0MjM5FQIAEhggQUNBMEVENDFDMDQ4MTc4NERGNjk5Rjk4N0QyMzNFRTMA"
+"2026-03-10 08:03:31","	573014264239","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDE0MjY0MjM5FQIAERgSODNEMERDNUMzMDM2M0VCOEYyAA=="
+"2026-03-10 08:03:32","	573014264239","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDE0MjY0MjM5FQIAERgSN0Q1MjBENjE3OEZEQjhFQjA3AA=="
+"2026-03-10 08:04:08","	573128652485",3006435708,ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUM0NjE3MDFGMTg5QUE4QkIzNjgwQkU2M0RGQzEwNjYA"
+"2026-03-10 08:04:11","	573206663963","Bienvenido/a a CEAD. Nos complace estar a su disposición para atender sus necesidades. ¿En qué podemos ayudarle hoy?",SALIDA,TEXTO,,saludo_bienvenida_2026,3,WHATSAPP,Estefania,"	573102825033",,"	wamid.HBgMNTczMjA2NjYzOTYzFQIAERgSMDQwNTRBMTQzQzg5MzdENDAwAA=="
+"2026-03-10 08:05:11","	573206663963","Buenos días.",ENTRADA,TEXTO,,marinalaverde15,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjA2NjYzOTYzFQIAEhggQUNGREZEOTc4RUIzOUY5QTZCMDBDQUQ0RERDRDJEOUQA"
+"2026-03-10 08:05:39","	573045594031","Hola.buenos días",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUNCQTlCNTYwMTdCN0JGODY5MDU5MDU1Njg4NERDRDMA"
+"2026-03-10 08:05:40","	573045594031","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSNDQ0NDU4ODBBQkUxQjQzN0QwAA=="
+"2026-03-10 08:05:41","	573045594031","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSNkU5NkU0NzFFOTQwN0E2RTNGAA=="
+"2026-03-10 08:05:47","	573128652485",312-7952098,ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUNFODM5MDM2MzE3NUY0QjYwOUQ0RERCNDgyRDJFNUIA"
+"2026-03-10 08:05:53","	573045594031","Asignar o Modificar",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUNGNUVENkIxRkJCOTRFRkIwQjAzRTlDNEVBOUU4NDIA"
+"2026-03-10 08:05:55","	573045594031","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSRDdFQThDNUNBOUU5MkIzMzFDAA=="
+"2026-03-10 08:05:59","	573127452091","Te esperamos...CEAD- Especialistas en Alivio del Dolor le desea ¡feliz día!",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMTI3NDUyMDkxFQIAERgSNUY5NDQzMUExREQ2MjQ3NjNEAA=="
+"2026-03-10 08:06:05","	573045594031",Eps,ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUNCNEY0MTBGRjgyN0JBRTBGODVGRkM1RDZFOTVERjkA"
+"2026-03-10 08:06:07","	573045594031","Por favor selecciona la EPS del paciente:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSMUU4RENGQzZFNTg2QkMwNkQ1AA=="
+"2026-03-10 08:06:17","	573045594031","Salud Total",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUMyQjQyODU1MjJBREFFQ0I3MDYzM0NGNzREREU5REUA"
+"2026-03-10 08:06:19","	573045594031","Por favor Seleccione el área de su interés:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSNDc1NDlDREFFQjExNjIwQTMwAA=="
+"2026-03-10 08:06:29","	573045594031","Cita Especialista",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUNDNzA5RTNBOUE4Q0ZDRTIyRDI4NjJFNjA3QTMwRjIA"
+"2026-03-10 08:06:31","	573045594031","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSRDNGNUU4Qzc3NTRGQjY0RDU3AA=="
+"2026-03-10 08:06:33","	573045594031","ASIGNADO A Gladys por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	ecdeed04f59d4b81deda9ab5ed5d3ddb"
+"2026-03-10 08:06:33","	573045594031","Este chat ha sido asignado a: Gladys",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSMDc0RDMxOURDQTMwMjU4MkRBAA=="
+"2026-03-10 08:07:32","	573045594031","Cédula de ciudadanía 70662978",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUM5MUQxQzM0NURGQjBERDIxQTVFMDk5RDVFRUUwN0YA"
+"2026-03-10 08:08:03","	573014264239","ASIGNADO A Daniela por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	fb32c0f607145b8252763e22f424887b"
+"2026-03-10 08:08:30","	573116587701","Estimado usuario. Adjunto encontrará los documentos correspondientes a la consulta realizada hoy. Por favor, responda con la palabra SI para el envío de los documentos. Que tenga un buen día.",SALIDA,TEXTO,,08admprocesalidanormal,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTE2NTg3NzAxFQIAERgSNUQ3NDIyRjY3RDQzOEE0MzY2AA=="
+"2026-03-10 08:08:42","	573014264239",,ENTRADA,AUDIO,tmp/573102825033/2026-03-10/IN-938653141863050.ogg,Luza,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDE0MjY0MjM5FQIAEhggQUM2QjMwQTAyMTQyMjI4OTAxRTdBQzRDOUI3OUY3REYA"
+"2026-03-10 08:09:04","	573237917296","La cita con el medico del deporte, tiene programada para el martes 10 de marzo a las 2:30 pm",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSMDk4NkE2MjdGQjdDMzg0MTkwAA=="
+"2026-03-10 08:09:11","	573116587701",Si,ENTRADA,TEXTO,,Elias,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE2NTg3NzAxFQIAEhggQUNBMzJENjg5MzhCODdGRUI1NUVCN0UzMTA0OTgyQjAA"
+"2026-03-10 08:09:32","	573128652485","garciaviviana692@gmail .com",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUMyNjhDNkRENUREN0MzRkM5ODgxRUMzOEFFQzk5MTMA"
+"2026-03-10 08:09:35","	573116587701",2026-03-10-42981630-MARIA_EUGENIA_ZAPATA_LONDOÑO-HC.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/1fbfbe02fe31e1884038b53b9b226410.pdf,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTE2NTg3NzAxFQIAERgSRDcyOUJBRUE1NDc3QjI2RkRBAA=="
+"2026-03-10 08:09:39","	573116587701",2026-03-10-42981630-MARIA_EUGENIA_ZAPATA_LONDOÑO-ORDEN_MEDICA.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/7dca028657a5cd31c83382f57495be85.pdf,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTE2NTg3NzAxFQIAERgSOENCN0QzNkJCNUM5QkQ4RTY1AA=="
+"2026-03-10 08:09:40","	573002289522",Pero,ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUNERjQ0MkM5OThERTc2QTg5QzAwNTY3RkQ1NkE1QzEA"
+"2026-03-10 08:09:51","	573002289522","Ya tenemos la auyorizacion",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUNDMjcwQzA0NTlBNDg2RURDOTVFRjUxOUMyOEE4RjYA"
+"2026-03-10 08:09:52","	573045594031","Buenos días, mi nombre es Gladys Marín de CEAD (Centro de Especialistas en el Alivio del Dolor) ",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSQzM0NTJEREUxNUZEMUZFMkRCAA=="
+"2026-03-10 08:09:56","	573116587701",Imagen,SALIDA,IMAGEN,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/87188.png,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTE2NTg3NzAxFQIAERgSQTcyREFDQTUyREZCQzNGN0UxAA=="
+"2026-03-10 08:09:57","	573024319097","Saludos, Sr(a) MARIA JOSE BARBOZA MENDOZA, nos comunicamos de la IPS CEAD Alivium ya que usted se encuentra pendiente de la programación de Bloqueo con el especialista Dr Frantz Colimon, nos informa por favor si desea programar escribe: *Si* *No* ❓",SALIDA,TEXTO,,09proprogramacion,2,WHATSAPP,Sara,"	573102825033",,"	wamid.HBgMNTczMDI0MzE5MDk3FQIAERgSNURCNTFENzdDNzBFRDk0QURCAA=="
+"2026-03-10 08:10:03","	573002289522","Será que hay un equivoco",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUNDODVCRjJDNDFGMjUzNUMyRkIwNTc1MTIxMjI0QTUA"
+"2026-03-10 08:10:13","	573226050994","Se cancela cita, quedamos atentos de la autorizacion para el nueva agendamiento",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAERgSQ0Q2RUMwMzREMEQ4NzNGQ0IxAA=="
+"2026-03-10 08:10:19","	573128652485","Viviana García sobrina",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUM0NTYwNEYzNTY1QjcwM0ZDQjlBQUEyNDU2QkYxNEIA"
+"2026-03-10 08:10:21","	573237917296","A listo en esta primera cita como se llama el especialista es que ayer",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUM1OTgyNjVGMTVCMzdDMDc2REMxRTNGRDlGQ0FCM0IA"
+"2026-03-10 08:10:27","	573237917296","Me dijieron otro nombre",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUNEREZGMTA2MDMzMTJCMTk5Mjc1QTU3RjU5QTk4OEEA"
+"2026-03-10 08:10:32","	573237917296","Y que llevo ??",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUNGRTFBNkY4OUMzMTVGOThDRjhCNTU4RUZFN0Q3MkYA"
+"2026-03-10 08:10:39","	573045594031","Buenos días te escribe juan Carlos acevedo de amaga",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUNDODY5MDMzMjFCNjg1NzFGNDM2MUI2QzNEOEZCNzgA"
+"2026-03-10 08:10:44","	573045594031","En el momento sólo tenemos disponible un espacio para mañana 11 de marzo a las 8:00 am",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSNTVEMTBCRDMwQ0M4MTM0ODY1AA=="
+"2026-03-10 08:10:49","	573237917296","Exámenes y historia clínica o que llevo para poder saber",ENTRADA,TEXTO,,"maria alejandra",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAEhggQUM5NzRFOTg5OEY1NjIyNDc2NDVEQ0Q1MkYzQzM2Q0EA"
+"2026-03-10 08:10:56","	573128652485","312-865-2485 Hernán García hermano",ENTRADA,TEXTO,,"Hernán García",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTI4NjUyNDg1FQIAEhggQUNCNzI4NTA4REJDOEJFMUM2QkQ1NjI5RkI2MTM0MDAA"
+"2026-03-10 08:11:18","	573045594031","Pero para la otra semana puedes",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUMwOEVEODM3RUE0REM0OTlEMjFGQjc4RDZGRDVDREUA"
+"2026-03-10 08:11:42","	573002289522","Buenos días
+Por favor enviar la foto, ya que en la plataforma de Savia Salud apareces sin autorización",SALIDA,TEXTO,,,3,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAERgSQTZDNzkyQUE2RkFERThFM0M2AA=="
+"2026-03-10 08:12:01","	573045594031","En el momento no contamos con otra disponibilidad",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSNEVGMDNFMjAxQTQzRTc5QkI0AA=="
+"2026-03-10 08:12:03","	573014264239","Buenos días
+
+*Si desea agendar cita es necesario ingresarlo a nuestro sistema, por favor enviar la siguiente información:*
+Foto de la autorización
+Foto de la cédula por ambos lados, de no tenerla enviar el nombre completo del paciente
+Número de documento
+Lugar y fecha de nacimiento
+Número de celular
+Nombre y cedula de un familiar
+Numero celular de un familiar
+Barrio y Dirección
+Estado civil
+Correo electrónico",SALIDA,TEXTO,,,3,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMDE0MjY0MjM5FQIAERgSQjY1MDQ5NjNFQjA4MzJEQTE1AA=="
+"2026-03-10 08:12:28","	573045594031","Ok entonces me toca  volver a escribir",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUNGNTg2OTcxMDU5RTg0NjVDMTNBNTdFRjVBNkFCMEYA"
+"2026-03-10 08:13:07","	573014441191",Gracias,ENTRADA,TEXTO,,"-Joha A-",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAEhgUM0EwRDQ4MDY0NEE5NEY2MzFGN0UA"
+"2026-03-10 08:13:09","	573045594031","Escribe por favor en dos semanas para las nuevas agendas",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSMUEyOTMxNzI0NTZFNEY5RkY2AA=="
+"2026-03-10 08:13:19","	573045594031","Y no me la puedes agenda para la próxima semana",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUM3MjYzN0Q0N0IxMDU2QzUwQzIwQzlGNzU2MTRFMUEA"
+"2026-03-10 08:13:26","	573002289522",,ENTRADA,IMAGEN,tmp/573102825033/2026-03-10/IN-1601103974445685.jpg,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUNDOTAxQzVGNEFCNEU0NjJFMzA2NUNGQUM5RUIyMjAA"
+"2026-03-10 08:13:43","	573136481694","Te esperamos... CEAD- Especialistas en Alivio del Dolor le desea ¡feliz día!",SALIDA,TEXTO,,,2,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAERgSMERCQTQ2RDgzRUYyNjRERjJFAA=="
+"2026-03-10 08:14:09","	573002289522","Por favor no quite la cita para mañana",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUNENzI4MTI3NTc5MzEwODE5QTA5RkE1NzY0Q0MwM0QA"
+"2026-03-10 08:14:19","	573045594031","No tengo disponibles, toca esperar si cancelan una",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSNEQyNDQ0Njk3REI0OEQ0REZFAA=="
+"2026-03-10 08:14:21","	573002289522","Que todo está autorizado",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUNFOEU0QzBGRDMwQzQ1RTUzMTVFRTg1MDk2RDZBRkUA"
+"2026-03-10 08:14:37","	573045594031","Ok me puedes avisar por favor",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUM0NjE2NjE3NEJFNDhBODZCNDcyQjRDNzczREI0OEUA"
+"2026-03-10 08:14:54","	573045594031","Debes ponerte en contacto",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSMTlDRTc5RkRDNEE1QjczMkE5AA=="
+"2026-03-10 08:15:39","	573045594031","Ook  estoy preguntando en el transcurso de la semana",ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUMxQTY1MTg2QzZBRDJCMEI4RENBMEIwNDIzQkZCMTMA"
+"2026-03-10 08:16:28","	573175587007",👍,ENTRADA,TEXTO,,"Cesar Pelaez??",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTc1NTg3MDA3FQIAEhgUM0E2NkJBNjY4MEZCNDEyOEY2OUUA"
+"2026-03-10 08:17:35","	573136481694","muchas gracias",ENTRADA,TEXTO,,??,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTM2NDgxNjk0FQIAEhggQUNCNjdFQ0NGNTZFMzU3RDExRDc1RjE3RTU4MkRGM0YA"
+"2026-03-10 08:17:44","	573175587007","CERRADO POR Sara",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	cbb93f55c58170c9ad9a852c1d1c7460"
+"2026-03-10 08:19:05","	573014441191","Con mucho gusto",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDE0NDQxMTkxFQIAERgSNjQwODNFRkFDQUI2RkY1REFEAA=="
+"2026-03-10 08:21:50","	573237917296","Es con el doctor LUDWING ORLANDO LOZANO MUÑOZ",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSMkJFN0U3MTE1ODQyRjI4NDM5AA=="
+"2026-03-10 08:22:06","	573045594031","Todas las agendas de la próxima semana están llenas y las citas las cancelan un día antes",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSODJDQTkwOTNDRERBQ0IyQzE3AA=="
+"2026-03-10 08:22:20","	573045594031","Estamos atentos a cualquier inquietud. CEAD- Especialistas en Alivio del Dolor le desea ¡feliz día!",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAERgSNzJCMDFBQjIyQUIzRjNGMzg2AA=="
+"2026-03-10 08:22:26","	573237917296","*RECUERDE* 🧏🏻‍♂️
+ 
+*Por favor llegar 30 minutos antes
+*Traer documento de identidad del paciente
+*Traer autorización EPS vigente
+*Traer ultima historia clínica en la cual el médico tratante l@ remite con nuestros especialistas
+*Traer resultados de exámenes que tenga relacionados a la consulta",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMjM3OTE3Mjk2FQIAERgSMzkyNzdCRkIwQUVCMzU0ODRBAA=="
+"2026-03-10 08:23:02","	573045594031",👍,ENTRADA,TEXTO,,"Juan Acevedo",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDQ1NTk0MDMxFQIAEhggQUMxRDBDNDBFOUMxREI0MEMzRTA5OThFMUQ4NTJCQUUA"
+"2026-03-10 08:23:28","	573226050994","Muchas gracias",ENTRADA,TEXTO,,aleida,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjI2MDUwOTk0FQIAEhggQUM2NzQ3RUJBMjI4NUQ0QjNBODUzMDA1NjgzRERCMEUA"
+"2026-03-10 08:23:45","	573002289522","La cita de mañana es control",SALIDA,TEXTO,,,3,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAERgSOTVDQjUxQkE5QUMwQjAzMjQ5AA=="
+"2026-03-10 08:23:49","	573002289522","No es para el procedimiento",SALIDA,TEXTO,,,3,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAERgSNDI4QjdGNzJFRDk0RDBFRENGAA=="
+"2026-03-10 08:23:54","	573011706242","Tiene varios pero nafa le quita el dolor..lad heridas ya le zanaron pero el dolor no se quito...",ENTRADA,TEXTO,,Yudy,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDExNzA2MjQyFQIAEhggQUMyREVFQzdFRjJFNTQ2MzI0NTBEMThDQjhDQTFFRTcA"
+"2026-03-10 08:24:16","	573002289522","Es un control",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUNGOUYxMzkyMkMzOEU0OUNBMzFFMTk0MkZENkE1MjAA"
+"2026-03-10 08:24:21","	573106924512","Buenos dias como estas",ENTRADA,TEXTO,,"Sarita Peña",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAEhggQUNGNDlBOUQwNTM4QTY3RTVFNjkzQzE5MTIzRDQ3OUIA"
+"2026-03-10 08:24:22","	573106924512","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAERgSMkJFMjNDNzVGRkRGQ0MwNjQ4AA=="
+"2026-03-10 08:24:23","	573106924512","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAERgSNjJDQUIyMUNEMzVBQzZEQTBEAA=="
+"2026-03-10 08:24:34","	573147623323","Buenos días.les pregunto q no me van a dar el medicamento q me  mando  el doctor q porque es nopos y hay q organizar la fórmula.ustedes me la pueden mandar por este medio 🤔",ENTRADA,TEXTO,,"LINA ALVAREZ",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAEhggQUMzNkFEMzg4Mjk3N0RGMEIxNjQ1Q0UwQUYxNDlENTAA"
+"2026-03-10 08:24:35","	573106924512","Asignar o Modificar",ENTRADA,TEXTO,,"Sarita Peña",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAEhggQUM1RDBBRkYyQjU3NTA2QjNENEJCRUMzNkMyMDgzODkA"
+"2026-03-10 08:24:35","	573147623323","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAERgSQkRBRDBFNzZEREJBQzA1OUUwAA=="
+"2026-03-10 08:24:35","	573147623323","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAERgSQjdFOEM0N0Q5QzQ0QUE0NzdDAA=="
+"2026-03-10 08:24:37","	573106924512","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAERgSNkU1QjlEMzkwMkY1QzdDMkUzAA=="
+"2026-03-10 08:24:41","	573193986147","Saludos, Sr(a) *DULFARY YEPES CHAUCANES*, nos comunicamos de la IPS CEAD Alivium, para brindarle información acerca de *MEDICINA DEL DEPORTE*, cuento con disponibilidad para el miércoles 29 de abril a la 1:30 pm, le queda fácil asistir?, por favor confirmar recibido de la información, Feliz dia.",SALIDA,TEXTO,,08proinfo,1,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTkzOTg2MTQ3FQIAERgSQjZCNDQxOEU4NDVCNzM2QzJFAA=="
+"2026-03-10 08:24:46","	573106924512",Eps,ENTRADA,TEXTO,,"Sarita Peña",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAEhggQUM3RjMxMjcxODA5MUM3RTA5Q0M2OTZBQzI4RTAyQTUA"
+"2026-03-10 08:24:48","	573106924512","Por favor selecciona la EPS del paciente:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAERgSMzAzMUM5MzRDNkJFN0IzRTJCAA=="
+"2026-03-10 08:25:08","	573106924512","Salud Total",ENTRADA,TEXTO,,"Sarita Peña",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAEhggQUMyMkVERTUzNUE4MTU4NzAwQjVBQUQ5NTVFRDBFMjQA"
+"2026-03-10 08:25:10","	573106924512","Por favor Seleccione el área de su interés:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAERgSM0QyQTk3QkZGOTM2QjVFN0E4AA=="
+"2026-03-10 08:25:11","	573147623323","Doctor Roberto Elías González",ENTRADA,TEXTO,,"LINA ALVAREZ",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAEhggQUNCOTNDNTMzMzlEMDAzNUEwQkNENDQyOUYwMTU4NDkA"
+"2026-03-10 08:25:12","	573147623323","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAERgSNDU0QkE1QTBDMUQ5QzFDMjI3AA=="
+"2026-03-10 08:25:20","	573106924512","Cita Especialista",ENTRADA,TEXTO,,"Sarita Peña",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAEhggQUMyQTlEMDg3MDVBRTI5ODY3MjczMDJCOThDQUZFMzMA"
+"2026-03-10 08:25:22","	573106924512","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAERgSMDhFRTIyNDNBRkFCNkYwNUVDAA=="
+"2026-03-10 08:25:24","	573106924512","ASIGNADO A santiago.perez por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	24e272367aee81e002143cfc7b1fc130"
+"2026-03-10 08:25:24","	573114296698",Ok,ENTRADA,TEXTO,,EC,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTE0Mjk2Njk4FQIAEhggQUMxMkM4REU1MzAwNjFBMTI5QTVBMTVEMTIyREQ1QUEA"
+"2026-03-10 08:25:24","	573106924512","Este chat ha sido asignado a: santiago.perez",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAERgSOThEQjZBNzQ2RUI3QURFQzVGAA=="
+"2026-03-10 08:25:27","	573147623323","Otros Tramites ",ENTRADA,TEXTO,,"LINA ALVAREZ",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAEhggQUMxOUU3RkE0NTEyMzg1MjUwM0UyNjMzMDdEMDY1QjEA"
+"2026-03-10 08:25:29","	573147623323","Por favor seleccione la opción de su interés",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAERgSNDkwMDIxRkVFOEREN0REMUY5AA=="
+"2026-03-10 08:25:48","	573147623323",Correcciones,ENTRADA,TEXTO,,"LINA ALVAREZ",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAEhggQUMxQjVDNzU2RUFEM0I0MkEzNzM4OUFBQkJENjU0OEQA"
+"2026-03-10 08:25:50","	573147623323","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAERgSMEQ3OTAyREYwNTYwOURGNEYxAA=="
+"2026-03-10 08:25:52","	573147623323","ASIGNADO A Leidy por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	ccd8bc649dc11c850379108aea2fdb22"
+"2026-03-10 08:25:52","	573147623323","Este chat ha sido asignado a: Leidy",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAERgSQkZBNzMzRTY5MkU1QkE3RDI1AA=="
+"2026-03-10 08:26:09","	573147623323",43840288,ENTRADA,TEXTO,,"LINA ALVAREZ",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ3NjIzMzIzFQIAEhggQUM3RkY2MTUyOTNBN0IxN0VGQzRGNTk5MDJFMUUzQ0MA"
+"2026-03-10 08:26:26","	573002289522","Si señora, la cita de mañana es control, y no tienes autorización del control",SALIDA,TEXTO,,,3,WHATSAPP,Daniela,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAERgSRjI5REE5RTJGREFBQzlCMTM5AA=="
+"2026-03-10 08:26:29","	573106924512","Buenos dias que pena yo tenia la cita hoy a las 8:20 pero estoy en un taco y taxi se perdió",ENTRADA,TEXTO,,"Sarita Peña",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAEhggQUM3MTBFNzUxMkQ5NTk5QjEyN0MyMTIzNkQ1MzczQjcA"
+"2026-03-10 08:26:33","	573146190213","Hola, buenos días",ENTRADA,TEXTO,,"Maria Camila Echavarria",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAEhgUM0I5RTFFQTU0QzBERUZCODk5QTYA"
+"2026-03-10 08:26:34","	573146190213","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAERgSMjJFOTM3NTExMDY3MDAyRUFBAA=="
+"2026-03-10 08:26:35","	573146190213","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAERgSQkMyNzE2NTkzMDVCMERDQjdFAA=="
+"2026-03-10 08:26:41","	573106924512","Hay posibilidad de asignarme otra cita",ENTRADA,TEXTO,,"Sarita Peña",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTA2OTI0NTEyFQIAEhggQUM2QzBBMEQzMzA2QTgyRDY5NzJEMkIyREZFOUQ2RkQA"
+"2026-03-10 08:26:47","	573002289522","No la quite",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUM1MDAwODVCQkU2M0FEMzU3M0FGM0ExRjAyRkVCMkIA"
+"2026-03-10 08:26:48","	573146190213","Asignar o Modificar",ENTRADA,TEXTO,,"Maria Camila Echavarria",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAEhgUM0JBQTI0OEVENEQ1NkM5REZCN0IA"
+"2026-03-10 08:26:50","	573146190213","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAERgSNTA1MkVEMzdCNkQ2NTQwMDk5AA=="
+"2026-03-10 08:26:59","	573146190213",Poliza/Prepagada,ENTRADA,TEXTO,,"Maria Camila Echavarria",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAEhgUM0I0QzQzNDc1NjFFRDlCOTcyREIA"
+"2026-03-10 08:27:01","	573002289522","Que yo voy hoy a autorizar",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUM1QTVDOEQ4Mzc5MUEzNzJDMkQ0NjU4MzRGQTk5NTAA"
+"2026-03-10 08:27:01","	573146190213","💙Su solicitud por Póliza/prepagada ha sido asignada al Área encargada 🏥🚀. Por favor, Indícanos la ENTIDAD de su cobertura ( Allianz | MedPlus | SURA | Coomeva | Axa Colpatria | Colmedica | Equidad Seguros ARL). Además, indíquenos su TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar.  ¡Gracias por tu colaboración! 🙌",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAERgSQjdBREM2NUQ4ODFBNjJFQkI0AA=="
+"2026-03-10 08:27:02","	573146190213","ASIGNADO A santiago.perez por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	1b377aea97cdca129c40c576bb1796ef"
+"2026-03-10 08:27:02","	573146190213","Este chat ha sido asignado a: santiago.perez",SALIDA,TEXTO,,,2,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAERgSMjVEMjI1RDZBMDBENTkxMzA5AA=="
+"2026-03-10 08:27:05","	573002289522","Esto a sabia",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUMxNThERkVEQ0VFQTBFMDdBQkIwMzg2RkZENEU2QkMA"
+"2026-03-10 08:27:28","	573002289522","Cómo no dijeron que tenía que autorizar",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUNDREUyN0QxMjJBQjdERDQxQUJCNUYyQ0Y5QjAxOEIA"
+"2026-03-10 08:27:33","	573002289522","No sabiamos",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUMzOTQ4NzhDNEQyNkVGMUUxRTczQkMyNTk4MDZFMTYA"
+"2026-03-10 08:27:35","	573146190213","SURA
+CC 1037640370",ENTRADA,TEXTO,,"Maria Camila Echavarria",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAEhgUM0I3NUY3MzNFNEI3RTM2ODUwN0YA"
+"2026-03-10 08:27:40","	573002289522","Pero no la wuite",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUNBMUU2RDdENjc0ODUzNTdCNDNCMDc0NTk4RTc5MjAA"
+"2026-03-10 08:27:44","	573002289522",Quite,ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUMxMDNCNTdFMURGQzE0RkM4OEQ1MDRERkVGRDNCMTQA"
+"2026-03-10 08:27:50","	573002289522","La cita",ENTRADA,TEXTO,,marlenyh859,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDAyMjg5NTIyFQIAEhggQUM1QzEzRURFRThCNUIzQjkzRjdCODkwMDdDMTVFOUYA"
+"2026-03-10 08:27:53","	573045594031","CERRADO POR Gladys",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	bc6c7144a5d8f6fc6fcd1ab2d00c75d0"
+"2026-03-10 08:28:01","	573218251940","Saludos, Sr(a) *Sandra milena vanegas céspedes*, nos comunicamos de la IPS CEAD Alivium, para brindarle información acerca de *PSIQUIATRIA*, En el momento no contamos con disponibilidad, nos habilitan agendas mensual y ya la del mes de abril esta llena, debe de estarse comunicando si habilitan algún espacio o si crean mas agendas, idealmente los dias jueves, por favor confirmar recibido de la información, Feliz dia.",SALIDA,TEXTO,,08proinfo,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMjE4MjUxOTQwFQIAERgSMUMyMTVFN0MzMEU0MjU2NjcyAA=="
+"2026-03-10 08:28:41","	573146190213","Hola🤗 bienvenid@ a CEAD (Centro de Especialistas en el Alivio del Dolor). Soy Santiago Perez🙋🏻‍♂️ para mi es un gusto atenderte ¿En qué puedo ayudarle hoy?",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAERgSNEU1OTgxOUU5N0ZBQzg3QjhBAA=="
+"2026-03-10 08:29:12","	573146190213","Hola Santiago",ENTRADA,TEXTO,,"Maria Camila Echavarria",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAEhgUM0JBQThCNkY4MTNFQjZDRTk4QzgA"
+"2026-03-10 08:29:38","	573146190213","Ayer la doctora juliana serna me mandó 6 sesiones de terapia de alta tecnología",ENTRADA,TEXTO,,"Maria Camila Echavarria",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAEhgUM0I4OERCOTlCRjAzMzI4NjJBNjkA"
+"2026-03-10 08:29:52","	573146190213","Quisiera saber como son, cada cuanto se deben hacer y que disponibilidad hay",ENTRADA,TEXTO,,"Maria Camila Echavarria",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAEhgUM0I1ODNBQjhFODFGNUZDQUMwNDkA"
+"2026-03-10 08:30:55","	573008877521","Buenos días
+Me estoy comunicando de parte de la paciente María Irma Gómez, ella está en cuidados paliativos en su casa
+Necesitamos ayuda, las gotas de morfina 3 cada 8 horas ya NO SON suficientes, no le están ayudando y lleva dos días con mucho dolor, que pueden hacer por ella?
+Yo soy su hermana:Omaira Gomez, pueden contestarme a este número
+Muchas gracias",ENTRADA,TEXTO,,"Omaira Gomez",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA4ODc3NTIxFQIAEhgUM0E3QzFBMDAyNUQ1NjVCM0Q3MjkA"
+"2026-03-10 08:30:56","	573008877521","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA4ODc3NTIxFQIAERgSQzVDMENDQzFBRTFCNDc5QzMzAA=="
+"2026-03-10 08:30:56","	573008877521","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDA4ODc3NTIxFQIAERgSNDIzMkM0OURCOUNDNUMyODgwAA=="
+"2026-03-10 08:31:00","	573145142384",Hola,ENTRADA,TEXTO,,Yamileth,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ1MTQyMzg0FQIAEhggQUNFQTI3OTkwQjM0OUY0OTZCNkVGM0YxQ0M3NDZERTEA"
+"2026-03-10 08:33:11","	573145142384","Hola🤗 bienvenid@ a CEAD (Centro de Especialistas en el Alivio del Dolor). Soy Santiago Perez🙋🏻‍♂️ para mi es un gusto atenderte ¿En qué puedo ayudarle hoy?",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTQ1MTQyMzg0FQIAERgSRTQzNENEMEYzMUZCRTNCMDc3AA=="
+"2026-03-10 08:34:40","	573145142384","Hola buenos días, para agendar cita",ENTRADA,TEXTO,,Yamileth,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ1MTQyMzg0FQIAEhggQUMyNjFCOUQ3NTNCQ0Q5Rjg1QkI3OTM2OTFBQ0Q4Q0QA"
+"2026-03-10 08:35:28","	573052599493","Bienvenido/a a CEAD. Nos complace estar a su disposición para atender sus necesidades. ¿En qué podemos ayudarle hoy?",SALIDA,TEXTO,,saludo_bienvenida_2026,3,WHATSAPP,Estefania,"	573102825033",,"	wamid.HBgMNTczMDUyNTk5NDkzFQIAERgSNzFFMjdDODMyMEY5QjY1OUQ1AA=="
+"2026-03-10 08:35:53","	573005052784",Gracias,ENTRADA,TEXTO,,Vigo,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDA1MDUyNzg0FQIAEhggQUM0MEYwNkE2MThBRTA0REFEMUJENDdFRjBCODc3MDcA"
+"2026-03-10 08:36:30","	573052599493",Hola,ENTRADA,TEXTO,,"Blanca Nubia",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUyNTk5NDkzFQIAEhggQUM2QkMwQzVENTQzNDMwMzVDQkJENDlERDI3MTk2RDIA"
+"2026-03-10 08:36:54","	573008877521","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	dabcb6a6ff2debddd2b81d85479ffb06"
+"2026-03-10 08:37:18","	573005052784","Con gusto",SALIDA,TEXTO,,,3,WHATSAPP,Gladys,"	573102825033",,"	wamid.HBgMNTczMDA1MDUyNzg0FQIAERgSQjFDMUUxNzZEREQwQ0I3NTZFAA=="
+"2026-03-10 08:38:37","	573116587701","CERRADO POR Jefferson",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	686764a74729cda212dbfafb64604ff7"
+"2026-03-10 08:38:55","	573206557047","Estimado usuario. Adjunto encontrará los documentos correspondientes a la consulta realizada hoy. Por favor, responda con la palabra SI para el envío de los documentos. Que tenga un buen día.",SALIDA,TEXTO,,08admprocesalidanormal,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMjA2NTU3MDQ3FQIAERgSRDYyREY2MTIwNjQ2NzkwQjQ4AA=="
+"2026-03-10 08:39:16","	573113248113","Elizabet Cardenas 
+43098290",ENTRADA,TEXTO,,Eliza,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTEzMjQ4MTEzFQIAEhggQUM4QzNDRUIzQ0I4QkYxQThDMDg4MDg3RjZFRTlEMTIA"
+"2026-03-10 08:39:26","	573206557047","Buenos días",ENTRADA,TEXTO,,"Patricia Mesa",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjA2NTU3MDQ3FQIAEhggQUM0Qjk5RTI1QzBFRkI1N0NGQUE2MkNGOTNENUFCMEIA"
+"2026-03-10 08:39:40","	573206557047",Si,ENTRADA,TEXTO,,"Patricia Mesa",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjA2NTU3MDQ3FQIAEhggQUNEQzA4MTYwMTFEOThCODcxNDBBRjI5QTVBQUQ1NzMA"
+"2026-03-10 08:39:41","	573206557047",2026-03-10-39439062-PATRICIA_MARIA_MESA_HINCAPIE-HC.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/7a916403140a9a6ef22c6068a0093f66.pdf,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMjA2NTU3MDQ3FQIAERgSRUIwRTJEQkNBMkU0NjY1ODgxAA=="
+"2026-03-10 08:39:53","	573206557047",2026-03-10-39439062-PATRICIA_MARIA_MESA_HINCAPIE-MEDICAMENTOS.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/d2bba5c005c865aa8797ebebf7ca199d.pdf,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMjA2NTU3MDQ3FQIAERgSQUFBRjJCQUU0Q0I1RkZFNUJEAA=="
+"2026-03-10 08:39:58","	573206557047",2026-03-10-39439062-PATRICIA_MARIA_MESA_HINCAPIE-ORDEN_MEDICA.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/d52a74604eff44f0926553164756e9d4.pdf,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMjA2NTU3MDQ3FQIAERgSRDYzNzdFMEMyREE4NzFFNTc4AA=="
+"2026-03-10 08:40:31","	573146190213","Buen dia, te pregunto el dia de ayer le entregaron una cotizacion?",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAERgSQjE2Q0E1M0I4MzcyNUI3QzEwAA=="
+"2026-03-10 08:41:02","	573113615298","¡Buen día ! Sr(a) sebastian le escribo de CEAD Alivium Especialistas en el alivio del dolor. Queremos recordar la cita que tiene con la especialidad Odontologia el día 15/02/2026 , por favor confirmar su asistencia. Gracias",SALIDA,TEXTO,,confirmacion_masivo,3,WHATSAPP,alivium.sistemas,"	573102825033",,"	wamid.HBgMNTczMTEzNjE1Mjk4FQIAERgSMjdDQjJBOUNBN0MzRDg5M0YyAA=="
+"2026-03-10 08:41:10","	573206557047",Imagen,SALIDA,IMAGEN,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/32616.png,,3,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMjA2NTU3MDQ3FQIAERgSRDA4NjRCQTcyOTlEMUU5RkUzAA=="
+"2026-03-10 08:41:17","	573113615298","No podré asistir",ENTRADA,TEXTO,,"Juan Sebastian Atehortua",0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTEzNjE1Mjk4FQIAEhgUM0FCOTYyRkUyMEIzRTRGRTRGRDIA"
+"2026-03-10 08:41:45","	573146190213","Ya que en el momento este servicio lo prestamos particular",SALIDA,TEXTO,,,2,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTQ2MTkwMjEzFQIAERgSNjQ3Q0QyQ0M4M0YxRTlEODIyAA=="
+"2026-03-10 08:42:19","	573147362736","¡Buen día ! Sr(a) yuly le escribo de CEAD Alivium Especialistas en el alivio del dolor. Queremos recordar la cita que tiene con la especialidad Odontologia el día 15/02/2026 , por favor confirmar su asistencia. Gracias",SALIDA,TEXTO,,confirmacion_masivo,3,WHATSAPP,alivium.sistemas,"	573102825033",,"	wamid.HBgMNTczMTQ3MzYyNzM2FQIAERgSQjk4MkJGREEzMUVBRjg3MDhCAA=="
+"2026-03-10 08:42:41","	573145142384","Claro que si, esta cita es de primera vez, control o para algún servicio en especial?",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTQ1MTQyMzg0FQIAERgSMDA3NDY2MkRDN0I3MzJBMzExAA=="
+"2026-03-10 08:43:08","	573145142384","Primera vez",ENTRADA,TEXTO,,Yamileth,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ1MTQyMzg0FQIAEhggQUNCM0ZGNzVENUE0RTA1ODI2RDUzRDVDNDg5MjJEMjIA"
+"2026-03-10 08:44:15","	573206557047","CERRADO POR Jefferson",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	af75940a220d815ff13ee9de23132cb2"
+"2026-03-10 08:44:30","	573157421107","Estimado usuario. Adjunto encontrará los documentos correspondientes a la consulta realizada hoy. Por favor, responda con la palabra SI para el envío de los documentos. Que tenga un buen día.",SALIDA,TEXTO,,08admprocesalidanormal,2,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTU3NDIxMTA3FQIAERgSNDlEQzlCQzczQUJGNUU0QjQ1AA=="
+"2026-03-10 08:44:57","	573157421107",Si,ENTRADA,TEXTO,,Luz,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTU3NDIxMTA3FQIAEhggQUMzRTg4NkY5QTQ2OUIzQTZCOUY0RjY4MTM5MkQ0NDAA"
+"2026-03-10 08:45:18","	573157421107",2026-03-10-42788993-LUZ_MERY_CARVAJAL_OQUENDO-HC.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/993a410b97779b61f1d185885ef8d785.pdf,,2,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTU3NDIxMTA3FQIAERgSRTcyQUNGNTcyNDVEOEY1MjY2AA=="
+"2026-03-10 08:45:21","	573157421107",2026-03-10-42788993-LUZ_MERY_CARVAJAL_OQUENDO-MEDICAMENTOS.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/b1b5e03921e9b5f4bc01b169de730e24.pdf,,2,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTU3NDIxMTA3FQIAERgSNzkwRDhFQUU2MDlDODAwNzY3AA=="
+"2026-03-10 08:45:26","	573157421107",2026-03-10-42788993-LUZ_MERY_CARVAJAL_OQUENDO-ORDEN_MEDICA.pdf,SALIDA,DOCUMENTO,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/3c22a2d4a93665d4fc8a41649d0df819.pdf,,2,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTU3NDIxMTA3FQIAERgSRkYwRDUwMThFOTVEOTZEMUVEAA=="
+"2026-03-10 08:46:02","	573218587473",Hola,ENTRADA,TEXTO,,Juan,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAEhggQUM1NUYxMzFBQzFGQ0Y0RThBMjg0NTQ2ODFBRTFDMUQA"
+"2026-03-10 08:46:03","	573218587473","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAERgSQ0IzREVFRDNBQUJBM0RDMkUzAA=="
+"2026-03-10 08:46:04","	573218587473","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAERgSODE2MEU1RjExMUNDM0VCQkIxAA=="
+"2026-03-10 08:46:24","	573218587473","Asignar o Modificar",ENTRADA,TEXTO,,Juan,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAEhggQUMyRTMwODQ2QzZDQjQwOUZERUMzQjhBQjlCRjczQkYA"
+"2026-03-10 08:46:26","	573218587473","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAERgSRUY0MzY5QUE4QkVEQTU3OUQwAA=="
+"2026-03-10 08:46:33","	573157421107",Imagen,SALIDA,IMAGEN,https://estaqueue.udpsa.com/tmp/573102825033/2026-03-10/37516.png,,2,WHATSAPP,Jefferson,"	573102825033",,"	wamid.HBgMNTczMTU3NDIxMTA3FQIAERgSQ0E0NjRENTkwMDVDNUZGMjQ5AA=="
+"2026-03-10 08:46:40","	573107293334","CERRADO POR Jefferson",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	4fbfb02f774aa067a0dc1de2a7aa0b76"
+"2026-03-10 08:46:43","	573218587473",Eps,ENTRADA,TEXTO,,Juan,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAEhggQUNFMzgyQkVCNzA0OTE2MjczOTQyMUUzQThGNjM0RDEA"
+"2026-03-10 08:46:45","	573218587473","Por favor selecciona la EPS del paciente:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAERgSNUREQjJDRDQ3QUNBOUQzRjUxAA=="
+"2026-03-10 08:46:54","	573218587473","Savia Salud",ENTRADA,TEXTO,,Juan,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAEhggQUNCQzc5MTI2Nzg1OTlBQUNFOTk3OTAxMDMwQUM5NDIA"
+"2026-03-10 08:46:55","	573206663963","Buenos días. Favor enviarnos también la formula, porque no la recibimos. 3",ENTRADA,TEXTO,,marinalaverde15,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjA2NjYzOTYzFQIAEhggQUM1RUI2MjE5Nzc0OUMyQUY4RjIyRjIyMUIzRjdFRUEA"
+"2026-03-10 08:46:56","	573218587473","Por favor Seleccione el área de su interés:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAERgSRTA2ODU4MUM1MEMzNzVEMjEwAA=="
+"2026-03-10 08:47:02","	573218587473","Cita Especialista",ENTRADA,TEXTO,,Juan,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAEhggQUNDQjNEMjRCQkM5N0QwQzcyNjlFNzU0QzE4ODJBQUUA"
+"2026-03-10 08:47:04","	573218587473","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAERgSODcwNjBGODgzODE5QzgxREM0AA=="
+"2026-03-10 08:47:06","	573218587473","ASIGNADO A santiago.perez por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	3969c9ac600a3a71fbd423f44b6cd52b"
+"2026-03-10 08:47:06","	573218587473","Este chat ha sido asignado a: santiago.perez",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAERgSRjU5MzBCMkIwNUQ2NTQ2OEQ4AA=="
+"2026-03-10 08:47:11","	573206663963",Gracias,ENTRADA,TEXTO,,marinalaverde15,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjA2NjYzOTYzFQIAEhggQUM1QTMyMjU1OTlFQ0UyQjlDNzU0MTdCNjhBODcyQ0YA"
+"2026-03-10 08:47:25","	573218587473","Cuedula 10085485",ENTRADA,TEXTO,,Juan,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAEhggQUM2RUQ2QjU1NzAzQ0I4MkFDMDI0NkMxNjYxRUUyODYA"
+"2026-03-10 08:48:28","	573147362736","No podré asistir",ENTRADA,TEXTO,,alivium,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ3MzYyNzM2FQIAEhgWM0VCMDI0NjY1NDc3RDk3M0Q4MENBNgA="
+"2026-03-10 08:50:00","	573147362736","Confirmar asistencia",ENTRADA,TEXTO,,alivium,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ3MzYyNzM2FQIAEhgWM0VCMDdDNEVGRTZDRjlDNzdGRUI1MwA="
+"2026-03-10 08:52:06","	573053875508","Buenos días para autorizar este",ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0E1RENDNzA0NTU3ODI3MDYxMEEA"
+"2026-03-10 08:52:07","	573053875508","¡🌟 Bienvenido a CEAD, Especialistas en Alivio del Dolor! 🌡️ Somos una marca de Alivium SAS. 🚀 Estamos aquí para ayudarte. Utiliza este chat para solicitar tus servicios. 
+
+Le informamos que sus datos personales están siendo tratados conforme a la Ley 1581 de 2012 y nuestra política de tratamiento de datos. Al continuar esta conversación aceptas dicho tratamiento para fines relacionados con la atención . Si desea conocer nuestra política de datos personales o ejercer sus derechos, puede escribirnos o consultar en www.ceadalivium.com",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSQTZDMEMwMEFERTI4MTdBNTNEAA=="
+"2026-03-10 08:52:08","	573053875508","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSQjExRkU0NzdCRjU2RTc1REZDAA=="
+"2026-03-10 08:52:13","	573053875508","Examen quedo atenta mil gracias",ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0FDMUY2REE3MDg3QUM4RUMxNDIA"
+"2026-03-10 08:52:14","	573053875508","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSRDAxNDFCNUNFNzY3RTkwQzJCAA=="
+"2026-03-10 08:52:24","	573053875508",,ENTRADA,IMAGEN,tmp/573102825033/2026-03-10/IN-1482278926838430.jpg,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0E3RjM4REJEQ0I4RjY1ODM4OEYA"
+"2026-03-10 08:52:27","	573053875508","Por favor Selecciona el tramite que deseas realizar:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSRjA5M0NBMDY1MURBNzc2NjlCAA=="
+"2026-03-10 08:52:30","	573053875508","Asignar o Modificar",ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0E5NkRDMEJBM0QyQ0FERUNGNDYA"
+"2026-03-10 08:52:32","	573053875508","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSMzdBNkE0RjM0M0U5Q0I3NUVFAA=="
+"2026-03-10 08:52:38","	573145142384","💙Su solicitud por Póliza/prepagada ha sido asignada al Área encargada 🏥🚀. Por favor, Indícanos la ENTIDAD de su cobertura ( Allianz | MedPlus | SURA | Coomeva | Axa Colpatria | Colmedica | Equidad Seguros ARL). Además, indíquenos su TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMTQ1MTQyMzg0FQIAERgSMDJEMTAzNEMyQzg3OUQ0NzZEAA=="
+"2026-03-10 08:52:39","	573053875508","Asignar o Modificar",ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0EwRTFCRkVFRTQyMkUzNzdBRTcA"
+"2026-03-10 08:52:41","	573053875508","¡Gracias! Por favor, seleccione el medio por el cual desea realizar su solicitud:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSNEZCMDNGQ0IyNDM3N0MwMkFGAA=="
+"2026-03-10 08:52:51","	573053875508",Eps,ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0E5OUU4NUEyNjdDOTg1NUVGNUMA"
+"2026-03-10 08:52:53","	573053875508","Por favor selecciona la EPS del paciente:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSNzVCQTJFQUVFOEQ2Nzg0QkVGAA=="
+"2026-03-10 08:52:57","	573218587473","- Cedula 10085485
+- Flavio César Morales Velásquez
+- 1958/03/23 Guadalupe Antioquía, Colombia
+- Unión libre
+- Avenida 26  # 52 140 bello sector Niquia
+- Bello Niquia
+- 3218587473
+- 3242894133  elsilencio3646@gmail.com
+- Juan David Morales Fonnegra
+- Hijo
+- 3506484692",ENTRADA,TEXTO,,Juan,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAEhggQUMzQjk1NzA4QUIwNDkyNDREMUY3NzA5RkMzOUZEMkEA"
+"2026-03-10 08:52:58","	573053875508","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	1652e0a4cf4d4a37c6aaedc7087b0847"
+"2026-03-10 08:53:02","	573053875508","Savia Salud",ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0ExMDNEMDg4QUZGODRDRjU3MkQA"
+"2026-03-10 08:53:04","	573053875508","Por favor Seleccione el área de su interés:",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSQzQxQ0NCNUE3MDZFMzNDNEUyAA=="
+"2026-03-10 08:53:06","	573053875508","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	df6a8c61c5cb104a2fd2647ac5ea698b"
+"2026-03-10 08:53:23","	573053875508","Cita Especialista",ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0E0NEUxNzFDMUU4MURGODBFNUIA"
+"2026-03-10 08:53:25","	573053875508","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSRTY5NDU1QThFN0NBQzU2MTc1AA=="
+"2026-03-10 08:53:26","	573053875508","ASIGNADO A santiago.perez por USUARIO",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	aa8e5101f85bfd708d88b22d00a4ea5b"
+"2026-03-10 08:53:27","	573053875508","ASIGNADO A Gladys por IVR",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	535b74eb1b43d17a80f29ac8542bdbdb"
+"2026-03-10 08:53:27","	573053875508","Este chat ha sido asignado a: Gladys",SALIDA,TEXTO,,,3,WHATSAPP,Automatico,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSMUI1RjYxQUE4MjVDNDQxMTQzAA=="
+"2026-03-10 08:53:39","	573145142384","Savia Salud 
+PPT 
+6932830",ENTRADA,TEXTO,,Yamileth,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMTQ1MTQyMzg0FQIAEhggQUM0OEFEQ0JDNjA1MUJFNzg1MDlEOUY2QzI4MkIzREQA"
+"2026-03-10 08:53:39","	573053875508",Ok,ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0FDMjc4NDc2MzZFRkFFRDEyMzQA"
+"2026-03-10 08:53:45","	573053875508",21676447,ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0FBMTFCNzcyOUMyNDc3MEUyNkMA"
+"2026-03-10 08:53:59","	573053875508","Este chat ha sido asignado a:",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSOUU1ODAwMUZBNEREMzJGMzYwAA=="
+"2026-03-10 08:54:01","	573053875508",21576447,ENTRADA,TEXTO,,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0FCQUQ2OUJBQ0ZGQTMwNUM1NDMA"
+"2026-03-10 08:54:05","	573053875508","Tu solicitud ha sido asignada al Área encargada 🏥🚀. Por favor, ingresa tu TIPO Y NÚMERO de documento, sin puntos, comas o guiones, para continuar. ¡Gracias por tu colaboración! 🙌💙",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSRTRBQjcxMjBDNzIwQjdERTQ5AA=="
+"2026-03-10 08:54:10","	573053875508","
+Este chat ha sido asignado a:",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAERgSRUMyRDk0Rjg2MjRGNjdCQjIzAA=="
+"2026-03-10 08:54:16","	573053875508",,ENTRADA,IMAGEN,tmp/573102825033/2026-03-10/IN-1257415123159304.jpg,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0E3NEUxQkRFQUYyNTNENzhFNjkA"
+"2026-03-10 08:54:24","	573014441191","CERRADO POR santiago.perez",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	491882d147f4a0b64f69af37a103ddf8"
+"2026-03-10 08:54:37","	573053875508",,ENTRADA,IMAGEN,tmp/573102825033/2026-03-10/IN-4223969077857579.jpg,???,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMDUzODc1NTA4FQIAEhgUM0FBNkIzNzlDMUIyODdERDk0NDkA"
+"2026-03-10 08:54:41","	573005740840","
+Este chat ha sido asignado a:",SALIDA,TEXTO,,,3,WHATSAPP,santiago.perez,"	573102825033",,"	wamid.HBgMNTczMDA1NzQwODQwFQIAERgSMjUxNUZCRUIxRTIyNEY4MEU5AA=="
+"2026-03-10 08:54:49","	573218587473",,ENTRADA,DOCUMENTO,tmp/573102825033/2026-03-10/IN-1254127983450752.pdf,Juan,0,WHATSAPP,,"	573102825033",,"	wamid.HBgMNTczMjE4NTg3NDczFQIAEhggQUNDNDRDMjk0MzJEODQ2QjU0RUJGRjUzMEQzQ0UwM0YA"
+"2026-03-10 09:00:12","	573114296698","CERRADO POR Daniela",SALIDA,TEXTO,,,0,WHATSAPP,Automatico,"	573102825033",,"	8219ae1412c12c7333f901e5ac675108"
+"2026-03-10 09:02:22","	573148366499","Bienvenido/a a CEAD. Nos complace estar a su disposición para atender sus necesidades. ¿En qué podemos ayudarle hoy?",SALIDA,TEXTO,,saludo_bienvenida_2026,2,WHATSAPP,Juliana,"	573102825033",,"	wamid.HBgMNTczMTQ4MzY2NDk5FQIAERgSMjYwQUJFNDFGMDVCM0ZFRjAxAA=="

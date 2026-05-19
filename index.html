@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Preparación de campaña</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=1EP6h2rxql_IosBS84vDm8JNgbavhHBIBv7JXRHZdqN-_KIPFqCRxcoO9KmaFx8Kw8gRAhIV8xaFDuVOa302AGxgdP_PDvYGhNd3R2Z8FaSiTVua0CEQYU02GMa_4bonb7_f_3qB9mFSqg5wUItEnkxZc_-tVhxIAbZnW4ZNNCQrJyUGvmwgUNhtBPyf6J4D-NZzz1yeceym3iOwixnZ5hJegkNrSHNJBoVsJmFCR8pNfp-e7xXYOgsNzzzKuE7g2ANT7dtnZeqvYovXswu_xw" charset="UTF-8"></script><script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <style>
+    .status-box{margin-top:14px;padding:12px 14px;background:var(--card-soft);border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:13px}
+    .actions-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+    .table-wrap{margin-top:16px}
+    .metric-line{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .metric-pill{display:inline-flex;align-items:center;padding:9px 12px;border-radius:999px;background:#eef5fb;color:var(--primary-dark);font-weight:700;font-size:12px;border:1px solid var(--line)}
+    .preview-grid{display:grid;grid-template-columns:1fr;gap:18px}
+    .preview-card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:14px}
+    .preview-card h3{margin:0 0 10px 0;font-size:14px}
+    .small-muted{font-size:12px;color:var(--muted);margin-bottom:10px}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <div class="brand">
+        <img src="static/LogoEmpresa.jpg" alt="Logo" id="logoEmpresa" onerror="this.style.display='none'">
+        <div>
+          <h1>SERVICIOS WEB CEAD</h1>
+          <p>Preparación previa de campañas para asistencia masiva</p>
+        </div>
+      </div>
+
+      <div class="section-title">CONVERTIR PLANTILLA DE CONFIRMACIONES</div>
+      <div class="section-body">
+        <div class="filters">
+          <div>
+            <label>Plantilla original</label>
+            <input type="file" id="sourceFile" accept=".xlsx,.xls,.csv">
+          </div>
+          <div>
+            <label>Campo servicio</label>
+            <select id="serviceMode">
+              <option value="AUTO">Automático</option>
+              <option value="ESPECIALIDAD">Especialidad</option>
+              <option value="PROCEDIMIENTO">Procedimiento</option>
+            </select>
+          </div>
+          <div>
+            <button id="btnProcesar">Procesar archivo</button>
+          </div>
+          <div>
+            <button type="button" class="btn-link btn-dark" id="btnIrMasivos">Ir a asistencia masiva</button>
+          </div>
+        </div>
+
+        <div class="subnote">
+          El archivo final y la campaña guardada se generan únicamente con este formato:
+          <strong>cédula, celular, nombre, servicio, fecha_hora</strong>.
+          Los registros excluidos se muestran solo en pantalla para revisión.
+        </div>
+
+        <div class="metric-line" id="metricas" style="display:none;">
+          <span class="metric-pill" id="mTotal">0 filas leídas</span>
+          <span class="metric-pill" id="mValidos">0 exportables</span>
+          <span class="metric-pill" id="mInvalidos">0 excluidos por número</span>
+        </div>
+
+        <div class="actions-row">
+          <button type="button" id="btnGuardar" disabled>Guardar para usar en asistencia masiva</button>
+          <button type="button" id="btnExcel" disabled>Descargar Excel</button>
+          <button type="button" id="btnCSV" disabled>Descargar CSV</button>
+          <button type="button" id="btnLimpiarGuardado" class="btn-link btn-dark">Borrar campaña guardada</button>
+        </div>
+
+        <div class="status-box" id="estadoGuardado">No hay campaña guardada en este navegador.</div>
+      </div>
+
+      <div class="section-title">VISTA PREVIA</div>
+      <div class="section-body">
+        <div class="preview-grid">
+          <div class="preview-card">
+            <h3>Registros exportables</h3>
+            <div class="small-muted">Estos sí van al archivo final y al guardado para masivos. Se muestran máximo 100 filas.</div>
+            <div class="table-wrap" id="previewIncluidos">
+              <table><tr><td>Procesa un archivo para ver resultados.</td></tr></table>
+            </div>
+          </div>
+
+          <div class="preview-card">
+            <h3>Registros excluidos</h3>
+            <div class="small-muted">Estos no van al exportable porque no tienen número celular válido. Se muestran máximo 100 filas.</div>
+            <div class="table-wrap" id="previewExcluidos">
+              <table><tr><td>Aquí verás los excluidos cuando proceses el archivo.</td></tr></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+const STORAGE_KEY = 'campania_previa_para_masivos_v1';
+const STORAGE_KEY_META = 'campania_previa_para_masivos_meta_v1';
+
+let exportRows = [];
+let excludedRows = [];
+let exportMetaRows = [];
+let totalLeidas = 0;
+let invalidas = 0;
+
+const sourceFile = document.getElementById('sourceFile');
+const serviceMode = document.getElementById('serviceMode');
+const btnProcesar = document.getElementById('btnProcesar');
+const btnGuardar = document.getElementById('btnGuardar');
+const btnExcel = document.getElementById('btnExcel');
+const btnCSV = document.getElementById('btnCSV');
+const btnIrMasivos = document.getElementById('btnIrMasivos');
+const btnLimpiarGuardado = document.getElementById('btnLimpiarGuardado');
+const previewIncluidos = document.getElementById('previewIncluidos');
+const previewExcluidos = document.getElementById('previewExcluidos');
+const estadoGuardado = document.getElementById('estadoGuardado');
+const metricas = document.getElementById('metricas');
+
+btnProcesar.addEventListener('click', procesarArchivo);
+btnGuardar.addEventListener('click', guardarCampana);
+btnExcel.addEventListener('click', descargarExcel);
+btnCSV.addEventListener('click', descargarCSV);
+btnIrMasivos.addEventListener('click', () => { window.location.href = 'masivos.html'; });
+btnLimpiarGuardado.addEventListener('click', () => {
+  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(STORAGE_KEY_META);
+  renderEstadoGuardado();
+  alert('Se eliminó la campaña guardada.');
+});
+
+renderEstadoGuardado();
+
+function normalizeText(text) {
+  if (text === null || text === undefined) return '';
+  return String(text)
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, ' ');
+}
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function csvEscape(value) {
+  return `"${String(value ?? '').replace(/"/g, '""')}"`;
+}
+
+function findColumn(columns, candidates) {
+  const normalized = columns.map(c => ({
+    original: c,
+    norm: normalizeText(c)
+  }));
+
+  for (const cand of candidates) {
+    const needle = normalizeText(cand);
+
+    const exact = normalized.find(c => c.norm === needle);
+    if (exact) return exact.original;
+
+    const starts = normalized.find(c => c.norm.startsWith(needle));
+    if (starts) return starts.original;
+
+    const includes = normalized.find(c => c.norm.includes(needle));
+    if (includes) return includes.original;
+  }
+
+  return null;
+}
+
+function parseDateFlexible(v) {
+  if (v === null || v === undefined || v === '') return null;
+  if (v instanceof Date && !isNaN(v.getTime())) return v;
+
+  if (typeof v === 'number') {
+    const dias = Math.floor(v);
+    const fraccion = v - dias;
+    const excelEpoch = new Date(1899, 11, 30);
+    excelEpoch.setDate(excelEpoch.getDate() + dias);
+    const segundosDelDia = Math.round(fraccion * 86400);
+    excelEpoch.setSeconds(excelEpoch.getSeconds() + segundosDelDia);
+    return isNaN(excelEpoch.getTime()) ? null : excelEpoch;
+  }
+
+  const s = String(v).trim();
+  if (!s) return null;
+
+  let m = s.match(/^(\d{2})\/(\d{2})\/(\d{4})(?:\s+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/);
+  if (m) {
+    return new Date(
+      Number(m[3]),
+      Number(m[2]) - 1,
+      Number(m[1]),
+      Number(m[4] || 0),
+      Number(m[5] || 0),
+      Number(m[6] || 0)
+    );
+  }
+
+  m = s.match(/^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{1,2}):(\d{2})(?::(\d{2}))?)?$/);
+  if (m) {
+    return new Date(
+      Number(m[1]),
+      Number(m[2]) - 1,
+      Number(m[3]),
+      Number(m[4] || 0),
+      Number(m[5] || 0),
+      Number(m[6] || 0)
+    );
+  }
+
+  const d = new Date(s);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+function toDateTimeStr(d) {
+  if (!(d instanceof Date) || isNaN(d.getTime())) return '';
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  const hh = String(d.getHours()).padStart(2, '0');
+  const mm = String(d.getMinutes()).padStart(2, '0');
+  const ss = String(d.getSeconds()).padStart(2, '0');
+  return `${y}-${m}-${day} ${hh}:${mm}:${ss}`;
+}
+
+function normalizarMovilColombia(text) {
+  const raw = String(text || '').trim();
+  if (!raw) return '';
+
+  // 1) partir por separadores típicos entre varios números
+  const partes = raw
+    .split(/[\-|\/,;|\n]+/)
+    .map(x => x.trim())
+    .filter(Boolean);
+
+  // 2) si no partió nada útil, usar el valor completo
+  const candidatosBase = partes.length ? partes : [raw];
+
+  // 3) de cada parte, además sacar secuencias numéricas largas
+  const candidatos = [];
+  for (const item of candidatosBase) {
+    const extraidos = String(item).match(/\+?\d[\d\s\(\)]{7,}\d/g);
+    if (extraidos && extraidos.length) {
+      candidatos.push(...extraidos);
+    } else {
+      candidatos.push(item);
+    }
+  }
+
+  // 4) probar cada candidato por separado
+  for (let item of candidatos) {
+    let dig = String(item).replace(/\D/g, '');
+
+    if (!dig) continue;
+
+    // quitar prefijos comunes
+    if (dig.startsWith('0057')) dig = dig.slice(4);
+    else if (dig.startsWith('57') && dig.length >= 12) dig = dig.slice(2);
+
+    // móvil colombiano limpio
+    if (dig.length === 10 && dig.startsWith('3')) {
+      return dig;
+    }
+
+    // si viene más largo, revisar ventanas de 10 dígitos
+    for (let i = 0; i <= dig.length - 10; i++) {
+      const chunk = dig.slice(i, i + 10);
+      if (chunk.startsWith('3')) {
+        return chunk;
+      }
+    }
+  }
+
+  return '';
+}
+
+function elegirServicio(row, mode, especialidadCol, procedimientoCol, servicioCol) {
+  const especialidad = especialidadCol ? String(row[especialidadCol] || '').trim() : '';
+  const procedimiento = procedimientoCol ? String(row[procedimientoCol] || '').trim() : '';
+  const servicio = servicioCol ? String(row[servicioCol] || '').trim() : '';
+
+  if (mode === 'ESPECIALIDAD') return especialidad;
+  if (mode === 'PROCEDIMIENTO') return procedimiento || servicio;
+
+  return especialidad || procedimiento || servicio;
+}
+
+function readGenericFile(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    const isCSV = file.name.toLowerCase().endsWith('.csv');
+
+    if (isCSV) {
+      reader.onload = e => {
+        try {
+          const text = e.target.result;
+          const wb = XLSX.read(text, { type: 'string' });
+          const sheet = wb.Sheets[wb.SheetNames[0]];
+          resolve(XLSX.utils.sheet_to_json(sheet, { defval: '' }));
+        } catch (err) {
+          reject(err);
+        }
+      };
+      reader.onerror = () => reject(new Error('No se pudo leer el CSV.'));
+      reader.readAsText(file, 'utf-8');
+    } else {
+      reader.onload = e => {
+        try {
+          const data = new Uint8Array(e.target.result);
+          const wb = XLSX.read(data, { type: 'array', cellDates: true });
+          const sheet = wb.Sheets[wb.SheetNames[0]];
+          resolve(XLSX.utils.sheet_to_json(sheet, { defval: '' }));
+        } catch (err) {
+          reject(err);
+        }
+      };
+      reader.onerror = () => reject(new Error('No se pudo leer el Excel.'));
+      reader.readAsArrayBuffer(file);
+    }
+  });
+}
+
+function convertirPlantilla(rows, mode) {
+  if (!Array.isArray(rows) || !rows.length) {
+    return { rows: [], excluded: [], total: 0, invalidas: 0 };
+  }
+
+  const columns = Object.keys(rows[0]);
+
+  const cedulaCol = findColumn(columns, [
+    'documento', 'cedula', 'identificacion', 'nro documento'
+  ]);
+
+  const nombreCol = findColumn(columns, [
+    'nombre paciente', 'nombre completo', 'nombre'
+  ]);
+
+  const telefonoCol = findColumn(columns, [
+    'telefono principal',
+    'telefono paciente',
+    'telefono',
+    'teléfono',
+    'celular',
+    'movil',
+    'móvil',
+    'numero celular',
+    'numero',
+    'número'
+  ]);
+
+  const especialidadCol = findColumn(columns, ['especialidad']);
+
+  const entidadCol = findColumn(columns, [
+    'entidad', 'eps', 'aseguradora', 'asegurador', 'convenio', 'empresa', 'cliente'
+  ]);
+
+  const procedimientoCol = findColumn(columns, [
+    'nombre procedimiento',
+    'descripcion procedimiento',
+    'procedimiento'
+  ]);
+
+  const servicioCol = findColumn(columns, [
+    'nombre servicio',
+    'servicio'
+  ]);
+
+  const fechacitaCol = findColumn(columns, [
+    'fechacita', 'fecha cita', 'fecha_cita'
+  ]);
+
+  const fechaCol = findColumn(columns, ['fecha']);
+  const horaCol = findColumn(columns, ['hora']);
+
+  const out = [];
+  const meta = [];
+  const excluidos = [];
+  let invalidasCount = 0;
+
+  for (const row of rows) {
+    const cedula = cedulaCol ? String(row[cedulaCol] || '').trim() : '';
+    const nombre = nombreCol ? String(row[nombreCol] || '').trim() : '';
+    const telefonoOriginal = telefonoCol ? String(row[telefonoCol] || '').trim() : '';
+    const numero = telefonoCol ? normalizarMovilColombia(row[telefonoCol]) : '';
+
+    const servicio = elegirServicio(
+      row,
+      mode,
+      especialidadCol,
+      procedimientoCol,
+      servicioCol
+    );
+    const entidad = entidadCol ? String(row[entidadCol] || '').trim() : '';
+
+    let fechaHora = '';
+    const fc = fechacitaCol ? parseDateFlexible(row[fechacitaCol]) : null;
+
+    if (fc) {
+      fechaHora = toDateTimeStr(fc);
+    } else {
+      const f = fechaCol ? parseDateFlexible(row[fechaCol]) : null;
+      const h = horaCol ? parseDateFlexible(row[horaCol]) : null;
+
+      if (f) {
+        if (h) {
+          const mix = new Date(f);
+          mix.setHours(h.getHours(), h.getMinutes(), h.getSeconds(), 0);
+          fechaHora = toDateTimeStr(mix);
+        } else {
+          fechaHora = toDateTimeStr(f);
+        }
+      }
+    }
+
+    if (!numero) {
+      invalidasCount++;
+      excluidos.push([
+        cedula,
+        nombre,
+        telefonoOriginal,
+        servicio,
+        fechaHora,
+        'Número inválido o vacío'
+      ]);
+      continue;
+    }
+
+    out.push([
+      cedula,
+      numero,
+      nombre,
+      servicio,
+      fechaHora
+    ]);
+
+    meta.push({
+      cedula,
+      numero,
+      nombre,
+      servicio,
+      fecha_hora: fechaHora,
+      entidad
+    });
+  }
+
+  return {
+    rows: out,
+    meta,
+    excluded: excluidos,
+    total: rows.length,
+    invalidas: invalidasCount
+  };
+}
+
+async function procesarArchivo() {
+  const file = sourceFile.files[0];
+  if (!file) {
+    alert('Selecciona primero la plantilla de confirmaciones.');
+    return;
+  }
+
+  try {
+    const rows = await readGenericFile(file);
+    const converted = convertirPlantilla(rows, serviceMode.value);
+
+    exportRows = converted.rows;
+    exportMetaRows = Array.isArray(converted.meta) ? converted.meta : [];
+    excludedRows = converted.excluded;
+    totalLeidas = converted.total;
+    invalidas = converted.invalidas;
+
+    btnGuardar.disabled = !exportRows.length;
+    btnExcel.disabled = !exportRows.length;
+    btnCSV.disabled = !exportRows.length;
+
+    renderMetricas();
+    renderPreviewIncluidos(exportRows);
+    renderPreviewExcluidos(excludedRows);
+  } catch (e) {
+    console.error(e);
+    alert('No se pudo procesar el archivo: ' + (e.message || e));
+  }
+}
+
+function renderMetricas() {
+  metricas.style.display = 'flex';
+  document.getElementById('mTotal').textContent = `${totalLeidas} filas leídas`;
+  document.getElementById('mValidos').textContent = `${exportRows.length} exportables`;
+  document.getElementById('mInvalidos').textContent = `${invalidas} excluidos por número`;
+}
+
+function renderPreviewIncluidos(rows) {
+  if (!rows.length) {
+    previewIncluidos.innerHTML = '<table><tr><td>No quedaron filas exportables.</td></tr></table>';
+    return;
+  }
+
+  const top = rows.slice(0, 100);
+  previewIncluidos.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>cédula</th>
+          <th>celular</th>
+          <th>nombre</th>
+          <th>servicio</th>
+          <th>fecha hora</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${top.map(r => `
+          <tr>
+            <td>${escapeHtml(r[0])}</td>
+            <td>${escapeHtml(r[1])}</td>
+            <td>${escapeHtml(r[2])}</td>
+            <td>${escapeHtml(r[3])}</td>
+            <td>${escapeHtml(r[4])}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+}
+
+function renderPreviewExcluidos(rows) {
+  if (!rows.length) {
+    previewExcluidos.innerHTML = '<table><tr><td>No hubo registros excluidos.</td></tr></table>';
+    return;
+  }
+
+  const top = rows.slice(0, 100);
+  previewExcluidos.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>cédula</th>
+          <th>nombre</th>
+          <th>teléfono original</th>
+          <th>servicio</th>
+          <th>fecha hora</th>
+          <th>motivo</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${top.map(r => `
+          <tr>
+            <td>${escapeHtml(r[0])}</td>
+            <td>${escapeHtml(r[1])}</td>
+            <td>${escapeHtml(r[2])}</td>
+            <td>${escapeHtml(r[3])}</td>
+            <td>${escapeHtml(r[4])}</td>
+            <td>${escapeHtml(r[5])}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+}
+
+function guardarCampana() {
+  try {
+    if (!exportRows.length) {
+      alert('Primero procesa el archivo.');
+      return;
+    }
+
+    const savedAt = new Date().toISOString();
+
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        savedAt,
+        rows: exportRows
+      })
+    );
+
+    localStorage.setItem(
+      STORAGE_KEY_META,
+      JSON.stringify({
+        savedAt,
+        rows: exportMetaRows
+      })
+    );
+
+    renderEstadoGuardado();
+    alert('Campaña guardada correctamente. Ya puedes ir a asistencia masiva.');
+  } catch (e) {
+    console.error(e);
+    alert('No se pudo guardar la campaña: ' + (e.message || e));
+  }
+}
+
+function renderEstadoGuardado() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) {
+      estadoGuardado.textContent = 'No hay campaña guardada en este navegador.';
+      return;
+    }
+
+    const parsed = JSON.parse(raw);
+    const cantidad = Array.isArray(parsed.rows) ? parsed.rows.length : 0;
+    const fecha = parsed.savedAt ? new Date(parsed.savedAt).toLocaleString() : 'sin fecha';
+
+    estadoGuardado.innerHTML = `<strong>Campaña guardada detectada:</strong> ${cantidad} registros. <br>Última actualización: ${fecha}`;
+  } catch (e) {
+    estadoGuardado.textContent = 'No se pudo leer la campaña guardada.';
+  }
+}
+
+function descargarExcel() {
+  if (!exportRows.length) {
+    alert('No hay datos para exportar.');
+    return;
+  }
+
+  const rows = [
+    ['cedula', 'celular', 'nombre', 'servicio', 'fecha_hora'],
+    ...exportRows
+  ];
+
+  const ws = XLSX.utils.aoa_to_sheet(rows);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Campania');
+  XLSX.writeFile(wb, 'campania_convertida.xlsx');
+}
+
+function descargarCSV() {
+  if (!exportRows.length) {
+    alert('No hay datos para exportar.');
+    return;
+  }
+
+  const rows = [
+    ['cedula', 'celular', 'nombre', 'servicio', 'fecha_hora'],
+    ...exportRows
+  ];
+
+  const csv = rows.map(r => r.map(csvEscape).join(',')).join('\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'campania_convertida.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>

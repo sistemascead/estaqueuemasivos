@@ -1,0 +1,993 @@
+let rawMessageRows = [];
+let campaignRows = [];
+let groupedRows = [];
+let consolidatedRows = [];
+let estadoChart = null;
+let horasChart = null;
+
+const STORAGE_KEY_CAMPAIGN = "campania_previa_para_masivos_v1";
+
+const campaignFileInput = document.getElementById("campaignFileInput");
+const messagesFileInput = document.getElementById("messagesFileInput");
+const btnProcesar = document.getElementById("btnProcesar");
+const fechaEnvioFiltro = document.getElementById("fechaEnvioFiltro");
+const fechaCitaFiltro = document.getElementById("fechaCitaFiltro");
+const estadoFiltro = document.getElementById("estadoFiltro");
+const numeroFiltro = document.getElementById("numeroFiltro");
+const cedulaFiltro = document.getElementById("cedulaFiltro");
+const nombreFiltro = document.getElementById("nombreFiltro");
+const dashboard = document.getElementById("dashboard");
+const kpis = document.getElementById("kpis");
+const vistaActual = document.getElementById("vistaActual");
+const btnExportar = document.getElementById("btnExportar");
+
+if (btnProcesar) btnProcesar.addEventListener("click", procesarArchivos);
+if (fechaEnvioFiltro) fechaEnvioFiltro.addEventListener("change", renderDashboard);
+if (fechaCitaFiltro) fechaCitaFiltro.addEventListener("change", renderDashboard);
+if (estadoFiltro) estadoFiltro.addEventListener("change", renderDashboard);
+if (numeroFiltro) numeroFiltro.addEventListener("input", renderDashboard);
+if (cedulaFiltro) cedulaFiltro.addEventListener("input", renderDashboard);
+if (nombreFiltro) nombreFiltro.addEventListener("input", renderDashboard);
+if (btnExportar) btnExportar.addEventListener("click", exportarCSV);
+
+document.querySelectorAll(".pill").forEach(pill => {
+  pill.addEventListener("click", e => {
+    e.preventDefault();
+    if (estadoFiltro) estadoFiltro.value = pill.dataset.estado || "TODOS";
+    renderDashboard();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  actualizarNotaCampaniaPrecargada();
+});
+
+function normalizeText(text) {
+  if (text === null || text === undefined) return "";
+  return String(text)
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ");
+}
+
+function normalizarTelefono(text) {
+  const dig = String(text || "").replace(/\D/g, "");
+  if (dig.length === 12 && dig.startsWith("57")) return dig.slice(2);
+  if (dig.length === 13 && dig.startsWith("0057")) return dig.slice(4);
+  return dig;
+}
+
+function obtenerCampaniaGuardada() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_CAMPAIGN);
+    if (!raw) return null;
+
+    const parsed = JSON.parse(raw);
+    if (!parsed) return null;
+    if (!Array.isArray(parsed.rows)) return null;
+    if (!parsed.rows.length) return null;
+
+    return parsed.rows;
+  } catch (e) {
+    console.warn("No se pudo leer la campaña guardada:", e);
+    return null;
+  }
+}
+
+function guardarCampaniaNormalizada(rows) {
+  try {
+    localStorage.setItem(
+      STORAGE_KEY_CAMPAIGN,
+      JSON.stringify({
+        savedAt: new Date().toISOString(),
+        rows
+      })
+    );
+    return true;
+  } catch (e) {
+    console.error("No se pudo guardar la campaña en localStorage:", e);
+    return false;
+  }
+}
+
+function limpiarCampaniaGuardada() {
+  try {
+    localStorage.removeItem(STORAGE_KEY_CAMPAIGN);
+  } catch (e) {
+    console.warn("No se pudo limpiar la campaña guardada:", e);
+  }
+}
+
+function borrarCampaniaGuardadaConAviso() {
+  limpiarCampaniaGuardada();
+  actualizarNotaCampaniaPrecargada();
+  alert("Campaña guardada eliminada.");
+}
+
+function actualizarNotaCampaniaPrecargada() {
+  const existente = document.getElementById("campaniaPrecargadaInfo");
+  if (existente) existente.remove();
+
+  const saved = obtenerCampaniaGuardada();
+  const subnote = document.querySelector(".subnote");
+  if (!subnote || !saved || !saved.length) return;
+
+  const box = document.createElement("div");
+  box.id = "campaniaPrecargadaInfo";
+  box.style.marginTop = "10px";
+  box.style.padding = "10px 12px";
+  box.style.borderRadius = "10px";
+  box.style.background = "#eef7ff";
+  box.style.border = "1px solid #cfe2f5";
+  box.innerHTML = `
+    <strong>Campaña precargada detectada:</strong> ${saved.length} registros listos desde la página previa.
+    <br>Puedes procesar solo con el archivo de respuestas.
+    <div style="margin-top:8px;">
+      <button type="button" id="btnBorrarCampaniaPrecargada" style="width:auto;padding:8px 12px;font-size:12px;">
+        Borrar campaña guardada
+      </button>
+    </div>
+  `;
+
+  subnote.appendChild(box);
+
+  const btnBorrar = document.getElementById("btnBorrarCampaniaPrecargada");
+  if (btnBorrar) {
+    btnBorrar.addEventListener("click", borrarCampaniaGuardadaConAviso);
+  }
+}
+
+function classifyMessage(text) {
+  const t = normalizeText(text);
+
+  if (
+    t === "confirmar asistencia" ||
+    t === "confirmo asistencia" ||
+    t === "si confirmo asistencia" ||
+    t === "si confirmo"
+  ) {
+    return "CONFIRMA";
+  }
+
+  if (
+    t === "no podre asistir" ||
+    t === "no podré asistir" ||
+    t === "no puedo asistir"
+  ) {
+    return "NO_ASISTE";
+  }
+
+  return null;
+}
+
+
+function isIncomingMessage(msg) {
+  const dirNorm = normalizeText(msg?.dir || "");
+  return dirNorm.includes("entrada") || dirNorm.includes("inbound") || dirNorm === "in";
+}
+
+function isOutgoingMessage(msg) {
+  const dirNorm = normalizeText(msg?.dir || "");
+  return dirNorm.includes("salida") || dirNorm.includes("outbound") || dirNorm === "out";
+}
+
+function isTemplateMessage(msg) {
+  if (!msg) return false;
+  const nombre = normalizeText(msg.template_name || "");
+  const mensaje = normalizeText(msg.mensaje || "");
+
+  if (nombre.includes("confirmacion_boton_masivo") || nombre.includes("confirmacion_masivo")) {
+    return true;
+  }
+
+  return (
+    mensaje.includes("por favor confirmar su asistencia") &&
+    mensaje.includes("queremos recordar la cita")
+  );
+}
+
+function extraerFechaCita(texto) {
+  if (!texto) return "";
+  const s = String(texto);
+
+  let m = s.match(/el día\s+(\d{2}\/\d{2}\/\d{4})/i);
+  if (m) return formatDateToISO(m[1]);
+
+  m = s.match(/\b(\d{2}\/\d{2}\/\d{4})\b/);
+  if (m) return formatDateToISO(m[1]);
+
+  m = s.match(/\b(\d{4}-\d{2}-\d{2})\b/);
+  if (m) return m[1];
+
+  m = s.match(/\b(\d{4}-\d{2}-\d{2})\s+\d{2}:\d{2}:\d{2}\b/);
+  if (m) return m[1];
+
+  return "";
+}
+
+function formatDateToISO(ddmmyyyy) {
+  const m = String(ddmmyyyy).match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  if (!m) return "";
+  return `${m[3]}-${m[2]}-${m[1]}`;
+}
+
+function parseDateFlexible(v) {
+  if (v === null || v === undefined || v === "") return null;
+  if (v instanceof Date && !isNaN(v.getTime())) return v;
+
+  if (typeof v === "number") {
+    const dias = Math.floor(v);
+    const fraccion = v - dias;
+
+    const excelEpoch = new Date(1899, 11, 30);
+    excelEpoch.setDate(excelEpoch.getDate() + dias);
+
+    const segundosDelDia = Math.round(fraccion * 86400);
+    excelEpoch.setSeconds(excelEpoch.getSeconds() + segundosDelDia);
+
+    return isNaN(excelEpoch.getTime()) ? null : excelEpoch;
+  }
+
+  const s = String(v).trim();
+  if (!s) return null;
+
+  let m = s.match(/^(\d{2})\/(\d{2})\/(\d{4})(?:\s+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/);
+  if (m) {
+    return new Date(
+      Number(m[3]),
+      Number(m[2]) - 1,
+      Number(m[1]),
+      Number(m[4] || 0),
+      Number(m[5] || 0),
+      Number(m[6] || 0)
+    );
+  }
+
+  m = s.match(/^(\d{4})-(\d{2})-(\d{2})\s+(\d{1,2}):(\d{2})(?::(\d{2}))?$/);
+  if (m) {
+    return new Date(
+      Number(m[1]),
+      Number(m[2]) - 1,
+      Number(m[3]),
+      Number(m[4] || 0),
+      Number(m[5] || 0),
+      Number(m[6] || 0)
+    );
+  }
+
+  m = s.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{1,2}):(\d{2})(?::(\d{2}))?$/);
+  if (m) {
+    return new Date(
+      Number(m[1]),
+      Number(m[2]) - 1,
+      Number(m[3]),
+      Number(m[4] || 0),
+      Number(m[5] || 0),
+      Number(m[6] || 0)
+    );
+  }
+
+  m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (m) {
+    return new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]), 0, 0, 0);
+  }
+
+  m = s.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+\-]\d{2}:\d{2})$/);
+  if (m) {
+    const d = new Date(s);
+    return isNaN(d.getTime()) ? null : d;
+  }
+
+  return null;
+}
+
+function toISODate(d) {
+  if (!(d instanceof Date) || isNaN(d.getTime())) return "";
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+function toDateTimeStr(d) {
+  if (!(d instanceof Date) || isNaN(d.getTime())) return "";
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  const hh = String(d.getHours()).padStart(2, "0");
+  const mm = String(d.getMinutes()).padStart(2, "0");
+  const ss = String(d.getSeconds()).padStart(2, "0");
+  return `${y}-${m}-${day} ${hh}:${mm}:${ss}`;
+}
+
+function findColumn(columns, candidates) {
+  const cols = columns.map(c => normalizeText(c));
+
+  for (const cand of candidates) {
+    const needle = normalizeText(cand);
+    for (let i = 0; i < cols.length; i++) {
+      if (cols[i].includes(needle)) return columns[i];
+    }
+  }
+
+  return null;
+}
+
+async function procesarArchivos() {
+  const campaignFile = campaignFileInput ? campaignFileInput.files[0] : null;
+  const messagesFile = messagesFileInput ? messagesFileInput.files[0] : null;
+
+  if (!messagesFile) {
+    alert("Selecciona primero el archivo de respuestas.");
+    return;
+  }
+
+  try {
+    const savedCampaignRows = obtenerCampaniaGuardada();
+    const messagesData = await readGenericFile(messagesFile, false);
+
+    if (campaignFile) {
+      const campaignData = await readGenericFile(campaignFile, true);
+      campaignRows = transformCampaignRows(campaignData);
+
+      guardarCampaniaNormalizada(
+        campaignRows.map(r => [
+          r.cedula || "",
+          r.numero || "",
+          r.nombre || "",
+          r.especialidad || "",
+          r.fecha_cita_str || r.fecha_cita || ""
+        ])
+      );
+
+      actualizarNotaCampaniaPrecargada();
+    } else if (savedCampaignRows && savedCampaignRows.length) {
+      campaignRows = transformCampaignRows(savedCampaignRows);
+    } else {
+      alert("Selecciona un archivo de campaña o guarda una campaña desde la página previa.");
+      return;
+    }
+
+    rawMessageRows = transformMessageRows(messagesData);
+    groupedRows = cruzarCampaniaConMensajes(campaignRows, rawMessageRows);
+    consolidatedRows = consolidarPorCedula(groupedRows);
+
+    if (!groupedRows.length) {
+      alert("No se encontraron citas válidas con plantilla enviada, fecha de envío y fecha de cita. Revisa que el reporte realmente tenga los mensajes de la plantilla y que la fecha de la cita venga dentro del texto enviado.");
+      return;
+    }
+
+    renderDashboard();
+  } catch (e) {
+    console.error(e);
+    alert("Error procesando archivos: " + (e.message || e));
+  }
+}
+
+function readGenericFile(file, isCampaignFile = false) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    const isCSV = file.name.toLowerCase().endsWith(".csv");
+
+    if (isCSV) {
+      reader.onload = e => {
+        try {
+          const text = e.target.result;
+          const wb = XLSX.read(text, { type: "string" });
+          const sheet = wb.Sheets[wb.SheetNames[0]];
+
+          if (isCampaignFile) {
+            resolve(XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" }));
+          } else {
+            resolve(XLSX.utils.sheet_to_json(sheet, { defval: "" }));
+          }
+        } catch (err) {
+          reject(err);
+        }
+      };
+      reader.onerror = () => reject(new Error("No se pudo leer el archivo CSV."));
+      reader.readAsText(file, "utf-8");
+    } else {
+      reader.onload = e => {
+        try {
+          const data = new Uint8Array(e.target.result);
+          const wb = XLSX.read(data, { type: "array", cellDates: true });
+          const sheet = wb.Sheets[wb.SheetNames[0]];
+
+          if (isCampaignFile) {
+            resolve(XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" }));
+          } else {
+            resolve(XLSX.utils.sheet_to_json(sheet, { defval: "" }));
+          }
+        } catch (err) {
+          reject(err);
+        }
+      };
+      reader.onerror = () => reject(new Error("No se pudo leer el archivo Excel."));
+      reader.readAsArrayBuffer(file);
+    }
+  });
+}
+
+function transformCampaignRows(rows) {
+  return rows
+    .filter(r => Array.isArray(r) && r.length >= 5)
+    .map(r => {
+      const fecha = parseDateFlexible(r[4]);
+
+      return {
+        cedula: String(r[0] || "").trim(),
+        numero: normalizarTelefono(r[1]),
+        nombre: String(r[2] || "").trim(),
+        especialidad: String(r[3] || "").trim(),
+        fecha_cita: fecha ? toISODate(fecha) : "",
+        fecha_cita_str: fecha ? toDateTimeStr(fecha) : ""
+      };
+    })
+    .filter(r => r.numero || r.cedula);
+}
+
+function transformMessageRows(rows) {
+  if (!rows.length) return [];
+
+  const columns = Object.keys(rows[0]);
+
+  const numeroCol = findColumn(columns, [
+    "numero", "celular", "telefono", "tel", "phone", "msisdn", "destinatario", "cel"
+  ]);
+
+  const mensajeCol = findColumn(columns, [
+    "mensaje", "message", "texto", "body", "contenido"
+  ]);
+
+  const fechaCol = findColumn(columns, [
+    "fecha", "date", "time", "hora", "timestamp"
+  ]);
+
+  const dirCol = findColumn(columns, [
+    "dir", "direccion", "tipo", "sentido", "entrada", "salida"
+  ]);
+
+  if (!numeroCol || !mensajeCol || !fechaCol) {
+    throw new Error(
+      `No encontré columnas mínimas en archivo de respuestas. numero=${numeroCol}, mensaje=${mensajeCol}, fecha=${fechaCol}`
+    );
+  }
+
+  return rows
+    .map(r => {
+      const fecha = parseDateFlexible(r[fechaCol]);
+      const mensaje = String(r[mensajeCol] || "");
+      const dir = String(dirCol ? r[dirCol] || "" : "").trim();
+
+      return {
+        numero: normalizarTelefono(r[numeroCol]),
+        mensaje,
+        mensaje_normalizado: normalizeText(mensaje),
+        fecha,
+        fecha_envio: fecha ? toISODate(fecha) : "",
+        fecha_cita: extraerFechaCita(mensaje),
+        fecha_hora_str: fecha ? toDateTimeStr(fecha) : "",
+        dir,
+        template_name: String(r["Nombre"] || r["nombre"] || "").trim()
+      };
+    })
+    .filter(r => r.fecha && r.numero);
+}
+
+function cruzarCampaniaConMensajes(campaignRows, messageRows) {
+  const mensajesPorNumero = new Map();
+
+  for (const msg of messageRows) {
+    const num = normalizarTelefono(msg.numero);
+    if (!mensajesPorNumero.has(num)) mensajesPorNumero.set(num, []);
+    mensajesPorNumero.get(num).push(msg);
+  }
+
+  for (const lista of mensajesPorNumero.values()) {
+    lista.sort((a, b) => (a.fecha?.getTime() || 0) - (b.fecha?.getTime() || 0));
+  }
+
+  const resultado = [];
+
+  for (const camp of campaignRows) {
+    const mensajes = mensajesPorNumero.get(camp.numero) || [];
+    const templates = mensajes.filter(m => isOutgoingMessage(m) && isTemplateMessage(m) && m.fecha && m.fecha_cita);
+
+    let matchedTemplate = null;
+
+    if (camp.fecha_cita) {
+      matchedTemplate = templates.find(t => t.fecha_cita === camp.fecha_cita) || null;
+    }
+
+    if (!matchedTemplate) {
+      continue;
+    }
+
+    const templateIndex = mensajes.indexOf(matchedTemplate);
+    const siguienteTemplate = templates.find(t => (t.fecha?.getTime() || 0) > (matchedTemplate.fecha?.getTime() || 0));
+    const finVentana = siguienteTemplate?.fecha || null;
+
+    const mensajesVentana = mensajes.filter(m => {
+      if (!m.fecha) return false;
+      const ts = m.fecha.getTime();
+      const ini = matchedTemplate.fecha.getTime();
+      if (ts < ini) return false;
+      if (finVentana && ts >= finVentana.getTime()) return false;
+      return true;
+    });
+
+    const respuestasEntrada = mensajesVentana.filter(m => isIncomingMessage(m));
+
+    let estado_final = "SIN_RESPUESTA";
+    let respuesta_valida = "";
+    let fecha_ultima_respuesta = "";
+    let fecha_ultima_respuesta_dt = null;
+    let hubo_invalida = false;
+    let ultima_invalida = "";
+    let ultima_invalidaFecha = null;
+
+    for (const msg of respuestasEntrada) {
+      const clas = classifyMessage(msg.mensaje);
+
+      if (clas === "CONFIRMA") {
+        estado_final = "CONFIRMA";
+        respuesta_valida = msg.mensaje;
+        fecha_ultima_respuesta_dt = msg.fecha;
+        fecha_ultima_respuesta = msg.fecha_hora_str;
+      } else if (clas === "NO_ASISTE") {
+        estado_final = "NO_ASISTE";
+        respuesta_valida = msg.mensaje;
+        fecha_ultima_respuesta_dt = msg.fecha;
+        fecha_ultima_respuesta = msg.fecha_hora_str;
+      } else if (msg.mensaje_normalizado) {
+        hubo_invalida = true;
+        ultima_invalida = msg.mensaje;
+        ultima_invalidaFecha = msg.fecha;
+      }
+    }
+
+    if (estado_final === "SIN_RESPUESTA" && hubo_invalida) {
+      estado_final = "RESPUESTA_NO_VALIDA";
+      respuesta_valida = ultima_invalida;
+      fecha_ultima_respuesta_dt = ultima_invalidaFecha;
+      fecha_ultima_respuesta = ultima_invalidaFecha ? toDateTimeStr(ultima_invalidaFecha) : "";
+    }
+
+    resultado.push({
+      cedula: camp.cedula,
+      nombre: camp.nombre,
+      especialidad: camp.especialidad,
+      numero: camp.numero,
+      fecha_cita: camp.fecha_cita,
+      fecha_envio: matchedTemplate.fecha_envio || "",
+      estado_final,
+      respuesta_valida,
+      fecha_ultima_respuesta,
+      fecha_ultima_respuesta_dt,
+      mensajes_total: mensajesVentana.length,
+      mensajes_respuesta_total: respuestasEntrada.length,
+      template_name: matchedTemplate.template_name || "",
+      template_texto: matchedTemplate.mensaje || ""
+    });
+  }
+
+  return resultado
+    .filter(r => r.numero && r.fecha_envio && r.fecha_cita)
+    .sort((a, b) => {
+      const cmpNumero = String(a.numero || "").localeCompare(String(b.numero || ""));
+      if (cmpNumero !== 0) return cmpNumero;
+      return String(a.fecha_cita || "").localeCompare(String(b.fecha_cita || ""));
+    });
+}
+
+function consolidarPorCedula(rows) {
+  const map = new Map();
+
+  for (const r of rows) {
+    const key = r.cedula || `SIN_CEDULA_${r.numero}`;
+
+    if (!map.has(key)) {
+      map.set(key, {
+        cedula: r.cedula,
+        nombre: r.nombre,
+        especialidad: r.especialidad,
+        fecha_cita: r.fecha_cita,
+        numeros: new Set(),
+        estado_final: "SIN_RESPUESTA",
+        respuesta_valida: "",
+        fecha_ultima_respuesta: ""
+      });
+    }
+
+    const item = map.get(key);
+    item.numeros.add(r.numero);
+
+    const prioridad = {
+      CONFIRMA: 4,
+      NO_ASISTE: 3,
+      RESPUESTA_NO_VALIDA: 2,
+      SIN_RESPUESTA: 1
+    };
+
+    if (prioridad[r.estado_final] > prioridad[item.estado_final]) {
+      item.estado_final = r.estado_final;
+      item.respuesta_valida = r.respuesta_valida;
+      item.fecha_ultima_respuesta = r.fecha_ultima_respuesta;
+    }
+  }
+
+  return Array.from(map.values()).map(x => ({
+    cedula: x.cedula,
+    nombre: x.nombre,
+    especialidad: x.especialidad,
+    fecha_cita: x.fecha_cita,
+    numeros: Array.from(x.numeros).join(", "),
+    estado_final: x.estado_final,
+    respuesta_valida: x.respuesta_valida,
+    fecha_ultima_respuesta: x.fecha_ultima_respuesta
+  }));
+}
+
+function getFilteredRows() {
+  let rows = [...groupedRows];
+
+  const fEnvio = fechaEnvioFiltro ? fechaEnvioFiltro.value : "";
+  const fCita = fechaCitaFiltro ? fechaCitaFiltro.value : "";
+  const estado = estadoFiltro ? estadoFiltro.value : "TODOS";
+  const numero = normalizarTelefono(numeroFiltro ? numeroFiltro.value : "");
+  const cedula = normalizeText(cedulaFiltro ? cedulaFiltro.value : "");
+  const nombre = normalizeText(nombreFiltro ? nombreFiltro.value : "");
+
+  if (fEnvio) rows = rows.filter(r => r.fecha_envio === fEnvio);
+  if (fCita) rows = rows.filter(r => r.fecha_cita === fCita);
+  if (estado && estado !== "TODOS") rows = rows.filter(r => r.estado_final === estado);
+  if (numero) rows = rows.filter(r => String(r.numero || "").includes(numero));
+  if (cedula) rows = rows.filter(r => normalizeText(r.cedula).includes(cedula));
+  if (nombre) rows = rows.filter(r => normalizeText(r.nombre).includes(nombre));
+
+  return rows;
+}
+
+function getFilteredConsolidatedRows() {
+  const filteredMain = getFilteredRows();
+  return consolidarPorCedula(filteredMain);
+}
+
+function renderDashboard() {
+  if (!dashboard || !kpis) return;
+
+  const filtered = getFilteredRows();
+  const resumen = buildResumen(filtered);
+
+  kpis.style.display = "grid";
+  dashboard.style.display = "block";
+
+  const kpiTotal = document.getElementById("kpiTotal");
+  const kpiConfirma = document.getElementById("kpiConfirma");
+  const kpiNoAsiste = document.getElementById("kpiNoAsiste");
+  const kpiNoValida = document.getElementById("kpiNoValida");
+  const kpiSinRespuesta = document.getElementById("kpiSinRespuesta");
+  const kpiTasaRespuesta = document.getElementById("kpiTasaRespuesta");
+  const kpiTasaConfirma = document.getElementById("kpiTasaConfirma");
+  const kpiTasaNoAsiste = document.getElementById("kpiTasaNoAsiste");
+
+  if (kpiTotal) kpiTotal.textContent = resumen.total;
+  if (kpiConfirma) kpiConfirma.textContent = resumen.confirma;
+  if (kpiNoAsiste) kpiNoAsiste.textContent = resumen.no_asiste;
+  if (kpiNoValida) kpiNoValida.textContent = resumen.no_valida;
+  if (kpiSinRespuesta) kpiSinRespuesta.textContent = resumen.sin_respuesta;
+  if (kpiTasaRespuesta) kpiTasaRespuesta.textContent = resumen.tasa_respuesta + "%";
+  if (kpiTasaConfirma) kpiTasaConfirma.textContent = resumen.tasa_confirma + "%";
+  if (kpiTasaNoAsiste) kpiTasaNoAsiste.textContent = resumen.tasa_noasiste + "%";
+
+  if (vistaActual) {
+    vistaActual.textContent =
+      `Vista actual: ${estadoFiltro ? estadoFiltro.value : "TODOS"}` +
+      ((numeroFiltro && numeroFiltro.value) ? ` | Número: ${numeroFiltro.value}` : "") +
+      ((cedulaFiltro && cedulaFiltro.value) ? ` | Cédula: ${cedulaFiltro.value}` : "") +
+      ((nombreFiltro && nombreFiltro.value) ? ` | Nombre: ${nombreFiltro.value}` : "") +
+      ((fechaEnvioFiltro && fechaEnvioFiltro.value) ? ` | Envío: ${fechaEnvioFiltro.value}` : "") +
+      ((fechaCitaFiltro && fechaCitaFiltro.value) ? ` | Cita: ${fechaCitaFiltro.value}` : "");
+  }
+
+  renderMainTable("tablaPrincipalWrap", filtered);
+  renderCedulaTable("tablaCedula", getFilteredConsolidatedRows());
+  renderMainTable("tablaConfirma", filtered.filter(r => r.estado_final === "CONFIRMA"));
+  renderMainTable("tablaNoAsiste", filtered.filter(r => r.estado_final === "NO_ASISTE"));
+  renderMainTable("tablaNoValida", filtered.filter(r => r.estado_final === "RESPUESTA_NO_VALIDA"));
+  renderMainTable("tablaSinRespuesta", filtered.filter(r => r.estado_final === "SIN_RESPUESTA"));
+
+  const filteredNumbers = new Set(filtered.map(x => x.numero));
+
+  const detalle = rawMessageRows.filter(r => {
+    if (!filteredNumbers.has(r.numero)) return false;
+    if (fechaEnvioFiltro && fechaEnvioFiltro.value && r.fecha_envio !== fechaEnvioFiltro.value) return false;
+    if (fechaCitaFiltro && fechaCitaFiltro.value && r.fecha_cita && r.fecha_cita !== fechaCitaFiltro.value) return false;
+    return true;
+  });
+
+  renderDetalle(detalle);
+  renderCharts(resumen, filtered);
+}
+
+function buildResumen(rows) {
+  const total = rows.length;
+  const confirma = rows.filter(r => r.estado_final === "CONFIRMA").length;
+  const no_asiste = rows.filter(r => r.estado_final === "NO_ASISTE").length;
+  const no_valida = rows.filter(r => r.estado_final === "RESPUESTA_NO_VALIDA").length;
+  const sin_respuesta = rows.filter(r => r.estado_final === "SIN_RESPUESTA").length;
+  const respuestas = confirma + no_asiste + no_valida;
+
+  return {
+    total,
+    confirma,
+    no_asiste,
+    no_valida,
+    sin_respuesta,
+    tasa_respuesta: total ? ((respuestas / total) * 100).toFixed(2) : "0.00",
+    tasa_confirma: total ? ((confirma / total) * 100).toFixed(2) : "0.00",
+    tasa_noasiste: total ? ((no_asiste / total) * 100).toFixed(2) : "0.00"
+  };
+}
+
+function estadoBadge(estado) {
+  if (estado === "CONFIRMA") return `<span class="badge confirma">SÍ VIENE</span>`;
+  if (estado === "NO_ASISTE") return `<span class="badge noasiste">NO VIENE</span>`;
+  if (estado === "RESPUESTA_NO_VALIDA") return `<span class="badge invalida">RESPUESTA NO VÁLIDA</span>`;
+  return `<span class="badge sinresp">SIN RESPUESTA</span>`;
+}
+
+function renderMainTable(targetId, rows) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+
+  if (!rows.length) {
+    target.innerHTML = `<table><tr><td>Sin datos para mostrar.</td></tr></table>`;
+    return;
+  }
+
+  const html = `
+    <table>
+      <thead>
+        <tr>
+          <th>cedula</th>
+          <th>nombre</th>
+          <th>especialidad</th>
+          <th>numero</th>
+          <th>fecha_cita</th>
+          <th>fecha_envio</th>
+          <th>plantilla</th>
+          <th>estado_final</th>
+          <th>respuesta_valida</th>
+          <th>fecha_ultima_respuesta</th>
+          <th>respuestas</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(r => `
+          <tr>
+            <td>${escapeHtml(r.cedula || "")}</td>
+            <td>${escapeHtml(r.nombre || "")}</td>
+            <td>${escapeHtml(r.especialidad || "")}</td>
+            <td>${escapeHtml(r.numero || "")}</td>
+            <td>${escapeHtml(r.fecha_cita || "")}</td>
+            <td>${escapeHtml(r.fecha_envio || "")}</td>
+            <td>${escapeHtml(r.template_name || "")}</td>
+            <td>${estadoBadge(r.estado_final)}</td>
+            <td>${escapeHtml(r.respuesta_valida || "")}</td>
+            <td>${escapeHtml(r.fecha_ultima_respuesta || "")}</td>
+            <td>${escapeHtml(r.mensajes_respuesta_total ?? 0)}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+
+  target.innerHTML = html;
+}
+
+function renderCedulaTable(targetId, rows) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+
+  if (!rows.length) {
+    target.innerHTML = `<table><tr><td>Sin datos para mostrar.</td></tr></table>`;
+    return;
+  }
+
+  const html = `
+    <table>
+      <thead>
+        <tr>
+          <th>cedula</th>
+          <th>nombre</th>
+          <th>especialidad</th>
+          <th>fecha_cita</th>
+          <th>numeros</th>
+          <th>estado_final</th>
+          <th>respuesta_valida</th>
+          <th>fecha_ultima_respuesta</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(r => `
+          <tr>
+            <td>${escapeHtml(r.cedula || "")}</td>
+            <td>${escapeHtml(r.nombre || "")}</td>
+            <td>${escapeHtml(r.especialidad || "")}</td>
+            <td>${escapeHtml(r.fecha_cita || "")}</td>
+            <td>${escapeHtml(r.numeros || "")}</td>
+            <td>${estadoBadge(r.estado_final)}</td>
+            <td>${escapeHtml(r.respuesta_valida || "")}</td>
+            <td>${escapeHtml(r.fecha_ultima_respuesta || "")}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+
+  target.innerHTML = html;
+}
+
+function renderDetalle(rows) {
+  const target = document.getElementById("tablaDetalle");
+  if (!target) return;
+
+  if (!rows.length) {
+    target.innerHTML = `<table><tr><td>Sin detalle para mostrar.</td></tr></table>`;
+    return;
+  }
+
+  const html = `
+    <table>
+      <thead>
+        <tr>
+          <th>numero</th>
+          <th>direccion</th>
+          <th>plantilla</th>
+          <th>mensaje</th>
+          <th>fecha</th>
+          <th>fecha_envio</th>
+          <th>fecha_cita</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(r => `
+          <tr>
+            <td>${escapeHtml(r.numero)}</td>
+            <td>${escapeHtml(r.dir || "")}</td>
+            <td>${escapeHtml(r.template_name || "")}</td>
+            <td>${escapeHtml(r.mensaje)}</td>
+            <td>${escapeHtml(r.fecha_hora_str)}</td>
+            <td>${escapeHtml(r.fecha_envio || "")}</td>
+            <td>${escapeHtml(r.fecha_cita || "")}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+
+  target.innerHTML = html;
+}
+
+function renderCharts(resumen, rows) {
+  const canvasEstados = document.getElementById("chartEstados");
+  const canvasHoras = document.getElementById("chartHoras");
+
+  if (!canvasEstados || !canvasHoras || typeof Chart === "undefined") return;
+
+  const ctxEstados = canvasEstados.getContext("2d");
+  const ctxHoras = canvasHoras.getContext("2d");
+
+  if (estadoChart) estadoChart.destroy();
+  if (horasChart) horasChart.destroy();
+
+  estadoChart = new Chart(ctxEstados, {
+    type: "doughnut",
+    data: {
+      labels: ["Sí vienen", "No vienen", "No válida", "Sin respuesta"],
+      datasets: [{
+        data: [resumen.confirma, resumen.no_asiste, resumen.no_valida, resumen.sin_respuesta],
+        backgroundColor: ["#19b56b", "#ef4444", "#f59e0b", "#94a3b8"],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: "bottom" }
+      }
+    }
+  });
+
+  const horas = Array.from({ length: 24 }, (_, i) => i);
+  const counts = new Array(24).fill(0);
+
+  rows.forEach(r => {
+    if (r.fecha_ultima_respuesta_dt instanceof Date && !isNaN(r.fecha_ultima_respuesta_dt.getTime())) {
+      counts[r.fecha_ultima_respuesta_dt.getHours()]++;
+    }
+  });
+
+  horasChart = new Chart(ctxHoras, {
+    type: "bar",
+    data: {
+      labels: horas.map(h => String(h).padStart(2, "0") + ":00"),
+      datasets: [{
+        label: "Respuestas",
+        data: counts,
+        backgroundColor: "#22b3e6",
+        borderRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { precision: 0 }
+        }
+      }
+    }
+  });
+}
+
+function exportarCSV() {
+  const rows = getFilteredRows();
+
+  if (!rows.length) {
+    alert("No hay datos para exportar.");
+    return;
+  }
+
+  const headers = [
+    "cedula",
+    "nombre",
+    "especialidad",
+    "numero",
+    "fecha_cita",
+    "fecha_envio",
+    "template_name",
+    "estado_final",
+    "respuesta_valida",
+    "fecha_ultima_respuesta",
+    "mensajes_respuesta_total"
+  ];
+
+  const csv = [
+    headers.join(","),
+    ...rows.map(r => headers.map(h => csvEscape(r[h] ?? "")).join(","))
+  ].join("\n");
+
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "resumen_asistencia_filtrado.csv";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function csvEscape(value) {
+  const s = String(value).replace(/"/g, '""');
+  return `"${s}"`;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard de Asistencia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <div class="brand">
+        <img src="static/LogoEmpresa.jpg" alt="Logo" id="logoEmpresa" onerror="this.style.display='none'">
+        <div>
+          <h1>SERVICIOS WEB CEAD</h1>
+          <p>Panel de control de asistencia por campañas SMS / WhatsApp</p>
+        </div>
+      </div>
+
+      <div class="section-title">ASISTENCIA MASIVA</div>
+      <div class="section-body">
+        <div class="filters">
+          <div>
+            <label>Archivo de campaña (Excel) o usar campaña guardada</label>
+            <input type="file" id="campaignFileInput" accept=".xlsx,.xls,.csv">
+          </div>
+          <div>
+            <label>Archivo de respuestas (CSV o Excel)</label>
+            <input type="file" id="messagesFileInput" accept=".csv,.xlsx,.xls">
+          </div>
+          <div>
+            <label>Fecha de envío</label>
+            <input type="date" id="fechaEnvioFiltro">
+          </div>
+          <div>
+            <label>Fecha de cita</label>
+            <input type="date" id="fechaCitaFiltro">
+          </div>
+          <div>
+            <label>Estado</label>
+            <select id="estadoFiltro">
+              <option value="TODOS">Todos</option>
+              <option value="CONFIRMA">Sí vienen</option>
+              <option value="NO_ASISTE">No vienen</option>
+              <option value="RESPUESTA_NO_VALIDA">Respuesta no válida</option>
+              <option value="SIN_RESPUESTA">Sin respuesta</option>
+            </select>
+          </div>
+          <div>
+            <label>Buscar número</label>
+            <input type="text" id="numeroFiltro" placeholder="3147362736">
+          </div>
+          <div>
+            <label>Buscar cédula</label>
+            <input type="text" id="cedulaFiltro" placeholder="1234567890">
+          </div>
+          <div>
+            <label>Buscar nombre</label>
+            <input type="text" id="nombreFiltro" placeholder="Sebastian">
+          </div>
+          <div>
+            <button id="btnProcesar">Procesar</button>
+          </div>
+        </div>
+
+        <div class="subnote">
+          Respuestas válidas exactas: <strong>Confirmar asistencia</strong> y <strong>No podré asistir</strong>.
+        </div>
+      </div>
+
+      <div class="kpis" id="kpis" style="display:none;">
+        <div class="kpi"><h2 id="kpiTotal">0</h2><p>Total campañas</p></div>
+        <div class="kpi"><h2 id="kpiConfirma">0</h2><p>Sí vienen</p></div>
+        <div class="kpi"><h2 id="kpiNoAsiste">0</h2><p>No vienen</p></div>
+        <div class="kpi"><h2 id="kpiNoValida">0</h2><p>No válida</p></div>
+        <div class="kpi"><h2 id="kpiSinRespuesta">0</h2><p>Sin respuesta</p></div>
+        <div class="kpi"><h2 id="kpiTasaRespuesta">0%</h2><p>Tasa respuesta</p></div>
+        <div class="kpi"><h2 id="kpiTasaConfirma">0%</h2><p>Tasa confirma</p></div>
+        <div class="kpi"><h2 id="kpiTasaNoAsiste">0%</h2><p>Tasa no viene</p></div>
+      </div>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+      <div class="section-title">FILTROS RÁPIDOS</div>
+      <div class="section-body">
+        <div class="quick-filters">
+          <a href="#" class="pill todos" data-estado="TODOS">Todos</a>
+          <a href="#" class="pill si" data-estado="CONFIRMA">Sí vienen</a>
+          <a href="#" class="pill no" data-estado="NO_ASISTE">No vienen</a>
+          <a href="#" class="pill inv" data-estado="RESPUESTA_NO_VALIDA">No válida</a>
+          <a href="#" class="pill sr" data-estado="SIN_RESPUESTA">Sin respuesta</a>
+        </div>
+        <div class="small" id="vistaActual">Vista actual: TODOS</div>
+      </div>
+
+      <div class="section-title">GRÁFICAS</div>
+      <div class="section-body">
+        <div class="charts">
+          <div class="chart-card">
+            <h3>Distribución general</h3>
+            <div class="chart-box">
+              <canvas id="chartEstados"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h3>Respuestas por hora</h3>
+            <div class="chart-box">
+              <canvas id="chartHoras"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">TABLA PRINCIPAL</div>
+      <div class="section-body">
+        <div class="table-tools">
+          <div class="small">Esta tabla respeta el filtro actual.</div>
+          <button class="btn-link btn-dark" id="btnExportar">Descargar CSV filtrado</button>
+        </div>
+        <div class="table-wrap" id="tablaPrincipalWrap"></div>
+      </div>
+
+      <div class="section-title">TABLA CONSOLIDADA POR CÉDULA</div>
+      <div class="section-body">
+        <details>
+          <summary>Ver consolidado por persona</summary>
+          <div class="details-body">
+            <div class="table-wrap" id="tablaCedula"></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="section-title">TABLAS SECUNDARIAS</div>
+      <div class="section-body">
+        <details>
+          <summary>Sí vienen</summary>
+          <div class="details-body">
+            <div class="table-wrap" id="tablaConfirma"></div>
+          </div>
+        </details>
+
+        <details>
+          <summary>No vienen</summary>
+          <div class="details-body">
+            <div class="table-wrap" id="tablaNoAsiste"></div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Respuesta no válida</summary>
+          <div class="details-body">
+            <div class="table-wrap" id="tablaNoValida"></div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Sin respuesta</summary>
+          <div class="details-body">
+            <div class="table-wrap" id="tablaSinRespuesta"></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="section-title">DETALLE DE MENSAJES</div>
+      <div class="section-body">
+        <details>
+          <summary>Ver detalle completo</summary>
+          <div class="details-body">
+            <div class="table-wrap" id="tablaDetalle"></div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
