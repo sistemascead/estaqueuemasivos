@@ -46,6 +46,9 @@
               <option value="NO_ASISTE">No vienen</option>
               <option value="RESPUESTA_NO_VALIDA">Respuesta no válida</option>
               <option value="SIN_RESPUESTA">Sin respuesta</option>
+              <option value="YA_ATENDIDO">Ya fue atendido (MEDYREH)</option>
+              <option value="TIENE_CITA_MEDYREH">Tiene cita en MEDYREH</option>
+              <option value="NO_HAN_PROGRAMADO">No han programado cita</option>
             </select>
           </div>
           <div>
@@ -67,6 +70,7 @@
 
         <div class="subnote">
           Respuestas válidas exactas: <strong>Confirmar asistencia</strong> y <strong>No podré asistir</strong>.
+          <br>Plantilla MEDYREH (<em>no_me_han_programado_cita</em>): <strong>Ya fui atendido</strong> · <strong>Tengo cita en MEDYREH</strong> · <strong>No me han programado cita</strong>.
         </div>
       </div>
 
@@ -79,6 +83,9 @@
         <div class="kpi"><h2 id="kpiTasaRespuesta">0%</h2><p>Tasa respuesta</p></div>
         <div class="kpi"><h2 id="kpiTasaConfirma">0%</h2><p>Tasa confirma</p></div>
         <div class="kpi"><h2 id="kpiTasaNoAsiste">0%</h2><p>Tasa no viene</p></div>
+        <div class="kpi kpi-medyreh"><h2 id="kpiYaAtendido">0</h2><p>Ya atendido</p></div>
+        <div class="kpi kpi-medyreh"><h2 id="kpiTieneCitaMedyreh">0</h2><p>Tiene cita MEDYREH</p></div>
+        <div class="kpi kpi-medyreh"><h2 id="kpiNoHanProgramado">0</h2><p>No han programado</p></div>
       </div>
     </div>
 
@@ -91,6 +98,9 @@
           <a href="#" class="pill no" data-estado="NO_ASISTE">No vienen</a>
           <a href="#" class="pill inv" data-estado="RESPUESTA_NO_VALIDA">No válida</a>
           <a href="#" class="pill sr" data-estado="SIN_RESPUESTA">Sin respuesta</a>
+          <a href="#" class="pill ya-atendido" data-estado="YA_ATENDIDO">Ya atendido</a>
+          <a href="#" class="pill tiene-cita" data-estado="TIENE_CITA_MEDYREH">Tiene cita MEDYREH</a>
+          <a href="#" class="pill no-programado" data-estado="NO_HAN_PROGRAMADO">No han programado</a>
         </div>
         <div class="small" id="vistaActual">Vista actual: TODOS</div>
       </div>
@@ -161,6 +171,27 @@
             <div class="table-wrap" id="tablaSinRespuesta"></div>
           </div>
         </details>
+
+        <details>
+          <summary>Ya fue atendido (MEDYREH)</summary>
+          <div class="details-body">
+            <div class="table-wrap" id="tablaYaAtendido"></div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Tiene cita en MEDYREH</summary>
+          <div class="details-body">
+            <div class="table-wrap" id="tablaTieneCitaMedyreh"></div>
+          </div>
+        </details>
+
+        <details>
+          <summary>No han programado cita</summary>
+          <div class="details-body">
+            <div class="table-wrap" id="tablaNoHanProgramado"></div>
+          </div>
+        </details>
       </div>
 
       <div class="section-title">DETALLE DE MENSAJES</div>
@@ -173,6 +204,86 @@
         </details>
       </div>
     </div>
+  </div>
+
+  <!-- ═══ MODO INDIVIDUAL MEDYREH ═══════════════════════════════════════ -->
+  <div class="page" style="margin-top:0; padding-top:0;">
+
+    <div class="hero" style="margin-top:18px;">
+      <div class="brand">
+        <img src="static/LogoEmpresa.jpg" alt="Logo" onerror="this.style.display='none'" style="width:48px;height:48px;border-radius:10px;object-fit:contain;border:1px solid #d9e2ec;padding:6px;">
+        <div>
+          <h1 style="font-size:20px;">PLANTILLA MEDYREH — CARGA INDIVIDUAL</h1>
+          <p>Solo el archivo de respuestas. Detecta automáticamente la plantilla <em>no_me_han_programado_cita</em>.</p>
+        </div>
+      </div>
+
+      <div class="section-title">CARGAR ARCHIVO</div>
+      <div class="section-body">
+        <div class="filters">
+          <div>
+            <label>Archivo de respuestas (CSV o Excel)</label>
+            <input type="file" id="medyrehFileInput" accept=".csv,.xlsx,.xls">
+          </div>
+          <div>
+            <label>Base de campaña con cédula/nombre <span style="font-weight:400;color:#888;">(opcional)</span></label>
+            <input type="file" id="medyrehBaseInput" accept=".xlsx,.xls,.csv">
+          </div>
+          <div style="align-self:end;">
+            <button id="btnProcesarMedyreh">Procesar</button>
+          </div>
+        </div>
+        <div class="subnote">
+          Botones reconocidos: <strong>Ya fui atendido</strong> · <strong>Tengo cita en MEDYREH</strong> · <strong>No me han programado cita</strong>
+          <br>Si cargas la base de campaña (columnas: cédula, celular, nombre) se cruza por celular para traer cédula y nombre.
+          Si no hay base, el nombre se extrae del mensaje de salida.
+        </div>
+      </div>
+
+      <div class="kpis" id="medyrehKpis" style="display:grid; margin-top:18px;">
+        <div class="kpi"><h2 id="kpiM_total">—</h2><p>Total enviados</p></div>
+        <div class="kpi kpi-medyreh"><h2 id="kpiM_ya">—</h2><p>Ya fui atendido</p></div>
+        <div class="kpi kpi-medyreh"><h2 id="kpiM_cita">—</h2><p>Tiene cita MEDYREH</p></div>
+        <div class="kpi kpi-medyreh"><h2 id="kpiM_noprog">—</h2><p>No me han programado</p></div>
+        <div class="kpi"><h2 id="kpiM_novalida">—</h2><p>Resp. no válida</p></div>
+        <div class="kpi"><h2 id="kpiM_sinresp">—</h2><p>Sin respuesta</p></div>
+      </div>
+    </div>
+
+    <div id="medyrehDashboard" style="display:none;">
+      <div class="section-title">FILTROS RÁPIDOS</div>
+      <div class="section-body">
+        <div class="quick-filters">
+          <a href="#" class="pill todos pill-medyreh" data-estado="TODOS">Todos</a>
+          <a href="#" class="pill ya-atendido pill-medyreh" data-estado="YA_FUI_ATENDIDO">Ya fui atendido</a>
+          <a href="#" class="pill tiene-cita pill-medyreh" data-estado="TIENE_CITA_MEDYREH">Tiene cita MEDYREH</a>
+          <a href="#" class="pill no-programado pill-medyreh" data-estado="NO_PROGRAMADO">No me han programado</a>
+          <a href="#" class="pill inv pill-medyreh" data-estado="RESPUESTA_NO_VALIDA">No válida</a>
+          <a href="#" class="pill sr pill-medyreh" data-estado="SIN_RESPUESTA">Sin respuesta</a>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+          <select id="medyrehEstadoFiltro" style="width:auto;">
+            <option value="TODOS">Todos los estados</option>
+            <option value="YA_FUI_ATENDIDO">Ya fui atendido</option>
+            <option value="TIENE_CITA_MEDYREH">Tiene cita en MEDYREH</option>
+            <option value="NO_PROGRAMADO">No me han programado cita</option>
+            <option value="RESPUESTA_NO_VALIDA">Respuesta no válida</option>
+            <option value="SIN_RESPUESTA">Sin respuesta</option>
+          </select>
+          <span class="small" id="medyrehVistaActual">Vista actual: TODOS</span>
+        </div>
+      </div>
+
+      <div class="section-title">RESULTADOS</div>
+      <div class="section-body">
+        <div class="table-tools">
+          <div class="small">Registros con plantilla MEDYREH detectada.</div>
+          <button class="btn-link btn-dark" id="btnExportarMedyreh" style="width:auto;">Descargar CSV filtrado</button>
+        </div>
+        <div class="table-wrap" id="tablaMedyreh"></div>
+      </div>
+    </div>
+
   </div>
 
   <script src="app.js"></script>

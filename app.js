@@ -193,7 +193,82 @@ function classifyMessage(text) {
     return "NO_ASISTE";
   }
 
+  if (t === "ya fui atendido") return "YA_ATENDIDO";
+  if (t === "tengo cita en medyreh") return "TIENE_CITA_MEDYREH";
+  if (t === "no me han programado cita") return "NO_HAN_PROGRAMADO";
+
   return null;
+}
+
+function classifyMedyrehMessage(text) {
+  const t = normalizeText(text);
+  if (t === "ya fui atendido") return "YA_FUI_ATENDIDO";
+  if (t === "tengo cita en medyreh") return "TIENE_CITA_MEDYREH";
+  if (t === "no me han programado cita") return "NO_PROGRAMADO";
+  return null;
+}
+
+function extraerNombreDesdeTemplate(mensaje) {
+  const m = String(mensaje || "").match(/Saludos\s+Sr\(a\)\.\s*(.*?)\s*\./i);
+  return m ? m[1].trim() : "";
+}
+
+function extraerServicioDesdeTemplate(mensaje) {
+  const m = String(mensaje || "").match(/autorizaci[oó]n para el servicio de\s+(.*?)\s+en la IPS/i);
+  return m ? m[1].trim() : "";
+}
+
+function transformBaseRowsMedyreh(data) {
+  if (!data || !data.length) return [];
+
+  const columns = Object.keys(data[0] || {});
+
+  // Mapeo priorizado: nombre exacto de la campaña → alias genéricos
+  const colCedula    = findColumn(columns, ["CodCliente",  "cedula",        "documento",    "identificacion"]);
+  const colCelular   = findColumn(columns, ["Telefono1",   "celular",       "telefono",     "movil", "numero", "phone"]);
+  const colNombre    = findColumn(columns, ["Info1",       "nombre",        "paciente",     "usuario"]);
+  const colServicio  = findColumn(columns, ["Info3",       "servicio",      "especialidad", "procedimiento"]);
+  const colCodCamp   = findColumn(columns, ["CodCampanna", "cod_campanna",  "codigo_campana"]);
+  const colFechaMod  = findColumn(columns, ["FechaMod",    "fecha_mod",     "fecha_base",   "fecha"]);
+
+  console.log("[transformBaseRowsMedyreh] Mapeo de columnas detectado →",
+    { colCedula, colCelular, colNombre, colServicio, colCodCamp, colFechaMod }
+  );
+
+  // Índice para detectar duplicados (celular normalizado → índice de fila 0-based)
+  const seenCelulares = new Map();
+  const resultado = [];
+
+  for (let i = 0; i < data.length; i++) {
+    const r = data[i];
+
+    const celularRaw = String(colCelular ? r[colCelular] || "" : "").trim();
+    const celular = normalizarTelefono(celularRaw);
+    if (!celular) continue;   // fila sin teléfono → ignorar
+
+    if (seenCelulares.has(celular)) {
+      // Regla 8: conservar primer registro no vacío, registrar advertencia
+      console.warn(
+        `[Base MEDYREH] Celular duplicado: ${celular}` +
+        ` — primera aparición fila ${seenCelulares.get(celular) + 2},` +
+        ` duplicado ignorado en fila ${i + 2}`
+      );
+      continue;
+    }
+
+    seenCelulares.set(celular, i);
+    resultado.push({
+      cedula:          String(colCedula   ? r[colCedula]   || "" : "").trim(),
+      celular,
+      nombre:          String(colNombre   ? r[colNombre]   || "" : "").trim(),
+      servicio:        String(colServicio ? r[colServicio] || "" : "").trim(),
+      codigo_campanna: String(colCodCamp  ? r[colCodCamp]  || "" : "").trim(),
+      fecha_base:      String(colFechaMod ? r[colFechaMod] || "" : "").trim()
+    });
+  }
+
+  console.log(`[transformBaseRowsMedyreh] ${resultado.length} registros únicos cargados de la base.`);
+  return resultado;
 }
 
 function isIncomingMessage(msg) {
@@ -212,6 +287,21 @@ function isTemplateMessage(msg) {
   const mensaje = normalizeText(msg.mensaje || "");
 
   if (nombre.includes("confirmacion_boton_masivo") || nombre.includes("confirmacion_masivo")) {
+    return true;
+  }
+
+  if (nombre.includes("no_me_han_programado_cita") || nombre.includes("no me han programado cita")) {
+    return true;
+  }
+
+  if (
+    mensaje.includes("medyreh integral") &&
+    mensaje.includes("queremos confirmar con usted el estado")
+  ) {
+    return true;
+  }
+
+  if (mensaje.includes("queremos confirmar con usted el estado actual frente dicho servicio")) {
     return true;
   }
 
@@ -521,6 +611,85 @@ function readGenericFile(file, isCampaignFile = false) {
       reader.readAsArrayBuffer(file);
     }
   });
+}
+
+// ─── Lector adaptativo para el archivo base MEDYREH ──────────────────────────
+// El archivo puede ser .xls real, .xlsx, .csv o .xls que en realidad es TSV.
+// Estrategia: detectar tabulaciones en la primera línea → TSV;
+//             si no, parsear como Excel binario; último recurso: XLSX como texto.
+
+function parseTSV(text) {
+  const lines = text.split(/\r?\n/);
+  const noEmpty = lines.filter(l => l.trim() !== "");
+  if (!noEmpty.length) return [];
+  const headers = noEmpty[0].split("\t").map(h => h.trim());
+  return noEmpty
+    .slice(1)
+    .filter(l => l.trim() !== "")
+    .map(l => {
+      const vals = l.split("\t");
+      const obj = {};
+      headers.forEach((h, i) => {
+        obj[h] = String(vals[i] !== undefined ? vals[i] : "").trim();
+      });
+      return obj;
+    });
+}
+
+async function readBaseFile(file) {
+  let textContent = "";
+
+  // Intentar leer como texto primero (siempre disponible para TSV / CSV)
+  try {
+    textContent = await file.text();
+  } catch (e) {
+    console.warn("[readBaseFile] No se pudo leer como texto:", e);
+  }
+
+  // 1️⃣  Si la primera línea tiene tabulaciones → es TSV
+  if (textContent) {
+    const firstLine = textContent.split(/\r?\n/).find(l => l.trim() !== "") || "";
+    if (firstLine.includes("\t")) {
+      const rows = parseTSV(textContent);
+      if (rows.length > 0) {
+        console.log(
+          `[readBaseFile] TSV detectado → ${rows.length} registros.`,
+          "Columnas:", Object.keys(rows[0]).join(", ")
+        );
+        return rows;
+      }
+    }
+  }
+
+  // 2️⃣  Intentar Excel binario (XLS / XLSX reales)
+  try {
+    const arrayBuf = await file.arrayBuffer();
+    const uint8 = new Uint8Array(arrayBuf);
+    const wb = XLSX.read(uint8, { type: "array", cellDates: true });
+    const sheet = wb.Sheets[wb.SheetNames[0]];
+    const rows = XLSX.utils.sheet_to_json(sheet, { defval: "" });
+    console.log(`[readBaseFile] Excel binario → ${rows.length} registros.`);
+    return rows;
+  } catch (e) {
+    console.warn("[readBaseFile] Excel binario falló, intentando texto con XLSX:", e.message || e);
+  }
+
+  // 3️⃣  Último recurso: XLSX sobre el texto (maneja CSV con separador coma/punto y coma)
+  if (textContent) {
+    try {
+      const wb = XLSX.read(textContent, { type: "string" });
+      const sheet = wb.Sheets[wb.SheetNames[0]];
+      const rows = XLSX.utils.sheet_to_json(sheet, { defval: "" });
+      console.log(`[readBaseFile] CSV/texto → ${rows.length} registros.`);
+      return rows;
+    } catch (e2) {
+      throw new Error(
+        "No se pudo leer el archivo base como TSV, Excel ni CSV: " + (e2.message || e2)
+      );
+    }
+  }
+
+  throw new Error("No se pudo leer el archivo base (sin contenido legible).");
 }
 
 function buildCampaignMetaIndex(rows) {
@@ -839,6 +1008,12 @@ function cruzarCampaniaConMensajes(campaignRows, messageRows) {
         respuesta_valida = msg.mensaje;
         fecha_ultima_respuesta_dt = msg.fecha;
         fecha_ultima_respuesta = msg.fecha_hora_str;
+      } else if (clas === "YA_ATENDIDO" || clas === "TIENE_CITA_MEDYREH" || clas === "NO_HAN_PROGRAMADO") {
+        if (estado_final !== "SIN_RESPUESTA" && estado_final !== clas) cambio_decision = "SI";
+        estado_final = clas;
+        respuesta_valida = msg.mensaje;
+        fecha_ultima_respuesta_dt = msg.fecha;
+        fecha_ultima_respuesta = msg.fecha_hora_str;
       } else if (msg.mensaje_normalizado) {
         hubo_invalida = true;
         ultima_invalida = msg.mensaje;
@@ -915,6 +1090,9 @@ function consolidarPorCedula(rows) {
     const prioridad = {
       CONFIRMA: 4,
       NO_ASISTE: 3,
+      YA_ATENDIDO: 3,
+      TIENE_CITA_MEDYREH: 3,
+      NO_HAN_PROGRAMADO: 3,
       RESPUESTA_NO_VALIDA: 2,
       SIN_RESPUESTA: 1
     };
@@ -991,6 +1169,13 @@ function renderDashboard() {
   if (kpiTasaConfirma) kpiTasaConfirma.textContent = resumen.tasa_confirma + "%";
   if (kpiTasaNoAsiste) kpiTasaNoAsiste.textContent = resumen.tasa_noasiste + "%";
 
+  const kpiYaAtendido = document.getElementById("kpiYaAtendido");
+  const kpiTieneCitaMedyreh = document.getElementById("kpiTieneCitaMedyreh");
+  const kpiNoHanProgramado = document.getElementById("kpiNoHanProgramado");
+  if (kpiYaAtendido) kpiYaAtendido.textContent = resumen.ya_atendido;
+  if (kpiTieneCitaMedyreh) kpiTieneCitaMedyreh.textContent = resumen.tiene_cita_medyreh;
+  if (kpiNoHanProgramado) kpiNoHanProgramado.textContent = resumen.no_han_programado;
+
   if (vistaActual) {
     vistaActual.textContent =
       `Vista actual: ${estadoFiltro ? estadoFiltro.value : "TODOS"}` +
@@ -1007,6 +1192,9 @@ function renderDashboard() {
   renderMainTable("tablaNoAsiste", filtered.filter(r => r.estado_final === "NO_ASISTE"));
   renderMainTable("tablaNoValida", filtered.filter(r => r.estado_final === "RESPUESTA_NO_VALIDA"));
   renderMainTable("tablaSinRespuesta", filtered.filter(r => r.estado_final === "SIN_RESPUESTA"));
+  renderMainTable("tablaYaAtendido", filtered.filter(r => r.estado_final === "YA_ATENDIDO"));
+  renderMainTable("tablaTieneCitaMedyreh", filtered.filter(r => r.estado_final === "TIENE_CITA_MEDYREH"));
+  renderMainTable("tablaNoHanProgramado", filtered.filter(r => r.estado_final === "NO_HAN_PROGRAMADO"));
 
   const filteredNumbers = new Set(filtered.map(x => x.numero));
 
@@ -1027,7 +1215,10 @@ function buildResumen(rows) {
   const no_asiste = rows.filter(r => r.estado_final === "NO_ASISTE").length;
   const no_valida = rows.filter(r => r.estado_final === "RESPUESTA_NO_VALIDA").length;
   const sin_respuesta = rows.filter(r => r.estado_final === "SIN_RESPUESTA").length;
-  const respuestas = confirma + no_asiste + no_valida;
+  const ya_atendido = rows.filter(r => r.estado_final === "YA_ATENDIDO").length;
+  const tiene_cita_medyreh = rows.filter(r => r.estado_final === "TIENE_CITA_MEDYREH").length;
+  const no_han_programado = rows.filter(r => r.estado_final === "NO_HAN_PROGRAMADO").length;
+  const respuestas = confirma + no_asiste + no_valida + ya_atendido + tiene_cita_medyreh + no_han_programado;
 
   return {
     total,
@@ -1035,6 +1226,9 @@ function buildResumen(rows) {
     no_asiste,
     no_valida,
     sin_respuesta,
+    ya_atendido,
+    tiene_cita_medyreh,
+    no_han_programado,
     tasa_respuesta: total ? ((respuestas / total) * 100).toFixed(2) : "0.00",
     tasa_confirma: total ? ((confirma / total) * 100).toFixed(2) : "0.00",
     tasa_noasiste: total ? ((no_asiste / total) * 100).toFixed(2) : "0.00"
@@ -1044,6 +1238,11 @@ function buildResumen(rows) {
 function estadoBadge(estado) {
   if (estado === "CONFIRMA") return `<span class="badge confirma">SÍ VIENE</span>`;
   if (estado === "NO_ASISTE") return `<span class="badge noasiste">NO VIENE</span>`;
+  if (estado === "YA_ATENDIDO") return `<span class="badge ya-atendido">YA FUI ATENDIDO</span>`;
+  if (estado === "YA_FUI_ATENDIDO") return `<span class="badge ya-atendido">YA FUI ATENDIDO</span>`;
+  if (estado === "TIENE_CITA_MEDYREH") return `<span class="badge tiene-cita">TENGO CITA MEDYREH</span>`;
+  if (estado === "NO_HAN_PROGRAMADO") return `<span class="badge no-programado">NO HAN PROGRAMADO</span>`;
+  if (estado === "NO_PROGRAMADO") return `<span class="badge no-programado">NO ME HAN PROGRAMADO</span>`;
   if (estado === "RESPUESTA_NO_VALIDA") return `<span class="badge invalida">RESPUESTA NO VÁLIDA</span>`;
   return `<span class="badge sinresp">SIN RESPUESTA</span>`;
 }
@@ -1200,10 +1399,10 @@ function renderCharts(resumen, rows) {
   estadoChart = new Chart(ctxEstados, {
     type: "doughnut",
     data: {
-      labels: ["Sí vienen", "No vienen", "No válida", "Sin respuesta"],
+      labels: ["Sí vienen", "No vienen", "Ya atendido", "Tiene cita MEDYREH", "No han programado", "No válida", "Sin respuesta"],
       datasets: [{
-        data: [resumen.confirma, resumen.no_asiste, resumen.no_valida, resumen.sin_respuesta],
-        backgroundColor: ["#19b56b", "#ef4444", "#f59e0b", "#94a3b8"],
+        data: [resumen.confirma, resumen.no_asiste, resumen.ya_atendido, resumen.tiene_cita_medyreh, resumen.no_han_programado, resumen.no_valida, resumen.sin_respuesta],
+        backgroundColor: ["#19b56b", "#ef4444", "#3b82f6", "#8b5cf6", "#f97316", "#f59e0b", "#94a3b8"],
         borderWidth: 1
       }]
     },
@@ -1318,4 +1517,273 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+// ─── MODO INDIVIDUAL MEDYREH ────────────────────────────────────────────────
+
+let medyrehResultRows = [];
+let medyrehBaseRows = [];
+
+const medyrehFileInput = document.getElementById("medyrehFileInput");
+const medyrehBaseInput = document.getElementById("medyrehBaseInput");
+const btnProcesarMedyreh = document.getElementById("btnProcesarMedyreh");
+const btnExportarMedyreh = document.getElementById("btnExportarMedyreh");
+const medyrehEstadoFiltro = document.getElementById("medyrehEstadoFiltro");
+
+if (btnProcesarMedyreh) btnProcesarMedyreh.addEventListener("click", procesarMedyrehIndividual);
+if (btnExportarMedyreh) btnExportarMedyreh.addEventListener("click", exportarMedyrehCSV);
+if (medyrehEstadoFiltro) medyrehEstadoFiltro.addEventListener("change", renderMedyreh);
+
+document.querySelectorAll(".pill-medyreh").forEach(pill => {
+  pill.addEventListener("click", e => {
+    e.preventDefault();
+    if (medyrehEstadoFiltro) medyrehEstadoFiltro.value = pill.dataset.estado || "TODOS";
+    renderMedyreh();
+  });
+});
+
+function isMedyrehTemplateMsg(msg) {
+  const nombre = normalizeText(msg.template_name || "");
+  const mensaje = normalizeText(msg.mensaje || "");
+  if (nombre.includes("no_me_han_programado_cita") || nombre.includes("no me han programado cita")) return true;
+  if (mensaje.includes("medyreh integral") && mensaje.includes("queremos confirmar con usted el estado")) return true;
+  if (mensaje.includes("queremos confirmar con usted el estado actual frente dicho servicio")) return true;
+  return false;
+}
+
+async function procesarMedyrehIndividual() {
+  const file = medyrehFileInput ? medyrehFileInput.files[0] : null;
+  if (!file) {
+    alert("Selecciona el archivo de respuestas.");
+    return;
+  }
+
+  try {
+    const data = await readGenericFile(file, false);
+    const mensajes = transformMessageRows(data);
+
+    medyrehBaseRows = [];
+    const baseFile = medyrehBaseInput ? medyrehBaseInput.files[0] : null;
+    if (baseFile) {
+      const baseData = await readBaseFile(baseFile);
+      medyrehBaseRows = transformBaseRowsMedyreh(baseData);
+    }
+
+    medyrehResultRows = construirResultadosMedyreh(mensajes, medyrehBaseRows);
+
+    if (!medyrehResultRows.length) {
+      alert("No se encontraron registros de la plantilla 'no_me_han_programado_cita' en el archivo.");
+      return;
+    }
+
+    renderMedyreh();
+  } catch (e) {
+    console.error(e);
+    alert("Error procesando archivo: " + (e.message || e));
+  }
+}
+
+function construirResultadosMedyreh(mensajes, baseRows) {
+  const baseIndex = new Map();
+  for (const row of (baseRows || [])) {
+    const cel = normalizarTelefono(row.celular || row.numero || row.telefono || "");
+    if (cel) baseIndex.set(cel, row);
+  }
+
+  const porNumero = new Map();
+  for (const msg of mensajes) {
+    if (!msg.numero) continue;
+    if (!porNumero.has(msg.numero)) porNumero.set(msg.numero, []);
+    porNumero.get(msg.numero).push(msg);
+  }
+
+  for (const lista of porNumero.values()) {
+    lista.sort((a, b) => (a.fecha?.getTime() || 0) - (b.fecha?.getTime() || 0));
+  }
+
+  const resultado = [];
+
+  for (const [numero, msgs] of porNumero.entries()) {
+    const templates = msgs.filter(m => isOutgoingMessage(m) && isMedyrehTemplateMsg(m));
+    if (!templates.length) continue;
+
+    const baseData = baseIndex.get(numero) || null;
+    const cedula      = baseData ? (baseData.cedula   || "") : "";
+    const nombreBase  = baseData ? (baseData.nombre   || "") : "";
+    const servicioBase = baseData ? (baseData.servicio || "") : "";
+
+    for (let i = 0; i < templates.length; i++) {
+      const template = templates[i];
+      const finVentana = templates[i + 1]?.fecha || null;
+
+      // Prioridad: base (Info1/Info3) → extracción del mensaje de salida
+      const nombre   = nombreBase   || extraerNombreDesdeTemplate(template.mensaje);
+      const servicio = servicioBase || extraerServicioDesdeTemplate(template.mensaje);
+
+      const respuestas = msgs.filter(m => {
+        if (!m.fecha || !isIncomingMessage(m)) return false;
+        const ts = m.fecha.getTime();
+        if (ts <= template.fecha.getTime()) return false;
+        if (finVentana && ts >= finVentana.getTime()) return false;
+        return true;
+      });
+
+      let estado_medyreh = "SIN_RESPUESTA";
+      let respuesta_texto = "";
+      let fecha_respuesta = "";
+      let hubo_invalida = false;
+      let ultima_invalida = "";
+      let ultima_invalida_fecha = null;
+
+      for (const resp of respuestas) {
+        const clas = classifyMedyrehMessage(resp.mensaje);
+        if (clas) {
+          estado_medyreh = clas;
+          respuesta_texto = resp.mensaje;
+          fecha_respuesta = resp.fecha_hora_str;
+        } else if (resp.mensaje_normalizado) {
+          hubo_invalida = true;
+          ultima_invalida = resp.mensaje;
+          ultima_invalida_fecha = resp.fecha;
+        }
+      }
+
+      if (estado_medyreh === "SIN_RESPUESTA" && hubo_invalida) {
+        estado_medyreh = "RESPUESTA_NO_VALIDA";
+        respuesta_texto = ultima_invalida;
+        fecha_respuesta = ultima_invalida_fecha ? toDateTimeStr(ultima_invalida_fecha) : "";
+      }
+
+      resultado.push({
+        cedula,
+        nombre,
+        numero,
+        fecha_envio_str: template.fecha_hora_str || template.fecha_envio || "",
+        fecha_envio: template.fecha_envio || "",
+        template_name: template.template_name || "",
+        servicio,
+        estado_medyreh,
+        respuesta: respuesta_texto,
+        fecha_respuesta
+      });
+    }
+  }
+
+  return resultado.sort((a, b) =>
+    String(a.fecha_envio_str).localeCompare(String(b.fecha_envio_str))
+  );
+}
+
+function getMedyrehFiltradas() {
+  const estado = medyrehEstadoFiltro ? medyrehEstadoFiltro.value : "TODOS";
+  if (!estado || estado === "TODOS") return medyrehResultRows;
+  return medyrehResultRows.filter(r => r.estado_medyreh === estado);
+}
+
+function renderMedyreh() {
+  const dashboard = document.getElementById("medyrehDashboard");
+  if (dashboard) dashboard.style.display = "block";
+
+  const total = medyrehResultRows.length;
+  const ya_atendido = medyrehResultRows.filter(r => r.estado_medyreh === "YA_FUI_ATENDIDO").length;
+  const tiene_cita = medyrehResultRows.filter(r => r.estado_medyreh === "TIENE_CITA_MEDYREH").length;
+  const no_programado = medyrehResultRows.filter(r => r.estado_medyreh === "NO_PROGRAMADO").length;
+  const sin_resp = medyrehResultRows.filter(r => r.estado_medyreh === "SIN_RESPUESTA").length;
+  const no_valida = medyrehResultRows.filter(r => r.estado_medyreh === "RESPUESTA_NO_VALIDA").length;
+
+  const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+  set("kpiM_total", total);
+  set("kpiM_ya", ya_atendido);
+  set("kpiM_cita", tiene_cita);
+  set("kpiM_noprog", no_programado);
+  set("kpiM_sinresp", sin_resp);
+  set("kpiM_novalida", no_valida);
+
+  const vActual = document.getElementById("medyrehVistaActual");
+  if (vActual) {
+    const estado = medyrehEstadoFiltro ? medyrehEstadoFiltro.value : "TODOS";
+    vActual.textContent = `Vista actual: ${estado}`;
+  }
+
+  const rows = getMedyrehFiltradas();
+  const tabla = document.getElementById("tablaMedyreh");
+  if (!tabla) return;
+
+  if (!rows.length) {
+    tabla.innerHTML = `<table><tr><td>Sin datos para el filtro seleccionado.</td></tr></table>`;
+    return;
+  }
+
+  tabla.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>cedula</th>
+          <th>nombre</th>
+          <th>celular</th>
+          <th>servicio</th>
+          <th>fecha_envio</th>
+          <th>plantilla</th>
+          <th>estado</th>
+          <th>respuesta</th>
+          <th>fecha_respuesta</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(r => `
+          <tr>
+            <td>${escapeHtml(r.cedula || "")}</td>
+            <td>${escapeHtml(r.nombre || "")}</td>
+            <td>${escapeHtml(r.numero)}</td>
+            <td>${escapeHtml(r.servicio || "")}</td>
+            <td>${escapeHtml(r.fecha_envio_str)}</td>
+            <td>${escapeHtml(r.template_name)}</td>
+            <td>${estadoBadge(r.estado_medyreh)}</td>
+            <td>${escapeHtml(r.respuesta)}</td>
+            <td>${escapeHtml(r.fecha_respuesta)}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+}
+
+function exportarMedyrehCSV() {
+  const rows = getMedyrehFiltradas();
+  if (!rows.length) {
+    alert("No hay datos para exportar.");
+    return;
+  }
+
+  // Orden requerido: cedula, nombre, celular, servicio, plantilla, estado,
+  //                  respuesta, fecha_envio, fecha_respuesta
+  const headers = [
+    "cedula", "nombre", "celular", "servicio",
+    "plantilla", "estado", "respuesta",
+    "fecha_envio", "fecha_respuesta"
+  ];
+  const csv = [
+    headers.join(","),
+    ...rows.map(r => [
+      csvEscape(r.cedula               || ""),
+      csvEscape(r.nombre               || ""),
+      csvEscape(r.numero               || ""),
+      csvEscape(r.servicio             || ""),
+      csvEscape(r.template_name        || ""),
+      csvEscape(r.estado_medyreh       || ""),
+      csvEscape(r.respuesta            || ""),
+      csvEscape(r.fecha_envio_str || r.fecha_envio || ""),
+      csvEscape(r.fecha_respuesta      || "")
+    ].join(","))
+  ].join("\n");
+
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "medyreh_individual.csv";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
