@@ -262,6 +262,29 @@ button:active {
   border-color: rgba(148, 163, 184, 0.28);
 }
 
+.pill.ya-atendido {
+  background: rgba(59, 130, 246, 0.1);
+  color: #1d4ed8;
+  border-color: rgba(59, 130, 246, 0.22);
+}
+
+.pill.tiene-cita {
+  background: rgba(139, 92, 246, 0.1);
+  color: #6d28d9;
+  border-color: rgba(139, 92, 246, 0.22);
+}
+
+.pill.no-programado {
+  background: rgba(249, 115, 22, 0.1);
+  color: #c2410c;
+  border-color: rgba(249, 115, 22, 0.22);
+}
+
+.kpi.kpi-medyreh {
+  border-color: rgba(139, 92, 246, 0.18);
+  background: linear-gradient(180deg, #ffffff 0%, #faf7ff 100%);
+}
+
 .charts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -376,6 +399,24 @@ tbody tr:hover {
   background: rgba(148, 163, 184, 0.16);
   color: #59677a;
   border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.badge.ya-atendido {
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.badge.tiene-cita {
+  background: rgba(139, 92, 246, 0.12);
+  color: #6d28d9;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.badge.no-programado {
+  background: rgba(249, 115, 22, 0.12);
+  color: #c2410c;
+  border: 1px solid rgba(249, 115, 22, 0.2);
 }
 
 details {
